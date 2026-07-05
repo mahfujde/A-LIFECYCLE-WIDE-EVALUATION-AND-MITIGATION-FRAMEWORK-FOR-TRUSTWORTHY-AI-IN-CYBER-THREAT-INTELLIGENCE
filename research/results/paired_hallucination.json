@@ -1,0 +1,120 @@
+{
+  "timestamp": "2026-04-28T22:15:11Z",
+  "n_advisories": 10,
+  "no_rag_mean": 0.2411,
+  "hybrid_mean": 0.2411,
+  "mean_reduction_pct": 0.0,
+  "wilcoxon_p": 1.0,
+  "pairs": [
+    {
+      "id": "REAL-001",
+      "source": "CISA Advisory AA22-110A (Russian State-Sponsored Cyber Threats)",
+      "no_rag_hallucination_rate": 0.17208913564682005,
+      "no_rag_guard_passed": true,
+      "no_rag_trust_score": 61.78534796411637,
+      "hybrid_hallucination_rate": 0.17208913564682005,
+      "hybrid_guard_passed": true,
+      "hybrid_trust_score": 60.2015911768095,
+      "reduction_pct": 0.0
+    },
+    {
+      "id": "REAL-002",
+      "source": "CISA Advisory AA23-136A (LockBit 3.0 Ransomware)",
+      "no_rag_hallucination_rate": 0.14305872321128843,
+      "no_rag_guard_passed": true,
+      "no_rag_trust_score": 64.8043271682798,
+      "hybrid_hallucination_rate": 0.14305872321128843,
+      "hybrid_guard_passed": true,
+      "hybrid_trust_score": 63.15196801289444,
+      "reduction_pct": 0.0
+    },
+    {
+      "id": "REAL-003",
+      "source": "CISA Advisory AA24-060A (Volt Typhoon / PRC State-Sponsored)",
+      "no_rag_hallucination_rate": 0.44552415460348127,
+      "no_rag_guard_passed": true,
+      "no_rag_trust_score": 52.96358286060151,
+      "hybrid_hallucination_rate": 0.44552415460348127,
+      "hybrid_guard_passed": true,
+      "hybrid_trust_score": 51.73526185063735,
+      "reduction_pct": 0.0
+    },
+    {
+      "id": "REAL-004",
+      "source": "FBI IC3 Alert (Business Email Compromise)",
+      "no_rag_hallucination_rate": 0.19010377526283262,
+      "no_rag_guard_passed": true,
+      "no_rag_trust_score": 61.23573222549105,
+      "hybrid_hallucination_rate": 0.19010377526283262,
+      "hybrid_guard_passed": true,
+      "hybrid_trust_score": 59.755023327774225,
+      "reduction_pct": 0.0
+    },
+    {
+      "id": "REAL-005",
+      "source": "MITRE ATT&CK Group G0007 (APT28/Fancy Bear)",
+      "no_rag_hallucination_rate": 0.17985074520111088,
+      "no_rag_guard_passed": true,
+      "no_rag_trust_score": 61.27115229642111,
+      "hybrid_hallucination_rate": 0.17985074520111088,
+      "hybrid_guard_passed": true,
+      "hybrid_trust_score": 59.642819273195215,
+      "reduction_pct": 0.0
+    },
+    {
+      "id": "REAL-006",
+      "source": "CISA Advisory AA23-325A (Scattered Spider)",
+      "no_rag_hallucination_rate": 0.23898065537214275,
+      "no_rag_guard_passed": true,
+      "no_rag_trust_score": 59.72591621797388,
+      "hybrid_hallucination_rate": 0.23898065537214275,
+      "hybrid_guard_passed": true,
+      "hybrid_trust_score": 58.02166757814938,
+      "reduction_pct": 0.0
+    },
+    {
+      "id": "REAL-007",
+      "source": "CISA Advisory AA24-131A (Black Basta Ransomware)",
+      "no_rag_hallucination_rate": 0.40284092426300044,
+      "no_rag_guard_passed": true,
+      "no_rag_trust_score": 57.26329465450264,
+      "hybrid_hallucination_rate": 0.40284092426300044,
+      "hybrid_guard_passed": true,
+      "hybrid_trust_score": 55.87217597562359,
+      "reduction_pct": 0.0
+    },
+    {
+      "id": "REAL-008",
+      "source": "US-CERT Alert TA18-106A (SamSam Ransomware)",
+      "no_rag_hallucination_rate": 0.23850182890892024,
+      "no_rag_guard_passed": true,
+      "no_rag_trust_score": 62.147380652441576,
+      "hybrid_hallucination_rate": 0.23850182890892024,
+      "hybrid_guard_passed": true,
+      "hybrid_trust_score": 60.742064886292916,
+      "reduction_pct": 0.0
+    },
+    {
+      "id": "REAL-009",
+      "source": "NCSC Advisory (SolarWinds/SUNBURST)",
+      "no_rag_hallucination_rate": 0.1950726494193077,
+      "no_rag_guard_passed": true,
+      "no_rag_trust_score": 61.07982023704701,
+      "hybrid_hallucination_rate": 0.1950726494193077,
+      "hybrid_guard_passed": true,
+      "hybrid_trust_score": 59.58324332259206,
+      "reduction_pct": 0.0
+    },
+    {
+      "id": "REAL-010",
+      "source": "CISA Alert AA21-209A (Log4Shell/CVE-2021-44228)",
+      "no_rag_hallucination_rate": 0.20529804825782771,
+      "no_rag_guard_passed": true,
+      "no_rag_trust_score": 60.66772891808214,
+      "hybrid_hallucination_rate": 0.20529804825782771,
+      "hybrid_guard_passed": true,
+      "hybrid_trust_score": 58.94968919314829,
+      "reduction_pct": 0.0
+    }
+  ]
+}

@@ -1,0 +1,871 @@
+{
+  "timestamp": "2026-05-14T22:55:25Z",
+  "total_cases": 50,
+  "total_time_seconds": 17.56,
+  "confusion_matrix": {
+    "TP": 31,
+    "FP": 0,
+    "TN": 16,
+    "FN": 3
+  },
+  "metrics": {
+    "accuracy": 0.94,
+    "precision": 1.0,
+    "recall": 0.9118,
+    "f1": 0.9538,
+    "specificity": 1.0
+  },
+  "per_category": {
+    "A_fabricated_cve": {
+      "correct": 10,
+      "total": 10
+    },
+    "B_hallucinated_ttp": {
+      "correct": 10,
+      "total": 10
+    },
+    "C_fabricated_actor": {
+      "correct": 10,
+      "total": 10
+    },
+    "D_correct": {
+      "correct": 10,
+      "total": 10
+    },
+    "E_edge_case": {
+      "correct": 7,
+      "total": 10
+    }
+  },
+  "false_negatives": [
+    {
+      "id": "HC-E05",
+      "category": "E_edge_case",
+      "expected": "FAIL",
+      "predicted": "PASS",
+      "verdict": "FN",
+      "tier_failed": "none",
+      "hallucination_rate": 0.0749,
+      "tier_scores": {
+        "t1_embedding": 0.7504,
+        "t2_nli": 1.0,
+        "t3_crossref": 1.0,
+        "t4_entity": 1.0
+      },
+      "latency_ms": 56.9
+    },
+    {
+      "id": "HC-E06",
+      "category": "E_edge_case",
+      "expected": "FAIL",
+      "predicted": "PASS",
+      "verdict": "FN",
+      "tier_failed": "none",
+      "hallucination_rate": 0.1106,
+      "tier_scores": {
+        "t1_embedding": 0.6313,
+        "t2_nli": 1.0,
+        "t3_crossref": 1.0,
+        "t4_entity": 1.0
+      },
+      "latency_ms": 62.6
+    },
+    {
+      "id": "HC-E08",
+      "category": "E_edge_case",
+      "expected": "FAIL",
+      "predicted": "PASS",
+      "verdict": "FN",
+      "tier_failed": "none",
+      "hallucination_rate": 0.1025,
+      "tier_scores": {
+        "t1_embedding": 0.6585,
+        "t2_nli": 1.0,
+        "t3_crossref": 1.0,
+        "t4_entity": 1.0
+      },
+      "latency_ms": 65.6
+    }
+  ],
+  "false_positives": [],
+  "results": [
+    {
+      "id": "HC-A01",
+      "category": "A_fabricated_cve",
+      "expected": "FAIL",
+      "predicted": "FAIL",
+      "verdict": "TP",
+      "tier_failed": "T3_FAKE_CVE",
+      "hallucination_rate": 1.0,
+      "tier_scores": {
+        "t1_embedding": 0.8109,
+        "t2_nli": 1.0,
+        "t3_crossref": 0.0
+      },
+      "latency_ms": 15541.1
+    },
+    {
+      "id": "HC-A02",
+      "category": "A_fabricated_cve",
+      "expected": "FAIL",
+      "predicted": "FAIL",
+      "verdict": "TP",
+      "tier_failed": "T3_FAKE_CVE",
+      "hallucination_rate": 1.0,
+      "tier_scores": {
+        "t1_embedding": 0.6601,
+        "t2_nli": 1.0,
+        "t3_crossref": 0.0
+      },
+      "latency_ms": 34.3
+    },
+    {
+      "id": "HC-A03",
+      "category": "A_fabricated_cve",
+      "expected": "FAIL",
+      "predicted": "FAIL",
+      "verdict": "TP",
+      "tier_failed": "T3_FAKE_CVE",
+      "hallucination_rate": 1.0,
+      "tier_scores": {
+        "t1_embedding": 0.6811,
+        "t2_nli": 1.0,
+        "t3_crossref": 0.0
+      },
+      "latency_ms": 32.3
+    },
+    {
+      "id": "HC-A04",
+      "category": "A_fabricated_cve",
+      "expected": "FAIL",
+      "predicted": "FAIL",
+      "verdict": "TP",
+      "tier_failed": "T3_FAKE_CVE",
+      "hallucination_rate": 1.0,
+      "tier_scores": {
+        "t1_embedding": 0.764,
+        "t2_nli": 1.0,
+        "t3_crossref": 0.0
+      },
+      "latency_ms": 34.4
+    },
+    {
+      "id": "HC-A05",
+      "category": "A_fabricated_cve",
+      "expected": "FAIL",
+      "predicted": "FAIL",
+      "verdict": "TP",
+      "tier_failed": "T3_FAKE_CVE",
+      "hallucination_rate": 1.0,
+      "tier_scores": {
+        "t1_embedding": 0.6362,
+        "t2_nli": 1.0,
+        "t3_crossref": 0.0
+      },
+      "latency_ms": 35.4
+    },
+    {
+      "id": "HC-A06",
+      "category": "A_fabricated_cve",
+      "expected": "FAIL",
+      "predicted": "FAIL",
+      "verdict": "TP",
+      "tier_failed": "T3_FAKE_CVE",
+      "hallucination_rate": 1.0,
+      "tier_scores": {
+        "t1_embedding": 0.6486,
+        "t2_nli": 1.0,
+        "t3_crossref": 0.0
+      },
+      "latency_ms": 35.0
+    },
+    {
+      "id": "HC-A07",
+      "category": "A_fabricated_cve",
+      "expected": "FAIL",
+      "predicted": "FAIL",
+      "verdict": "TP",
+      "tier_failed": "T3_FAKE_CVE",
+      "hallucination_rate": 1.0,
+      "tier_scores": {
+        "t1_embedding": 0.3247,
+        "t2_nli": 1.0,
+        "t3_crossref": 0.0
+      },
+      "latency_ms": 35.7
+    },
+    {
+      "id": "HC-A08",
+      "category": "A_fabricated_cve",
+      "expected": "FAIL",
+      "predicted": "FAIL",
+      "verdict": "TP",
+      "tier_failed": "T3_FAKE_CVE",
+      "hallucination_rate": 1.0,
+      "tier_scores": {
+        "t1_embedding": 0.773,
+        "t2_nli": 1.0,
+        "t3_crossref": 0.0
+      },
+      "latency_ms": 30.9
+    },
+    {
+      "id": "HC-A09",
+      "category": "A_fabricated_cve",
+      "expected": "FAIL",
+      "predicted": "FAIL",
+      "verdict": "TP",
+      "tier_failed": "T3_FAKE_CVE",
+      "hallucination_rate": 1.0,
+      "tier_scores": {
+        "t1_embedding": 0.5601,
+        "t2_nli": 1.0,
+        "t3_crossref": 0.0
+      },
+      "latency_ms": 35.4
+    },
+    {
+      "id": "HC-A10",
+      "category": "A_fabricated_cve",
+      "expected": "FAIL",
+      "predicted": "FAIL",
+      "verdict": "TP",
+      "tier_failed": "T3_FAKE_CVE",
+      "hallucination_rate": 1.0,
+      "tier_scores": {
+        "t1_embedding": 0.5174,
+        "t2_nli": 1.0,
+        "t3_crossref": 0.0
+      },
+      "latency_ms": 34.4
+    },
+    {
+      "id": "HC-B01",
+      "category": "B_hallucinated_ttp",
+      "expected": "FAIL",
+      "predicted": "FAIL",
+      "verdict": "TP",
+      "tier_failed": "T3_FAKE_TTP",
+      "hallucination_rate": 1.0,
+      "tier_scores": {
+        "t1_embedding": 0.4515,
+        "t2_nli": 1.0,
+        "t3_crossref": 0.0
+      },
+      "latency_ms": 31.4
+    },
+    {
+      "id": "HC-B02",
+      "category": "B_hallucinated_ttp",
+      "expected": "FAIL",
+      "predicted": "FAIL",
+      "verdict": "TP",
+      "tier_failed": "T3_FAKE_TTP",
+      "hallucination_rate": 1.0,
+      "tier_scores": {
+        "t1_embedding": 0.2718,
+        "t2_nli": 1.0,
+        "t3_crossref": 0.0
+      },
+      "latency_ms": 33.5
+    },
+    {
+      "id": "HC-B03",
+      "category": "B_hallucinated_ttp",
+      "expected": "FAIL",
+      "predicted": "FAIL",
+      "verdict": "TP",
+      "tier_failed": "T3_FAKE_TTP",
+      "hallucination_rate": 1.0,
+      "tier_scores": {
+        "t1_embedding": 0.5545,
+        "t2_nli": 1.0,
+        "t3_crossref": 0.0
+      },
+      "latency_ms": 32.8
+    },
+    {
+      "id": "HC-B04",
+      "category": "B_hallucinated_ttp",
+      "expected": "FAIL",
+      "predicted": "FAIL",
+      "verdict": "TP",
+      "tier_failed": "T3_FAKE_TTP",
+      "hallucination_rate": 1.0,
+      "tier_scores": {
+        "t1_embedding": 0.3469,
+        "t2_nli": 1.0,
+        "t3_crossref": 0.0
+      },
+      "latency_ms": 30.7
+    },
+    {
+      "id": "HC-B05",
+      "category": "B_hallucinated_ttp",
+      "expected": "FAIL",
+      "predicted": "FAIL",
+      "verdict": "TP",
+      "tier_failed": "T3_FAKE_TTP",
+      "hallucination_rate": 1.0,
+      "tier_scores": {
+        "t1_embedding": 0.3367,
+        "t2_nli": 1.0,
+        "t3_crossref": 0.0
+      },
+      "latency_ms": 31.5
+    },
+    {
+      "id": "HC-B06",
+      "category": "B_hallucinated_ttp",
+      "expected": "FAIL",
+      "predicted": "FAIL",
+      "verdict": "TP",
+      "tier_failed": "T3_FAKE_TTP",
+      "hallucination_rate": 1.0,
+      "tier_scores": {
+        "t1_embedding": 0.4052,
+        "t2_nli": 1.0,
+        "t3_crossref": 0.0
+      },
+      "latency_ms": 31.9
+    },
+    {
+      "id": "HC-B07",
+      "category": "B_hallucinated_ttp",
+      "expected": "FAIL",
+      "predicted": "FAIL",
+      "verdict": "TP",
+      "tier_failed": "T3_FAKE_TTP",
+      "hallucination_rate": 1.0,
+      "tier_scores": {
+        "t1_embedding": 0.2099,
+        "t2_nli": 1.0,
+        "t3_crossref": 0.0
+      },
+      "latency_ms": 31.5
+    },
+    {
+      "id": "HC-B08",
+      "category": "B_hallucinated_ttp",
+      "expected": "FAIL",
+      "predicted": "FAIL",
+      "verdict": "TP",
+      "tier_failed": "T3_FAKE_TTP",
+      "hallucination_rate": 1.0,
+      "tier_scores": {
+        "t1_embedding": 0.5686,
+        "t2_nli": 1.0,
+        "t3_crossref": 0.0
+      },
+      "latency_ms": 36.7
+    },
+    {
+      "id": "HC-B09",
+      "category": "B_hallucinated_ttp",
+      "expected": "FAIL",
+      "predicted": "FAIL",
+      "verdict": "TP",
+      "tier_failed": "T3_FAKE_TTP",
+      "hallucination_rate": 1.0,
+      "tier_scores": {
+        "t1_embedding": 0.4835,
+        "t2_nli": 1.0,
+        "t3_crossref": 0.0
+      },
+      "latency_ms": 31.3
+    },
+    {
+      "id": "HC-B10",
+      "category": "B_hallucinated_ttp",
+      "expected": "FAIL",
+      "predicted": "FAIL",
+      "verdict": "TP",
+      "tier_failed": "T3_FAKE_TTP",
+      "hallucination_rate": 1.0,
+      "tier_scores": {
+        "t1_embedding": 0.4629,
+        "t2_nli": 1.0,
+        "t3_crossref": 0.0
+      },
+      "latency_ms": 29.6
+    },
+    {
+      "id": "HC-C01",
+      "category": "C_fabricated_actor",
+      "expected": "FAIL",
+      "predicted": "FAIL",
+      "verdict": "TP",
+      "tier_failed": "T2_NLI",
+      "hallucination_rate": 1.0,
+      "tier_scores": {
+        "t1_embedding": 0.1642,
+        "t2_nli": 0.0
+      },
+      "latency_ms": 36.0
+    },
+    {
+      "id": "HC-C02",
+      "category": "C_fabricated_actor",
+      "expected": "FAIL",
+      "predicted": "FAIL",
+      "verdict": "TP",
+      "tier_failed": "T4_ENTITY",
+      "hallucination_rate": 1.0,
+      "tier_scores": {
+        "t1_embedding": 0.5444,
+        "t2_nli": 1.0,
+        "t3_crossref": 1.0,
+        "t4_entity": 0.0
+      },
+      "latency_ms": 36.2
+    },
+    {
+      "id": "HC-C03",
+      "category": "C_fabricated_actor",
+      "expected": "FAIL",
+      "predicted": "FAIL",
+      "verdict": "TP",
+      "tier_failed": "T4_ENTITY",
+      "hallucination_rate": 1.0,
+      "tier_scores": {
+        "t1_embedding": 0.1564,
+        "t2_nli": 1.0,
+        "t3_crossref": 1.0,
+        "t4_entity": 0.0
+      },
+      "latency_ms": 35.4
+    },
+    {
+      "id": "HC-C04",
+      "category": "C_fabricated_actor",
+      "expected": "FAIL",
+      "predicted": "FAIL",
+      "verdict": "TP",
+      "tier_failed": "T4_ENTITY",
+      "hallucination_rate": 1.0,
+      "tier_scores": {
+        "t1_embedding": 0.3583,
+        "t2_nli": 1.0,
+        "t3_crossref": 1.0,
+        "t4_entity": 0.0
+      },
+      "latency_ms": 36.5
+    },
+    {
+      "id": "HC-C05",
+      "category": "C_fabricated_actor",
+      "expected": "FAIL",
+      "predicted": "FAIL",
+      "verdict": "TP",
+      "tier_failed": "T4_ENTITY",
+      "hallucination_rate": 1.0,
+      "tier_scores": {
+        "t1_embedding": 0.3264,
+        "t2_nli": 1.0,
+        "t3_crossref": 1.0,
+        "t4_entity": 0.0
+      },
+      "latency_ms": 38.3
+    },
+    {
+      "id": "HC-C06",
+      "category": "C_fabricated_actor",
+      "expected": "FAIL",
+      "predicted": "FAIL",
+      "verdict": "TP",
+      "tier_failed": "T4_ENTITY",
+      "hallucination_rate": 1.0,
+      "tier_scores": {
+        "t1_embedding": 0.4153,
+        "t2_nli": 1.0,
+        "t3_crossref": 1.0,
+        "t4_entity": 0.0
+      },
+      "latency_ms": 34.8
+    },
+    {
+      "id": "HC-C07",
+      "category": "C_fabricated_actor",
+      "expected": "FAIL",
+      "predicted": "FAIL",
+      "verdict": "TP",
+      "tier_failed": "T4_ENTITY",
+      "hallucination_rate": 1.0,
+      "tier_scores": {
+        "t1_embedding": 0.3897,
+        "t2_nli": 1.0,
+        "t3_crossref": 1.0,
+        "t4_entity": 0.0
+      },
+      "latency_ms": 36.1
+    },
+    {
+      "id": "HC-C08",
+      "category": "C_fabricated_actor",
+      "expected": "FAIL",
+      "predicted": "FAIL",
+      "verdict": "TP",
+      "tier_failed": "T4_ENTITY",
+      "hallucination_rate": 1.0,
+      "tier_scores": {
+        "t1_embedding": 0.3037,
+        "t2_nli": 1.0,
+        "t3_crossref": 1.0,
+        "t4_entity": 0.0
+      },
+      "latency_ms": 33.4
+    },
+    {
+      "id": "HC-C09",
+      "category": "C_fabricated_actor",
+      "expected": "FAIL",
+      "predicted": "FAIL",
+      "verdict": "TP",
+      "tier_failed": "T4_ENTITY",
+      "hallucination_rate": 1.0,
+      "tier_scores": {
+        "t1_embedding": 0.4562,
+        "t2_nli": 1.0,
+        "t3_crossref": 1.0,
+        "t4_entity": 0.0
+      },
+      "latency_ms": 34.0
+    },
+    {
+      "id": "HC-C10",
+      "category": "C_fabricated_actor",
+      "expected": "FAIL",
+      "predicted": "FAIL",
+      "verdict": "TP",
+      "tier_failed": "T4_ENTITY",
+      "hallucination_rate": 1.0,
+      "tier_scores": {
+        "t1_embedding": 0.506,
+        "t2_nli": 1.0,
+        "t3_crossref": 1.0,
+        "t4_entity": 0.0
+      },
+      "latency_ms": 34.5
+    },
+    {
+      "id": "HC-D01",
+      "category": "D_correct",
+      "expected": "PASS",
+      "predicted": "PASS",
+      "verdict": "TN",
+      "tier_failed": "none",
+      "hallucination_rate": 0.0042,
+      "tier_scores": {
+        "t1_embedding": 0.986,
+        "t2_nli": 1.0,
+        "t3_crossref": 1.0,
+        "t4_entity": 1.0
+      },
+      "latency_ms": 61.4
+    },
+    {
+      "id": "HC-D02",
+      "category": "D_correct",
+      "expected": "PASS",
+      "predicted": "PASS",
+      "verdict": "TN",
+      "tier_failed": "none",
+      "hallucination_rate": 0.0214,
+      "tier_scores": {
+        "t1_embedding": 0.9288,
+        "t2_nli": 1.0,
+        "t3_crossref": 1.0,
+        "t4_entity": 1.0
+      },
+      "latency_ms": 61.5
+    },
+    {
+      "id": "HC-D03",
+      "category": "D_correct",
+      "expected": "PASS",
+      "predicted": "PASS",
+      "verdict": "TN",
+      "tier_failed": "none",
+      "hallucination_rate": 0.0447,
+      "tier_scores": {
+        "t1_embedding": 0.8508,
+        "t2_nli": 1.0,
+        "t3_crossref": 1.0,
+        "t4_entity": 1.0
+      },
+      "latency_ms": 35.7
+    },
+    {
+      "id": "HC-D04",
+      "category": "D_correct",
+      "expected": "PASS",
+      "predicted": "PASS",
+      "verdict": "TN",
+      "tier_failed": "none",
+      "hallucination_rate": 0.0157,
+      "tier_scores": {
+        "t1_embedding": 0.9477,
+        "t2_nli": 1.0,
+        "t3_crossref": 1.0,
+        "t4_entity": 1.0
+      },
+      "latency_ms": 63.4
+    },
+    {
+      "id": "HC-D05",
+      "category": "D_correct",
+      "expected": "PASS",
+      "predicted": "PASS",
+      "verdict": "TN",
+      "tier_failed": "none",
+      "hallucination_rate": 0.0335,
+      "tier_scores": {
+        "t1_embedding": 0.8884,
+        "t2_nli": 1.0,
+        "t3_crossref": 1.0,
+        "t4_entity": 1.0
+      },
+      "latency_ms": 36.4
+    },
+    {
+      "id": "HC-D06",
+      "category": "D_correct",
+      "expected": "PASS",
+      "predicted": "PASS",
+      "verdict": "TN",
+      "tier_failed": "none",
+      "hallucination_rate": 0.0281,
+      "tier_scores": {
+        "t1_embedding": 0.9064,
+        "t2_nli": 1.0,
+        "t3_crossref": 1.0,
+        "t4_entity": 1.0
+      },
+      "latency_ms": 60.4
+    },
+    {
+      "id": "HC-D07",
+      "category": "D_correct",
+      "expected": "PASS",
+      "predicted": "PASS",
+      "verdict": "TN",
+      "tier_failed": "none",
+      "hallucination_rate": 0.0663,
+      "tier_scores": {
+        "t1_embedding": 0.7791,
+        "t2_nli": 1.0,
+        "t3_crossref": 1.0,
+        "t4_entity": 1.0
+      },
+      "latency_ms": 61.5
+    },
+    {
+      "id": "HC-D08",
+      "category": "D_correct",
+      "expected": "PASS",
+      "predicted": "PASS",
+      "verdict": "TN",
+      "tier_failed": "none",
+      "hallucination_rate": 0.0204,
+      "tier_scores": {
+        "t1_embedding": 0.9319,
+        "t2_nli": 1.0,
+        "t3_crossref": 1.0,
+        "t4_entity": 1.0
+      },
+      "latency_ms": 62.0
+    },
+    {
+      "id": "HC-D09",
+      "category": "D_correct",
+      "expected": "PASS",
+      "predicted": "PASS",
+      "verdict": "TN",
+      "tier_failed": "none",
+      "hallucination_rate": 0.0438,
+      "tier_scores": {
+        "t1_embedding": 0.854,
+        "t2_nli": 1.0,
+        "t3_crossref": 1.0,
+        "t4_entity": 1.0
+      },
+      "latency_ms": 59.4
+    },
+    {
+      "id": "HC-D10",
+      "category": "D_correct",
+      "expected": "PASS",
+      "predicted": "PASS",
+      "verdict": "TN",
+      "tier_failed": "none",
+      "hallucination_rate": 0.0067,
+      "tier_scores": {
+        "t1_embedding": 0.9777,
+        "t2_nli": 1.0,
+        "t3_crossref": 1.0,
+        "t4_entity": 1.0
+      },
+      "latency_ms": 35.8
+    },
+    {
+      "id": "HC-E01",
+      "category": "E_edge_case",
+      "expected": "PASS",
+      "predicted": "PASS",
+      "verdict": "TN",
+      "tier_failed": "none",
+      "hallucination_rate": 0.0878,
+      "tier_scores": {
+        "t1_embedding": 0.7074,
+        "t2_nli": 1.0,
+        "t3_crossref": 1.0,
+        "t4_entity": 1.0
+      },
+      "latency_ms": 57.8
+    },
+    {
+      "id": "HC-E02",
+      "category": "E_edge_case",
+      "expected": "PASS",
+      "predicted": "PASS",
+      "verdict": "TN",
+      "tier_failed": "none",
+      "hallucination_rate": 0.062,
+      "tier_scores": {
+        "t1_embedding": 0.7934,
+        "t2_nli": 1.0,
+        "t3_crossref": 1.0,
+        "t4_entity": 1.0
+      },
+      "latency_ms": 56.4
+    },
+    {
+      "id": "HC-E03",
+      "category": "E_edge_case",
+      "expected": "PASS",
+      "predicted": "PASS",
+      "verdict": "TN",
+      "tier_failed": "none",
+      "hallucination_rate": 0.0618,
+      "tier_scores": {
+        "t1_embedding": 0.7941,
+        "t2_nli": 1.0,
+        "t3_crossref": 1.0,
+        "t4_entity": 1.0
+      },
+      "latency_ms": 33.5
+    },
+    {
+      "id": "HC-E04",
+      "category": "E_edge_case",
+      "expected": "PASS",
+      "predicted": "PASS",
+      "verdict": "TN",
+      "tier_failed": "none",
+      "hallucination_rate": 0.1086,
+      "tier_scores": {
+        "t1_embedding": 0.6381,
+        "t2_nli": 1.0,
+        "t3_crossref": 1.0,
+        "t4_entity": 1.0
+      },
+      "latency_ms": 33.1
+    },
+    {
+      "id": "HC-E05",
+      "category": "E_edge_case",
+      "expected": "FAIL",
+      "predicted": "PASS",
+      "verdict": "FN",
+      "tier_failed": "none",
+      "hallucination_rate": 0.0749,
+      "tier_scores": {
+        "t1_embedding": 0.7504,
+        "t2_nli": 1.0,
+        "t3_crossref": 1.0,
+        "t4_entity": 1.0
+      },
+      "latency_ms": 56.9
+    },
+    {
+      "id": "HC-E06",
+      "category": "E_edge_case",
+      "expected": "FAIL",
+      "predicted": "PASS",
+      "verdict": "FN",
+      "tier_failed": "none",
+      "hallucination_rate": 0.1106,
+      "tier_scores": {
+        "t1_embedding": 0.6313,
+        "t2_nli": 1.0,
+        "t3_crossref": 1.0,
+        "t4_entity": 1.0
+      },
+      "latency_ms": 62.6
+    },
+    {
+      "id": "HC-E07",
+      "category": "E_edge_case",
+      "expected": "PASS",
+      "predicted": "PASS",
+      "verdict": "TN",
+      "tier_failed": "none",
+      "hallucination_rate": 0.0652,
+      "tier_scores": {
+        "t1_embedding": 0.7826,
+        "t2_nli": 1.0,
+        "t3_crossref": 1.0,
+        "t4_entity": 1.0
+      },
+      "latency_ms": 61.1
+    },
+    {
+      "id": "HC-E08",
+      "category": "E_edge_case",
+      "expected": "FAIL",
+      "predicted": "PASS",
+      "verdict": "FN",
+      "tier_failed": "none",
+      "hallucination_rate": 0.1025,
+      "tier_scores": {
+        "t1_embedding": 0.6585,
+        "t2_nli": 1.0,
+        "t3_crossref": 1.0,
+        "t4_entity": 1.0
+      },
+      "latency_ms": 65.6
+    },
+    {
+      "id": "HC-E09",
+      "category": "E_edge_case",
+      "expected": "PASS",
+      "predicted": "PASS",
+      "verdict": "TN",
+      "tier_failed": "none",
+      "hallucination_rate": 0.0383,
+      "tier_scores": {
+        "t1_embedding": 0.8724,
+        "t2_nli": 1.0,
+        "t3_crossref": 1.0,
+        "t4_entity": 1.0
+      },
+      "latency_ms": 31.0
+    },
+    {
+      "id": "HC-E10",
+      "category": "E_edge_case",
+      "expected": "FAIL",
+      "predicted": "FAIL",
+      "verdict": "TP",
+      "tier_failed": "T4_ENTITY",
+      "hallucination_rate": 1.0,
+      "tier_scores": {
+        "t1_embedding": 0.6054,
+        "t2_nli": 1.0,
+        "t3_crossref": 1.0,
+        "t4_entity": 0.0
+      },
+      "latency_ms": 36.2
+    }
+  ]
+}

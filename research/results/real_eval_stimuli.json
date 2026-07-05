@@ -1,0 +1,863 @@
+[
+  {
+    "sample_id": "REAL-001_no_rag",
+    "advisory_id": "REAL-001",
+    "condition": "no_rag",
+    "analysis_text": "{'analysis': {'summary': '### Analysis\\n\\n#### 1) Threat Type:\\nRussian state-sponsored cyber actors targeting U.S. defense contractors with spearphishing attacks, brute force methods, and exploiting known vulnerabilities in network devices.\\n\\n#### 2) Severity:\\nSerious Threat\\n\\n#### 3) TTPs Mapped to MITRE ATT&CK (T-codes):\\n- **T1566.001**: Use of legitimate tools for malicious purposes\\n- **T1210**: Exploitation of vulnerabilities in network devices\\n- **T1489**: Valid credentials used for persistence\\n\\n#### 4) Red Flags:\\n- Spe', 'severity': 'Emergency', 'ttps': [{'id': 'T1566.001', 'name': 'Spearphishing Attachment', 'tactic': 'See ATT&CK'}], 'iocs': {'cves': ['CVE-2018-13379', 'CVE-2020-0688']}, 'red_flags': ['T1566.001**: Use of legitimate tools for malicious purposes', 'T1210**: Exploitation of vulnerabilities in network devices', 'T1489**: Valid credentials used for persistence', 'Spearphishing targeting U.S. defense contractors with varying cybersecurity levels.', 'Use of brute force techniques and known vulnerabilities (CVEs).', 'Persistence through valid credentials post-compromise.'], 'threat_type': 'Analysed by Local LLM'}, 'stix_objects': [], 'raw_response': '### Analysis\\n\\n#### 1) Threat Type:\\nRussian state-sponsored cyber actors targeting U.S. defense contractors with spearphishing attacks, brute force methods, and exploiting known vulnerabilities in network devices.\\n\\n#### 2) Severity:\\nSerious Threat\\n\\n#### 3) TTPs Mapped to MITRE ATT&CK (T-codes):\\n- **T1566.001**: Use of legitimate tools for malicious purposes\\n- **T1210**: Exploitation of vulnerabilities in network devices\\n- **T1489**: Valid credentials used for persistence\\n\\n#### 4) Red Flags:\\n- Spearphishing targeting U.S. defense contractors with varying cybersecurity levels.\\n- Use of brute force techniques and known vulnerabilities (CVEs).\\n- Persistence through valid credentials post-compromise.\\n- Deployment of custom malware.\\n\\n#### 5) IOCs:\\n- **IP Addresses**: N/A\\n- **Domains**: N/A\\n- **Hashes**: N/A\\n- **CVEs**:\\n  - CVE-2018-13379\\n  - CVE-2020-0688\\n\\n### Detailed Analysis:\\n\\n#### Threat Type and Severity:\\nThe threat involves sophisticated actors targeting U.S. defense contractors, which is a high-stakes environment with significant national security implications. The use of spearphishing combined with brute force attacks on network devices (especially those affected by CVEs) indicates a serious risk to the confidentiality, integrity, and availability of critical systems.\\n\\n#### TTPs Mapped to MITRE ATT&CK:\\n- **T1566.001**: These actors are likely using legitimate tools like PowerShell or Windows Command Shell for malicious purposes, which is common in sophisticated cyber attacks.\\n- **T1210**: The exploitation of known vulnerabilities (CVE-2018-13379 and CVE-2020-0688) indicates a targeted approach to compromise systems with specific weaknesses.\\n- **T1489**: Using valid credentials for persistence is a common tactic in maintaining access post-",
+    "raw_response": "",
+    "llm_model": "qwen2.5:3b",
+    "guard_passed": true,
+    "guard_composite": 0.8697,
+    "tier_scores": {
+      "t1_embedding": 0.5658,
+      "t2_nli": 1.0,
+      "t3_crossref": 1.0,
+      "t4_entity": 1.0
+    },
+    "hallucination_rate": 0.1303,
+    "ungrounded_entities": [],
+    "attribution_rate": 1.0,
+    "citations": [
+      {
+        "claim": "{'summary': '### Analysis\\n\\n#### 1) Threat Type:\\nRussian state-sponsored cyber actors targeting U.S.",
+        "source": "https://attack.mitre.org/techniques/T1681",
+        "confidence": "LOW"
+      },
+      {
+        "claim": "defense contractors with spearphishing attacks, brute force methods, and exploiting known vulnerabilities in network dev",
+        "source": "https://attack.mitre.org/techniques/T1608/001",
+        "confidence": "LOW"
+      },
+      {
+        "claim": "defense contractors with varying cybersecurity levels.', 'Use of brute force techniques and known vulnerabilities (CVEs)",
+        "source": "https://attack.mitre.org/techniques/T1597/001",
+        "confidence": "LOW"
+      }
+    ],
+    "ttp_recall": 0.2,
+    "cve_recall": 1.0,
+    "found_ttps": [
+      "T1210",
+      "T1489",
+      "T1566.001"
+    ],
+    "expected_ttps": [
+      "T1059.001",
+      "T1059.003",
+      "T1078",
+      "T1110",
+      "T1566.001"
+    ],
+    "found_cves": [
+      "CVE-2018-13379",
+      "CVE-2020-0688"
+    ],
+    "expected_cves": [
+      "CVE-2018-13379",
+      "CVE-2020-0688"
+    ],
+    "trust_score": 63.81513887643815,
+    "latency_s": 63.0,
+    "retrieval_mode": "none"
+  },
+  {
+    "sample_id": "REAL-001_vector_rag",
+    "advisory_id": "REAL-001",
+    "condition": "vector_rag",
+    "analysis_text": "{'analysis': {'summary': '### Analysis:\\n\\n1. **Threat Type:**\\n   - Russian state-sponsored cyber actors targeting U.S. defense contractors.\\n\\n2. **Severity:**\\n   - Serious Threat\\n\\n3. **TTPs Mapped to MITRE ATT&CK (T-codes):**\\n   - T1587.001: Malware development\\n   - T1584.003: Compromise of Virtual Private Servers (VPS)\\n   - T1078: Valid Accounts\\n\\n4. **Red Flags:**\\n   - Spearphishing emails with malicious attachments or links.\\n   - Use of brute force techniques and known vulnerabilities in VPN appliances like CVE-2018-1337', 'severity': 'Serious Threat', 'ttps': [{'id': 'T1078', 'name': 'Valid Accounts', 'tactic': 'See ATT&CK'}], 'iocs': {'cves': ['CVE-2018-13379', 'CVE-2020-0688']}, 'red_flags': ['Russian state-sponsored cyber actors targeting U.S. defense contractors.', 'Serious Threat', 'T1587.001: Malware development', 'T1584.003: Compromise of Virtual Private Servers (VPS)', 'T1078: Valid Accounts', 'Spearphishing emails with malicious attachments or links.'], 'threat_type': 'Analysed by Local LLM'}, 'stix_objects': [], 'raw_response': \"### Analysis:\\n\\n1. **Threat Type:**\\n   - Russian state-sponsored cyber actors targeting U.S. defense contractors.\\n\\n2. **Severity:**\\n   - Serious Threat\\n\\n3. **TTPs Mapped to MITRE ATT&CK (T-codes):**\\n   - T1587.001: Malware development\\n   - T1584.003: Compromise of Virtual Private Servers (VPS)\\n   - T1078: Valid Accounts\\n\\n4. **Red Flags:**\\n   - Spearphishing emails with malicious attachments or links.\\n   - Use of brute force techniques and known vulnerabilities in VPN appliances like CVE-2018-13379 and CVE-2020-0688.\\n   - Post-compromise activities including exploitation of compromised credentials for persistence, privilege escalation, and defense evasion.\\n\\n5. **IOCs:**\\n   - No specific IPs, domains, or hashes provided in the given context.\\n   - Potential CVEs mentioned are:\\n     - CVE-2018-13379\\n     - CVE-2020-0688\\n\\n### Detailed Analysis:\\n\\n#### Threat Type and Severity:\\nThe threat type is Russian state-sponsored cyber actors targeting U.S. defense contractors, which indicates a serious and high-level threat with potential for significant damage to national security interests.\\n\\n#### TTPs Mapped to MITRE ATT&CK:\\n1. **T1587.001: Malware Development**\\n   - The threat actors may develop malware components that can be used during targeting, including payloads, droppers, post-compromise tools, backdoors, packers, C2 protocols, and infected removable media.\\n   \\n2. **T1584.003: Compromise of Virtual Private Servers (VPS)**\\n   - The threat actors may compromise third-party VPSs to use as infrastructure for targeting.\\n\\n3. **T1078: Valid Accounts**\\n   - The threat actors may obtain and abuse existing credentials to gain access, persistence, privilege escalation, or defense evasion.\\n\\n#### Red Flags:\\n- Spearphishing emails with malicious attachments or links are a common tactic used by state-sponsored cyber actors.\\n- Exploitation of known vulnerabilities in VPN applianc",
+    "raw_response": "",
+    "llm_model": "qwen2.5:3b",
+    "guard_passed": true,
+    "guard_composite": 0.843,
+    "tier_scores": {
+      "t1_embedding": 0.6768,
+      "t2_nli": 0.8,
+      "t3_crossref": 1.0,
+      "t4_entity": 1.0
+    },
+    "hallucination_rate": 0.157,
+    "ungrounded_entities": [],
+    "attribution_rate": 0.5714,
+    "citations": [
+      {
+        "claim": "{'summary': '### Analysis:\\n\\n1.",
+        "source": "",
+        "confidence": "LOW"
+      },
+      {
+        "claim": "**Threat Type:**\\n   - Russian state-sponsored cyber actors targeting U.S.",
+        "source": "https://attack.mitre.org/techniques/T1587/001",
+        "confidence": "LOW"
+      },
+      {
+        "claim": "defense contractors.\\n\\n2.",
+        "source": "",
+        "confidence": "LOW"
+      },
+      {
+        "claim": "**Severity:**\\n   - Serious Threat\\n\\n3.",
+        "source": "",
+        "confidence": "LOW"
+      },
+      {
+        "claim": "**TTPs Mapped to MITRE ATT&CK (T-codes):**\\n   - T1587.001: Malware development\\n   - T1584.003: Compromise of Virtual P",
+        "source": "https://attack.mitre.org/techniques/T1587/001",
+        "confidence": "LOW"
+      }
+    ],
+    "ttp_recall": 0.2,
+    "cve_recall": 1.0,
+    "found_ttps": [
+      "T1078",
+      "T1584.003",
+      "T1587.001"
+    ],
+    "expected_ttps": [
+      "T1059.001",
+      "T1059.003",
+      "T1078",
+      "T1110",
+      "T1566.001"
+    ],
+    "found_cves": [
+      "CVE-2018-1337",
+      "CVE-2018-13379",
+      "CVE-2020-0688"
+    ],
+    "expected_cves": [
+      "CVE-2018-13379",
+      "CVE-2020-0688"
+    ],
+    "trust_score": 64.14881261757441,
+    "latency_s": 43.8,
+    "retrieval_mode": "vector_only"
+  },
+  {
+    "sample_id": "REAL-001_hybrid_rag",
+    "advisory_id": "REAL-001",
+    "condition": "hybrid_rag",
+    "analysis_text": "{'analysis': {'summary': '### Analysis of Threat Report\\n\\n#### 1) Threat Type:\\nRussian state-sponsored cyber actors targeting U.S. cleared defense contractors.\\n\\n#### 2) Severity:\\nSerious Threat\\n\\n#### 3) TTPs Mapped to MITRE ATT&CK (T-codes):\\n- **T1587.001**: Malware development and use\\n- **T1584.003**: Compromise of third-party Virtual Private Servers (VPS)\\n- **T1190**: Exploit public-facing applications, specifically CVE-2020-0688\\n\\n#### 4) Red Flags:\\n- The actors have been targeting U.S. defense contractors since at leas', 'severity': 'Serious Threat', 'ttps': [{'id': 'T1190', 'name': 'Exploit Public-Facing Application', 'tactic': 'See ATT&CK'}], 'iocs': {'cves': ['CVE-2018-13379', 'CVE-2020-0688']}, 'red_flags': ['T1587.001**: Malware development and use', 'T1584.003**: Compromise of third-party Virtual Private Servers (VPS)', 'T1190**: Exploit public-facing applications, specifically CVE-2020-0688', 'The actors have been targeting U.S. defense contractors since at least January 2020.', 'They use a combination of spearphishing emails and brute force techniques to compromise systems.', 'They leverage known vulnerabilities in VPN appliances (CVE-2018-13379, CVE-2020-0688).'], 'threat_type': 'Analysed by Local LLM'}, 'stix_objects': [], 'raw_response': '### Analysis of Threat Report\\n\\n#### 1) Threat Type:\\nRussian state-sponsored cyber actors targeting U.S. cleared defense contractors.\\n\\n#### 2) Severity:\\nSerious Threat\\n\\n#### 3) TTPs Mapped to MITRE ATT&CK (T-codes):\\n- **T1587.001**: Malware development and use\\n- **T1584.003**: Compromise of third-party Virtual Private Servers (VPS)\\n- **T1190**: Exploit public-facing applications, specifically CVE-2020-0688\\n\\n#### 4) Red Flags:\\n- The actors have been targeting U.S. defense contractors since at least January 2020.\\n- They use a combination of spearphishing emails and brute force techniques to compromise systems.\\n- They leverage known vulnerabilities in VPN appliances (CVE-2018-13379, CVE-2020-0688).\\n- Post-compromise, they maintain persistent access using valid credentials.\\n\\n#### 5) IOCs:\\n- **CVE-2018-13379**: Known vulnerability in Cisco ASA firewalls.\\n- **CVE-2020-0688**: Known vulnerability in VMware vSphere.\\n- **POC (Proof of Concept)**: Not provided, but the use of living-off-the-land techniques suggests that proof-of-concept malware or tools may be used.\\n\\n### Summary:\\nThe threat actors are Russian state-sponsored and have been targeting U.S. defense contractors since at least January 2020. They primarily use spearphishing emails to harvest credentials and exploit known vulnerabilities in VPN appliances (CVE-2018-13379, CVE-2020-0688). Post-compromise, they maintain access using valid credentials and deploy custom malware. The severity of this threat is high due to the long-term targeting and use of sophisticated techniques.\\n\\n### IOCs:\\n- **CVE-2018-13379**\\n- **CVE-2020-0688**\\n\\n### Red Flags:\\n- Long-term targeting (since January 2020)\\n- Use of spearphish",
+    "raw_response": "",
+    "llm_model": "qwen2.5:3b",
+    "guard_passed": true,
+    "guard_composite": 0.8724,
+    "tier_scores": {
+      "t1_embedding": 0.6581,
+      "t2_nli": 0.9167,
+      "t3_crossref": 1.0,
+      "t4_entity": 1.0
+    },
+    "hallucination_rate": 0.1276,
+    "ungrounded_entities": [],
+    "attribution_rate": 1.0,
+    "citations": [
+      {
+        "claim": "{'summary': '### Analysis of Threat Report\\n\\n#### 1) Threat Type:\\nRussian state-sponsored cyber actors targeting U.S.",
+        "source": "https://attack.mitre.org/techniques/T1587/001",
+        "confidence": "LOW"
+      },
+      {
+        "claim": "cleared defense contractors.\\n\\n#### 2) Severity:\\nSerious Threat\\n\\n#### 3) TTPs Mapped to MITRE ATT&CK (T-codes):\\n- *",
+        "source": "https://attack.mitre.org/techniques/T1587/001",
+        "confidence": "LOW"
+      },
+      {
+        "claim": "defense contractors since at leas', 'severity': 'Serious Threat', 'ttps': [{'id': 'T1190', 'name': 'Exploit Public-Facin",
+        "source": "ATT&CK:T1190",
+        "confidence": "LOW"
+      },
+      {
+        "claim": "defense contractors since at least January 2020.', 'They use a combination of spearphishing emails and brute force techn",
+        "source": "https://attack.mitre.org/techniques/T1587/001",
+        "confidence": "LOW"
+      }
+    ],
+    "ttp_recall": 0.0,
+    "cve_recall": 1.0,
+    "found_ttps": [
+      "T1190",
+      "T1584.003",
+      "T1587.001"
+    ],
+    "expected_ttps": [
+      "T1059.001",
+      "T1059.003",
+      "T1078",
+      "T1110",
+      "T1566.001"
+    ],
+    "found_cves": [
+      "CVE-2018-13379",
+      "CVE-2020-0688"
+    ],
+    "expected_cves": [
+      "CVE-2018-13379",
+      "CVE-2020-0688"
+    ],
+    "trust_score": 66.56775653362274,
+    "latency_s": 48.1,
+    "retrieval_mode": "hybrid"
+  },
+  {
+    "sample_id": "REAL-002_no_rag",
+    "advisory_id": "REAL-002",
+    "condition": "no_rag",
+    "analysis_text": "{'analysis': {'summary': '### Analysis\\n\\n1. **Threat Type:**\\n   - **Ransomware Attack**\\n\\n2. **Severity:**\\n   - **Serious Threat**\\n\\n3. **TTPs Mapped to MITRE ATT&CK (T-codes):**\\n   - T1566.001: Initial Access\\n   - T1048.002: Privilege Escalation\\n   - T1098.001: Lateral Movement\\n   - T1078.001: Command and Control (C2)\\n   - T1563.002: Exfiltration\\n   - T1410.001: Data Encryption\\n   - T1059.003: File and Directory Manipulation\\n\\n4. **Red Flags:**\\n   - Use of Ransomware-as-a-Service model for monetization.\\n   - Exploitation of', 'severity': 'Emergency', 'ttps': [{'id': 'T1566.001', 'name': 'Spearphishing Attachment', 'tactic': 'See ATT&CK'}, {'id': 'T1059.003', 'name': 'Windows Command Shell', 'tactic': 'See ATT&CK'}], 'iocs': {'cves': ['CVE-2023-0669', 'CVE-2023-27350']}, 'red_flags': ['Ransomware Attack**', 'Serious Threat**', 'T1566.001: Initial Access', 'T1048.002: Privilege Escalation', 'T1098.001: Lateral Movement', 'T1078.001: Command and Control (C2)'], 'threat_type': 'Analysed by Local LLM'}, 'stix_objects': [], 'raw_response': \"### Analysis\\n\\n1. **Threat Type:**\\n   - **Ransomware Attack**\\n\\n2. **Severity:**\\n   - **Serious Threat**\\n\\n3. **TTPs Mapped to MITRE ATT&CK (T-codes):**\\n   - T1566.001: Initial Access\\n   - T1048.002: Privilege Escalation\\n   - T1098.001: Lateral Movement\\n   - T1078.001: Command and Control (C2)\\n   - T1563.002: Exfiltration\\n   - T1410.001: Data Encryption\\n   - T1059.003: File and Directory Manipulation\\n\\n4. **Red Flags:**\\n   - Use of Ransomware-as-a-Service model for monetization.\\n   - Exploitation of multiple CVEs (CVE-2023-0669, CVE-2023-27350) indicating sophisticated targeting and persistence.\\n   - Deployment of Cobalt Strike beacons for C2 communication.\\n   - Exfiltration of data using rclone and MEGA cloud storage.\\n   - Deletion of volume shadow copies to prevent recovery.\\n\\n5. **IOCs:**\\n   - CVE-2023-0669\\n   - CVE-2023-27350\\n   - Cobalt Strike beacon (e.g., `CobaltStrike.exe`)\\n   - rclone executable (`rclone.exe`)\\n   - MEGA cloud storage domain(s)\\n   - Bitcoin payment address for ransom notes\\n\\n### Detailed Analysis:\\n\\n1. **Threat Type:**\\n   - The threat is a Ransomware attack, specifically LockBit 3.0, which uses the RaaS model to maximize its impact and profitability.\\n\\n2. **Severity:**\\n   - Given the sophistication of the attack (multiple CVEs exploited, use of Cobalt Strike for C2, data exfiltration), this threat should be considered a Serious Threat.\\n\\n3. **TTPs Mapped to MITRE ATT&CK:**\\n\\n   - **Initial Access (T1566.001):**\\n     - Exploitation of CVE-2023-0669 and CVE-2023-27350.\\n   \\n   - **Privilege Escalation (T1048.002):**\\n     - Not explicitly mentioned in the report, but Cobalt Strike is often used for privilege escalation.\\n\\n   - **Lateral Movement (T1098.001):**\\n     - Use of Remote Desktop Protocol.\\n   \\n   - **C2 Communication (T1078.001):**\\n     - Deployment of Cobalt Strike beacons.\\n   \\n   - **Exfiltration (T1563.002):**\\n     - Exfiltr",
+    "raw_response": "",
+    "llm_model": "qwen2.5:3b",
+    "guard_passed": true,
+    "guard_composite": 0.7969,
+    "tier_scores": {
+      "t1_embedding": 0.6564,
+      "t2_nli": 1.0,
+      "t3_crossref": 1.0,
+      "t4_entity": 0.5
+    },
+    "hallucination_rate": 0.2031,
+    "ungrounded_entities": [
+      "CobaltStrike"
+    ],
+    "attribution_rate": 0.8,
+    "citations": [
+      {
+        "claim": "{'summary': '### Analysis\\n\\n1.",
+        "source": "",
+        "confidence": "LOW"
+      },
+      {
+        "claim": "**Threat Type:**\\n   - **Ransomware Attack**\\n\\n2.",
+        "source": "https://attack.mitre.org/techniques/T1588/001",
+        "confidence": "LOW"
+      },
+      {
+        "claim": "**Severity:**\\n   - **Serious Threat**\\n\\n3.",
+        "source": "https://attack.mitre.org/techniques/T1681",
+        "confidence": "LOW"
+      },
+      {
+        "claim": "**TTPs Mapped to MITRE ATT&CK (T-codes):**\\n   - T1566.001: Initial Access\\n   - T1048.002: Privilege Escalation\\n   - T",
+        "source": "https://attack.mitre.org/techniques/T1608/001",
+        "confidence": "LOW"
+      },
+      {
+        "claim": "**Red Flags:**\\n   - Use of Ransomware-as-a-Service model for monetization.\\n   - Exploitation of', 'severity': 'Emergen",
+        "source": "https://attack.mitre.org/techniques/T1608/001",
+        "confidence": "LOW"
+      }
+    ],
+    "ttp_recall": 0.0,
+    "cve_recall": 1.0,
+    "found_ttps": [
+      "T1048.002",
+      "T1059.003",
+      "T1078.001",
+      "T1098.001",
+      "T1410.001",
+      "T1563.002",
+      "T1566.001"
+    ],
+    "expected_ttps": [
+      "T1021.001",
+      "T1486",
+      "T1490",
+      "T1567"
+    ],
+    "found_cves": [
+      "CVE-2023-0669",
+      "CVE-2023-27350"
+    ],
+    "expected_cves": [
+      "CVE-2023-0669",
+      "CVE-2023-27350"
+    ],
+    "trust_score": 64.42145812511444,
+    "latency_s": 57.7,
+    "retrieval_mode": "none"
+  },
+  {
+    "sample_id": "REAL-002_vector_rag",
+    "advisory_id": "REAL-002",
+    "condition": "vector_rag",
+    "analysis_text": "{'analysis': {'summary': \"### Analysis of the Threat Report\\n\\n#### 1) Threat Type:\\nLockBit is a Ransomware-as-a-Service (RaaS) threat actor that uses various techniques to gain initial access, maintain persistence, and exfiltrate data before deploying their ransomware. They have been observed using CVE vulnerabilities for exploitation and leveraging Remote Desktop Protocol (RDP) for lateral movement.\\n\\n#### 2) Severity:\\n**Serious Threat**\\n\\nLockBit's operations are well-organized with a clear RaaS model, indicating signific\", 'severity': 'Emergency', 'ttps': [{'id': 'T1566.001', 'name': 'Spearphishing Attachment', 'tactic': 'See ATT&CK'}, {'id': 'T1190', 'name': 'Exploit Public-Facing Application', 'tactic': 'See ATT&CK'}], 'iocs': {'domains': ['attack.mitre.org'], 'cves': ['CVE-2023-0669', 'CVE-2023-27350']}, 'red_flags': ['Serious Threat**', 'T1650**: Acquire Access (resource-development)', 'T1680**: Local Storage Discovery', 'T1190**: Exploit Public-Facing Application (initial-access)', 'T1566.001**: Remote Desktop Protocol (RDP) for Lateral Movement', 'T1210.003**: Cobalt Strike Beacon Deployment'], 'threat_type': 'Analysed by Local LLM'}, 'stix_objects': [], 'raw_response': \"### Analysis of the Threat Report\\n\\n#### 1) Threat Type:\\nLockBit is a Ransomware-as-a-Service (RaaS) threat actor that uses various techniques to gain initial access, maintain persistence, and exfiltrate data before deploying their ransomware. They have been observed using CVE vulnerabilities for exploitation and leveraging Remote Desktop Protocol (RDP) for lateral movement.\\n\\n#### 2) Severity:\\n**Serious Threat**\\n\\nLockBit's operations are well-organized with a clear RaaS model, indicating significant resources dedicated to both the threat actor and its affiliates. The use of multiple attack vectors including exploiting known vulnerabilities and using sophisticated tools like Cobalt Strike suggests that this is a high-risk operation.\\n\\n#### 3) TTPs Mapped to MITRE ATT&CK:\\n- **T1650**: Acquire Access (resource-development)\\n- **T1680**: Local Storage Discovery\\n- **T1190**: Exploit Public-Facing Application (initial-access)\\n- **T1566.001**: Remote Desktop Protocol (RDP) for Lateral Movement\\n- **T1210.003**: Cobalt Strike Beacon Deployment\\n\\n#### 4) Red Flags:\\n- The use of RaaS model suggests a well-funded and organized threat actor.\\n- Exploitation of known vulnerabilities (CVE-2023-0669, CVE-2023-27350).\\n- Use of sophisticated tools like Cobalt Strike for persistence.\\n- Exfiltration of data using cloud storage services (rclone and MEGA).\\n\\n#### 5) IOCs:\\n- **IPs**: None provided in the context.\\n- **Domains**: None provided in the context.\\n- **Hashes**: None provided in the context.\\n- **CVEs**:\\n  - CVE-2023-0669\\n  - CVE-2023-27350\\n\\n### Summary:\\nLockBit is a serious threat actor using RaaS to deploy ransomware. They have been observed exploiting known vulnerabilities, using RDP for lateral movement, and deploying Cobalt Strike beacons. The use of",
+    "raw_response": "",
+    "llm_model": "qwen2.5:3b",
+    "guard_passed": true,
+    "guard_composite": 0.8797,
+    "tier_scores": {
+      "t1_embedding": 0.5989,
+      "t2_nli": 1.0,
+      "t3_crossref": 1.0,
+      "t4_entity": 1.0
+    },
+    "hallucination_rate": 0.1203,
+    "ungrounded_entities": [],
+    "attribution_rate": 0.5,
+    "citations": [
+      {
+        "claim": "{'summary': \"### Analysis of the Threat Report\\n\\n#### 1) Threat Type:\\nLockBit is a Ransomware-as-a-Service (RaaS) thre",
+        "source": "",
+        "confidence": "LOW"
+      },
+      {
+        "claim": "They have been observed using CVE vulnerabilities for exploitation and leveraging Remote Desktop Protocol (RDP) for late",
+        "source": "https://attack.mitre.org/techniques/T1190",
+        "confidence": "LOW"
+      }
+    ],
+    "ttp_recall": 0.0,
+    "cve_recall": 1.0,
+    "found_ttps": [
+      "T1190",
+      "T1210.003",
+      "T1566.001",
+      "T1650",
+      "T1680"
+    ],
+    "expected_ttps": [
+      "T1021.001",
+      "T1486",
+      "T1490",
+      "T1567"
+    ],
+    "found_cves": [
+      "CVE-2023-0669",
+      "CVE-2023-27350"
+    ],
+    "expected_cves": [
+      "CVE-2023-0669",
+      "CVE-2023-27350"
+    ],
+    "trust_score": 64.00556230545045,
+    "latency_s": 29.0,
+    "retrieval_mode": "vector_only"
+  },
+  {
+    "sample_id": "REAL-002_hybrid_rag",
+    "advisory_id": "REAL-002",
+    "condition": "hybrid_rag",
+    "analysis_text": "{'analysis': {'summary': '### Analysis\\n\\n#### 1) Threat Type:\\nLockBit ransomware operations as a Ransomware-as-a-Service model, leveraging vulnerabilities for initial access and deploying advanced techniques for lateral movement and data exfiltration.\\n\\n#### 2) Severity:\\nSerious Threat\\n\\n#### 3) TTPs Mapped to MITRE ATT&CK (T-codes):\\n- **T1650**: Acquire Access\\n- **T1190**: Exploit Public-Facing Application\\n- **T1003**: OS Credential Dumping\\n- **T1566.001**: Remote Desktop Protocol (RDP) for Lateral Movement\\n- **T1210.004**', 'severity': 'Emergency', 'ttps': [{'id': 'T1003', 'name': 'OS Credential Dumping', 'tactic': 'See ATT&CK'}, {'id': 'T1566.001', 'name': 'Spearphishing Attachment', 'tactic': 'See ATT&CK'}, {'id': 'T1190', 'name': 'Exploit Public-Facing Application', 'tactic': 'See ATT&CK'}], 'iocs': {'cves': ['CVE-2023-0669', 'CVE-2023-27350']}, 'red_flags': ['T1650**: Acquire Access', 'T1190**: Exploit Public-Facing Application', 'T1003**: OS Credential Dumping', 'T1566.001**: Remote Desktop Protocol (RDP) for Lateral Movement', 'T1210.004**: Cobalt Strike Beacon Deployment', 'T1078.001**: Exfiltration via Cloud Storage (e.g., MEGA)'], 'threat_type': 'Analysed by Local LLM'}, 'stix_objects': [], 'raw_response': '### Analysis\\n\\n#### 1) Threat Type:\\nLockBit ransomware operations as a Ransomware-as-a-Service model, leveraging vulnerabilities for initial access and deploying advanced techniques for lateral movement and data exfiltration.\\n\\n#### 2) Severity:\\nSerious Threat\\n\\n#### 3) TTPs Mapped to MITRE ATT&CK (T-codes):\\n- **T1650**: Acquire Access\\n- **T1190**: Exploit Public-Facing Application\\n- **T1003**: OS Credential Dumping\\n- **T1566.001**: Remote Desktop Protocol (RDP) for Lateral Movement\\n- **T1210.004**: Cobalt Strike Beacon Deployment\\n- **T1078.001**: Exfiltration via Cloud Storage (e.g., MEGA)\\n- **T1563.002**: Volume Shadow Copy Service (VSS) for Data Deletion\\n\\n#### 4) Red Flags:\\n- The use of Ransomware-as-a-Service model indicates a sophisticated and organized threat actor.\\n- Exploitation of known vulnerabilities (CVE-2023-0669, CVE-2023-27350).\\n- Use of advanced tools like Cobalt Strike for lateral movement.\\n- Exfiltration through multiple channels (RDP, MEGA cloud storage, and deletion of volume shadow copies).\\n\\n#### 5) IOCs:\\n- **CVE-2023-0669**: [REDACTED]\\n- **CVE-2023-27350**: [REDACTED]\\n- **RDP (Remote Desktop Protocol)**: [REDACTED] (IP address or domain)\\n- **Cobalt Strike Beacon Deployment**: [REDACTED] (Domain, IP, or beacon hash)\\n- **MEGA Cloud Storage**: [REDACTED] (Domain or account information)\\n- **Volume Shadow Copy Service (VSS)**: [REDACTED] (IP address or domain)\\n\\n### Notes:\\n- The CVE numbers are redacted as they were not provided in the context.\\n- RDP and Cobalt Strike beacon deployment details are redacted to protect privacy and confidentiality.\\n- MEGA cloud storage account information is redacted for security reasons.', 'context_used': 'LockBit 3.0 ransomware operations funct",
+    "raw_response": "",
+    "llm_model": "qwen2.5:3b",
+    "guard_passed": true,
+    "guard_composite": 0.8817,
+    "tier_scores": {
+      "t1_embedding": 0.6057,
+      "t2_nli": 1.0,
+      "t3_crossref": 1.0,
+      "t4_entity": 1.0
+    },
+    "hallucination_rate": 0.1183,
+    "ungrounded_entities": [],
+    "attribution_rate": 1.0,
+    "citations": [
+      {
+        "claim": "{'summary': '### Analysis\\n\\n#### 1) Threat Type:\\nLockBit ransomware operations as a Ransomware-as-a-Service model, lev",
+        "source": "ATT&CK:T1003",
+        "confidence": "LOW"
+      }
+    ],
+    "ttp_recall": 0.0,
+    "cve_recall": 1.0,
+    "found_ttps": [
+      "T1003",
+      "T1078.001",
+      "T1190",
+      "T1210.004",
+      "T1563.002",
+      "T1566.001",
+      "T1650"
+    ],
+    "expected_ttps": [
+      "T1021.001",
+      "T1486",
+      "T1490",
+      "T1567"
+    ],
+    "found_cves": [
+      "CVE-2023-0669",
+      "CVE-2023-27350"
+    ],
+    "expected_cves": [
+      "CVE-2023-0669",
+      "CVE-2023-27350"
+    ],
+    "trust_score": 64.18621230125427,
+    "latency_s": 61.5,
+    "retrieval_mode": "hybrid"
+  },
+  {
+    "sample_id": "REAL-003_no_rag",
+    "advisory_id": "REAL-003",
+    "condition": "no_rag",
+    "analysis_text": "{'analysis': {'summary': '### Analysis\\n\\n1. **Threat Type:**\\n   - **State-sponsored cyber threat actor (Volt Typhoon) targeting OT assets**\\n\\n2. **Severity:**\\n   - **Serious Threat**\\n\\n3. **TTPs Mapped to MITRE ATT&CK:**\\n   - **T1566.001**: Volt Typhoon actors use PowerShell for credential access and discovery.\\n   - **T1078.010**: They maintain persistence through web shells.\\n   - **T1049.006**: Proxy network traffic is used to obscure their activity.\\n\\n4. **Red Flags:**\\n   - **Use of living-off-the-land techniques (LOLT) in', 'severity': 'Emergency', 'ttps': [{'id': 'T1566.001', 'name': 'Spearphishing Attachment', 'tactic': 'See ATT&CK'}], 'iocs': {'cves': ['CVE-2023-27997']}, 'red_flags': ['State-sponsored cyber threat actor (Volt Typhoon) targeting OT assets**', 'Serious Threat**', 'T1566.001**: Volt Typhoon actors use PowerShell for credential access and discovery.', 'T1078.010**: They maintain persistence through web shells.', 'T1049.006**: Proxy network traffic is used to obscure their activity.', 'Use of living-off-the-land techniques (LOLT) including wmic, ntdsutil, netsh, and PowerShell** for credential access and discovery.'], 'threat_type': 'Analysed by Local LLM'}, 'stix_objects': [], 'raw_response': \"### Analysis\\n\\n1. **Threat Type:**\\n   - **State-sponsored cyber threat actor (Volt Typhoon) targeting OT assets**\\n\\n2. **Severity:**\\n   - **Serious Threat**\\n\\n3. **TTPs Mapped to MITRE ATT&CK:**\\n   - **T1566.001**: Volt Typhoon actors use PowerShell for credential access and discovery.\\n   - **T1078.010**: They maintain persistence through web shells.\\n   - **T1049.006**: Proxy network traffic is used to obscure their activity.\\n\\n4. **Red Flags:**\\n   - **Use of living-off-the-land techniques (LOLT) including wmic, ntdsutil, netsh, and PowerShell** for credential access and discovery.\\n   - **Maintenance of persistence through compromised SOHO routers via web shells and proxy network traffic** to obscure their activity.\\n\\n5. **IOCs:**\\n   - **CVE-2023-27997**: Exploited vulnerability in Fortinet FortiGuard devices.\\n   - **IPs, domains, hashes, or other indicators not provided in the report**.\\n\\n### Detailed Breakdown\\n\\n#### Threat Type:\\nVolt Typhoon is a state-sponsored cyber threat actor known for targeting OT assets. They are pre-positioning themselves on IT networks to enable lateral movement to these critical infrastructure systems.\\n\\n#### Severity:\\nThe severity of this threat is high due to its potential impact on critical infrastructure and the use of sophisticated techniques such as LOLT, which can lead to significant damage if successful.\\n\\n#### TTPs Mapped to MITRE ATT&CK:\\n- **T1566.001**: Volt Typhoon uses PowerShell for credential access and discovery. This is a common technique used by threat actors to maintain persistence and gain elevated privileges.\\n- **T1078.010**: They use web shells to maintain persistence, which can be difficult to detect and remove.\\n- **T1049.006**: Proxy network traffic is",
+    "raw_response": "",
+    "llm_model": "qwen2.5:3b",
+    "guard_passed": true,
+    "guard_composite": 0.7928,
+    "tier_scores": {
+      "t1_embedding": 0.6218,
+      "t2_nli": 0.6875,
+      "t3_crossref": 1.0,
+      "t4_entity": 1.0
+    },
+    "hallucination_rate": 0.2072,
+    "ungrounded_entities": [],
+    "attribution_rate": 0.8,
+    "citations": [
+      {
+        "claim": "{'summary': '### Analysis\\n\\n1.",
+        "source": "",
+        "confidence": "LOW"
+      },
+      {
+        "claim": "**Threat Type:**\\n   - **State-sponsored cyber threat actor (Volt Typhoon) targeting OT assets**\\n\\n2.",
+        "source": "https://attack.mitre.org/techniques/T1681",
+        "confidence": "LOW"
+      },
+      {
+        "claim": "**Severity:**\\n   - **Serious Threat**\\n\\n3.",
+        "source": "https://attack.mitre.org/techniques/T1681",
+        "confidence": "LOW"
+      },
+      {
+        "claim": "**TTPs Mapped to MITRE ATT&CK:**\\n   - **T1566.001**: Volt Typhoon actors use PowerShell for credential access and disco",
+        "source": "https://attack.mitre.org/techniques/T1597/001",
+        "confidence": "LOW"
+      },
+      {
+        "claim": "**Red Flags:**\\n   - **Use of living-off-the-land techniques (LOLT) in', 'severity': 'Emergency', 'ttps': [{'id': 'T1566",
+        "source": "https://attack.mitre.org/techniques/T1597/001",
+        "confidence": "LOW"
+      }
+    ],
+    "ttp_recall": 0.0,
+    "cve_recall": 1.0,
+    "found_ttps": [
+      "T1049.006",
+      "T1078.010",
+      "T1566.001"
+    ],
+    "expected_ttps": [
+      "T1059.001",
+      "T1090",
+      "T1190",
+      "T1505.003"
+    ],
+    "found_cves": [
+      "CVE-2023-27997"
+    ],
+    "expected_cves": [
+      "CVE-2023-27997"
+    ],
+    "trust_score": 61.152567874363484,
+    "latency_s": 35.6,
+    "retrieval_mode": "none"
+  },
+  {
+    "sample_id": "REAL-003_vector_rag",
+    "advisory_id": "REAL-003",
+    "condition": "vector_rag",
+    "analysis_text": "{'analysis': {'summary': '### Analysis\\n\\n#### 1) Threat Type:\\nVolt Typhoon is a state-sponsored cyber actor targeting IT and OT networks.\\n\\n#### 2) Severity:\\nSerious Threat\\n\\n#### 3) TTPs Mapped to MITRE ATT&CK:\\n\\n- **T1190.004**: Exploit Public-Facing Application (initial-access)\\n- **T1566.001**: Living-off-the-Land Techniques\\n- **T1210.003**: Exploitation of Remote Services (lateral-movement)\\n\\n#### 4) Red Flags:\\n- Volt Typhoon is known to be pre-positioning themselves on IT networks.\\n- They are targeting both IT and OT ass', 'severity': 'Serious Threat', 'ttps': [{'id': 'T1566.001', 'name': 'Spearphishing Attachment', 'tactic': 'See ATT&CK'}], 'iocs': {'cves': ['CVE-2023-27997']}, 'red_flags': ['T1190.004**: Exploit Public-Facing Application (initial-access)', 'T1566.001**: Living-off-the-Land Techniques', 'T1210.003**: Exploitation of Remote Services (lateral-movement)', 'Volt Typhoon is known to be pre-positioning themselves on IT networks.', 'They are targeting both IT and OT assets, indicating a multi-layered attack strategy.', 'Use of CVE-2023-27997 for exploitation.'], 'threat_type': 'Analysed by Local LLM'}, 'stix_objects': [], 'raw_response': '### Analysis\\n\\n#### 1) Threat Type:\\nVolt Typhoon is a state-sponsored cyber actor targeting IT and OT networks.\\n\\n#### 2) Severity:\\nSerious Threat\\n\\n#### 3) TTPs Mapped to MITRE ATT&CK:\\n\\n- **T1190.004**: Exploit Public-Facing Application (initial-access)\\n- **T1566.001**: Living-off-the-Land Techniques\\n- **T1210.003**: Exploitation of Remote Services (lateral-movement)\\n\\n#### 4) Red Flags:\\n- Volt Typhoon is known to be pre-positioning themselves on IT networks.\\n- They are targeting both IT and OT assets, indicating a multi-layered attack strategy.\\n- Use of CVE-2023-27997 for exploitation.\\n- Leveraging Fortinet FortiGuard devices as targets.\\n\\n#### 5) IOCs:\\n- **CVE-2023-27997**: A specific vulnerability that Volt Typhoon is exploiting. However, no direct CVE number was provided in the context.\\n- **Fortinet FortiGuard Devices**: Public-facing appliances targeted by Volt Typhoon.\\n- **IPs/Domains/Hashes/CVEs not specified** in this threat report.\\n\\n### Detailed Breakdown:\\n\\n#### Threat Type:\\nVolt Typhoon is a state-sponsored actor known for targeting both IT and OT networks. They are pre-positioning themselves to enable lateral movement, indicating they have already gained initial access through public-facing appliances like Fortinet FortiGuard devices.\\n\\n#### Severity:\\nThe severity of this threat is high due to the use of CVE-2023-27997, which suggests a significant vulnerability that could be exploited. The actors are also known for their persistence and lateral movement tactics, making it a serious concern.\\n\\n#### TTPs Mapped to MITRE ATT&CK:\\n1. **T1190.004**: Volt Typhoon is exploiting public-facing applications (Fortinet FortiGuard devices) to gain initial access.\\n2. **T1566.001**: They are using living-off-the-land techniques, which involves leveraging legiti",
+    "raw_response": "",
+    "llm_model": "qwen2.5:3b",
+    "guard_passed": true,
+    "guard_composite": 0.8567,
+    "tier_scores": {
+      "t1_embedding": 0.6225,
+      "t2_nli": 0.9,
+      "t3_crossref": 1.0,
+      "t4_entity": 1.0
+    },
+    "hallucination_rate": 0.1433,
+    "ungrounded_entities": [],
+    "attribution_rate": 1.0,
+    "citations": [
+      {
+        "claim": "{'summary': '### Analysis\\n\\n#### 1) Threat Type:\\nVolt Typhoon is a state-sponsored cyber actor targeting IT and OT net",
+        "source": "https://attack.mitre.org/techniques/T1587/004",
+        "confidence": "LOW"
+      }
+    ],
+    "ttp_recall": 0.0,
+    "cve_recall": 1.0,
+    "found_ttps": [
+      "T1190.004",
+      "T1210.003",
+      "T1566.001"
+    ],
+    "expected_ttps": [
+      "T1059.001",
+      "T1090",
+      "T1190",
+      "T1505.003"
+    ],
+    "found_cves": [
+      "CVE-2023-27997"
+    ],
+    "expected_cves": [
+      "CVE-2023-27997"
+    ],
+    "trust_score": 66.68677677127974,
+    "latency_s": 33.2,
+    "retrieval_mode": "vector_only"
+  },
+  {
+    "sample_id": "REAL-003_hybrid_rag",
+    "advisory_id": "REAL-003",
+    "condition": "hybrid_rag",
+    "analysis_text": "{'analysis': {'summary': '### Analysis\\n\\n#### 1) Threat Type:\\nVolt Typhoon is a state-sponsored cyber actor targeting IT networks with the intent of enabling lateral movement to Operational Technology (OT) assets.\\n\\n#### 2) Severity:\\nSerious Threat\\n\\n#### 3) TTPs Mapped to MITRE ATT&CK:\\n\\n- **T1190: Exploit Public-Facing Application**\\n  - [kg_semantic] [ATT&CK:T1190] (score: -4.5608)\\n  - [vector] [ATT&CK:T1190] (score: -7.5276)\\n\\n- **T1566.001: PowerShell**\\n  - [kg_semantic] [ATT&CK:T1566.001] (score: -4.388)\\n  \\n- **T1197: We', 'severity': 'Serious Threat', 'ttps': [{'id': 'T1190', 'name': 'Exploit Public-Facing Application', 'tactic': 'See ATT&CK'}, {'id': 'T1566.001', 'name': 'Spearphishing Attachment', 'tactic': 'See ATT&CK'}], 'iocs': {'cves': ['CVE-2018-13379', 'CVE-2023-27997']}, 'red_flags': ['T1190: Exploit Public-Facing Application**', '[kg_semantic] [ATT&CK:T1190] (score: -4.5608)', '[vector] [ATT&CK:T1190] (score: -7.5276)', 'T1566.001: PowerShell**', '[kg_semantic] [ATT&CK:T1566.001] (score: -4.388)', 'T1197: Web Shell**'], 'threat_type': 'Analysed by Local LLM'}, 'stix_objects': [], 'raw_response': \"### Analysis\\n\\n#### 1) Threat Type:\\nVolt Typhoon is a state-sponsored cyber actor targeting IT networks with the intent of enabling lateral movement to Operational Technology (OT) assets.\\n\\n#### 2) Severity:\\nSerious Threat\\n\\n#### 3) TTPs Mapped to MITRE ATT&CK:\\n\\n- **T1190: Exploit Public-Facing Application**\\n  - [kg_semantic] [ATT&CK:T1190] (score: -4.5608)\\n  - [vector] [ATT&CK:T1190] (score: -7.5276)\\n\\n- **T1566.001: PowerShell**\\n  - [kg_semantic] [ATT&CK:T1566.001] (score: -4.388)\\n  \\n- **T1197: Web Shell**\\n  - [kg_semantic] [ATT&CK:T1197] (score: -2.887)\\n\\n#### 4) Red Flags:\\n- The actors are pre-positioning themselves on IT networks to enable lateral movement.\\n- They use a combination of public-facing appliance vulnerabilities and living-off-the-land techniques for initial access, persistence, and lateral movement.\\n\\n#### 5) IOCs:\\n\\n- **CVE-2023-27997**: This is the specific vulnerability exploited by Volt Typhoon. However, no CVE number was provided in the context.\\n- **Fortinet FortiGuard devices**: These are public-facing appliances that can be targeted by Volt Typhoon.\\n- **PowerShell**: The use of PowerShell for credential access and persistence is a red flag.\\n- **Web Shells**: Compromised web shells used for maintaining persistence.\\n\\n### Summary:\\nVolt Typhoon, a state-sponsored actor from the People's Republic of China, is exploiting vulnerabilities in public-facing appliances like Fortinet FortiGuard devices to gain initial access. They use CVE-2023-27997 and living-off-the-land techniques including PowerShell for credential access and persistence through web shells. The actors are pre-positioning themselves on IT networks to enable lateral movement to OT assets, which is a serious threat.\\n\\n### IOCs:\\n- **Vulnerability**: CVE-2023-27997\\n- **Device**: Fortinet FortiGuard devices\\n- **Technique",
+    "raw_response": "",
+    "llm_model": "qwen2.5:3b",
+    "guard_passed": true,
+    "guard_composite": 0.7398,
+    "tier_scores": {
+      "t1_embedding": 0.5328,
+      "t2_nli": 0.6,
+      "t3_crossref": 1.0,
+      "t4_entity": 1.0
+    },
+    "hallucination_rate": 0.2602,
+    "ungrounded_entities": [],
+    "attribution_rate": 0.0,
+    "citations": [
+      {
+        "claim": "{'summary': '### Analysis\\n\\n#### 1) Threat Type:\\nVolt Typhoon is a state-sponsored cyber actor targeting IT networks w",
+        "source": "",
+        "confidence": "LOW"
+      }
+    ],
+    "ttp_recall": 0.25,
+    "cve_recall": 1.0,
+    "found_ttps": [
+      "T1190",
+      "T1197",
+      "T1566.001"
+    ],
+    "expected_ttps": [
+      "T1059.001",
+      "T1090",
+      "T1190",
+      "T1505.003"
+    ],
+    "found_cves": [
+      "CVE-2018-13379",
+      "CVE-2023-27997"
+    ],
+    "expected_cves": [
+      "CVE-2023-27997"
+    ],
+    "trust_score": 66.0037987256943,
+    "latency_s": 46.7,
+    "retrieval_mode": "hybrid"
+  },
+  {
+    "sample_id": "REAL-005_no_rag",
+    "advisory_id": "REAL-005",
+    "condition": "no_rag",
+    "analysis_text": "{'analysis': {'summary': '### Analysis\\n\\n#### 1) Threat Type:\\nAPT (Advanced Persistent Threat)\\n\\n#### 2) Severity:\\nSerious Threat\\n\\n#### 3) MITRE ATT&CK Tactics and Techniques:\\n\\n- **T1566.001**: Spearphishing attachment\\n- **T1059.001**: PowerShell for execution\\n- **T1071.001**: Web protocols (encrypted C2 channels)\\n\\n#### 4) Red Flags:\\n- The use of multiple sophisticated techniques including spearphishing, malware persistence, and encrypted command-and-control communications.\\n- Historical targeting by APT groups often indica', 'severity': 'Serious Threat', 'ttps': [{'id': 'T1059.001', 'name': 'PowerShell', 'tactic': 'See ATT&CK'}, {'id': 'T1071.001', 'name': 'Web Protocols', 'tactic': 'See ATT&CK'}, {'id': 'T1566.001', 'name': 'Spearphishing Attachment', 'tactic': 'See ATT&CK'}], 'iocs': {'cves': ['CVE-2017-0199', 'CVE-2015-1641']}, 'red_flags': ['T1566.001**: Spearphishing attachment', 'T1059.001**: PowerShell for execution', 'T1071.001**: Web protocols (encrypted C2 channels)', 'The use of multiple sophisticated techniques including spearphishing, malware persistence, and encrypted command-and-control communications.', 'Historical targeting by APT groups often indicates a high level of sophistication and potential for long-term access to corporate networks.', 'CVEs**: CVE-2017-0199, CVE-2015-1641'], 'threat_type': 'Analysed by Local LLM'}, 'stix_objects': [], 'raw_response': \"### Analysis\\n\\n#### 1) Threat Type:\\nAPT (Advanced Persistent Threat)\\n\\n#### 2) Severity:\\nSerious Threat\\n\\n#### 3) MITRE ATT&CK Tactics and Techniques:\\n\\n- **T1566.001**: Spearphishing attachment\\n- **T1059.001**: PowerShell for execution\\n- **T1071.001**: Web protocols (encrypted C2 channels)\\n\\n#### 4) Red Flags:\\n- The use of multiple sophisticated techniques including spearphishing, malware persistence, and encrypted command-and-control communications.\\n- Historical targeting by APT groups often indicates a high level of sophistication and potential for long-term access to corporate networks.\\n\\n#### 5) IOCs (IPs, domains, hashes, CVEs):\\n\\n- **CVEs**: CVE-2017-0199, CVE-2015-1641\\n- **Domains**:\\n  - `example.com` (Example domain used for credential harvesting)\\n- **Hashes**:\\n  - `hash123`\\n  - `hash456`\\n- **IPs**: \\n  - `192.0.2.1` (C2 server IP address)\\n\\n### Notes:\\n- The provided list of IOCs is illustrative and should be updated with actual data.\\n- Additional research may reveal more specific domains, IPs, or hashes associated with this threat group.\\n\\nThis analysis highlights the sophisticated nature of APT28's operations, emphasizing the need for robust security measures to detect and mitigate such threats.\", 'context_used': \"APT28 is a threat group attributed to Russia's General Staff Main Intelligence Directorate (GRU). APT28 has been observed using spearphishing with malicious Microsoft Office documents exploiting CVE-2\", 'ollama_model': 'qwen2.5:3b', 'latency_ms': 14922.568798065186, 'mode': 'api'}",
+    "raw_response": "",
+    "llm_model": "qwen2.5:3b",
+    "guard_passed": true,
+    "guard_composite": 0.8771,
+    "tier_scores": {
+      "t1_embedding": 0.5904,
+      "t2_nli": 1.0,
+      "t3_crossref": 1.0,
+      "t4_entity": 1.0
+    },
+    "hallucination_rate": 0.1229,
+    "ungrounded_entities": [],
+    "attribution_rate": 1.0,
+    "citations": [
+      {
+        "claim": "{'summary': '### Analysis\\n\\n#### 1) Threat Type:\\nAPT (Advanced Persistent Threat)\\n\\n#### 2) Severity:\\nSerious Threat",
+        "source": "https://attack.mitre.org/techniques/T1681",
+        "confidence": "LOW"
+      }
+    ],
+    "ttp_recall": 1.0,
+    "cve_recall": 1.0,
+    "found_ttps": [
+      "T1059.001",
+      "T1071.001",
+      "T1566.001"
+    ],
+    "expected_ttps": [
+      "T1059.001",
+      "T1071.001",
+      "T1566.001"
+    ],
+    "found_cves": [
+      "CVE-2015-1641",
+      "CVE-2017-0199"
+    ],
+    "expected_cves": [
+      "CVE-2015-1641",
+      "CVE-2017-0199"
+    ],
+    "trust_score": 66.32721227508588,
+    "latency_s": 23.7,
+    "retrieval_mode": "none"
+  },
+  {
+    "sample_id": "REAL-005_vector_rag",
+    "advisory_id": "REAL-005",
+    "condition": "vector_rag",
+    "analysis_text": "{'analysis': {'summary': \"### Analysis of the Threat Report\\n\\n#### 1) Threat Type:\\nAPT (Advanced Persistent Threat)\\n\\n#### 2) Severity:\\nSerious Threat\\n\\n#### 3) TTPs Mapped to MITRE ATT&CK:\\n\\n- **T1566.001** - Spearphishing attachment: APT28 uses spearphishing with malicious Microsoft Office documents.\\n- **T1059.001** - PowerShell for execution: APT28 employs X-Agent and Zebrocy malware, which likely use PowerShell for execution.\\n\\n#### 4) Red Flags:\\n- The threat group is known to be from Russia's GRU (General Staff Main Inte\", 'severity': 'Serious Threat', 'ttps': [{'id': 'T1059.001', 'name': 'PowerShell', 'tactic': 'See ATT&CK'}, {'id': 'T1566.001', 'name': 'Spearphishing Attachment', 'tactic': 'See ATT&CK'}], 'iocs': {'cves': ['CVE-2017-0199', 'CVE-2015-1641']}, 'red_flags': ['T1566.001** - Spearphishing attachment: APT28 uses spearphishing with malicious Microsoft Office documents.', 'T1059.001** - PowerShell for execution: APT28 employs X-Agent and Zebrocy malware, which likely use PowerShell for execution.', \"The threat group is known to be from Russia's GRU (General Staff Main Intelligence Directorate).\", 'They have a history of using spearphishing attacks with malicious Office documents.', 'Credential harvesting through fake login pages mimicking corporate webmail portals.', 'Use of X-Agent and Zebrocy malware for persistent access.'], 'threat_type': 'Analysed by Local LLM'}, 'stix_objects': [], 'raw_response': \"### Analysis of the Threat Report\\n\\n#### 1) Threat Type:\\nAPT (Advanced Persistent Threat)\\n\\n#### 2) Severity:\\nSerious Threat\\n\\n#### 3) TTPs Mapped to MITRE ATT&CK:\\n\\n- **T1566.001** - Spearphishing attachment: APT28 uses spearphishing with malicious Microsoft Office documents.\\n- **T1059.001** - PowerShell for execution: APT28 employs X-Agent and Zebrocy malware, which likely use PowerShell for execution.\\n\\n#### 4) Red Flags:\\n- The threat group is known to be from Russia's GRU (General Staff Main Intelligence Directorate).\\n- They have a history of using spearphishing attacks with malicious Office documents.\\n- Credential harvesting through fake login pages mimicking corporate webmail portals.\\n- Use of X-Agent and Zebrocy malware for persistent access.\\n\\n#### 5) IOCs:\\n- **CVE-2017-0199** - APT28 has been observed exploiting this vulnerability in their attacks.\\n- **CVE-2015-1641** - Another known CVE that they have used to exploit Office documents.\\n- **IP Addresses**: No specific IP addresses provided in the context.\\n- **Domains**: No specific domains provided in the context.\\n- **Hashes**: No specific hashes provided in the context.\\n- **CVEs**: CVE-2017-0199, CVE-2015-1641\\n\\n### Summary:\\nAPT28 is a serious threat group known for using spearphishing attacks with malicious Office documents to compromise corporate systems. They have used vulnerabilities like CVE-2017-0199 and CVE-2015-1641, as well as malware such as X-Agent and Zebrocy for persistent access. The threat group is known to use fake login pages",
+    "raw_response": "",
+    "llm_model": "qwen2.5:3b",
+    "guard_passed": true,
+    "guard_composite": 0.8612,
+    "tier_scores": {
+      "t1_embedding": 0.7374,
+      "t2_nli": 0.8,
+      "t3_crossref": 1.0,
+      "t4_entity": 1.0
+    },
+    "hallucination_rate": 0.1388,
+    "ungrounded_entities": [],
+    "attribution_rate": 1.0,
+    "citations": [
+      {
+        "claim": "{'summary': \"### Analysis of the Threat Report\\n\\n#### 1) Threat Type:\\nAPT (Advanced Persistent Threat)\\n\\n#### 2) Seve",
+        "source": "https://attack.mitre.org/techniques/T1587/001",
+        "confidence": "LOW"
+      }
+    ],
+    "ttp_recall": 0.6667,
+    "cve_recall": 1.0,
+    "found_ttps": [
+      "T1059.001",
+      "T1566.001"
+    ],
+    "expected_ttps": [
+      "T1059.001",
+      "T1071.001",
+      "T1566.001"
+    ],
+    "found_cves": [
+      "CVE-2015-1641",
+      "CVE-2017-0199"
+    ],
+    "expected_cves": [
+      "CVE-2015-1641",
+      "CVE-2017-0199"
+    ],
+    "trust_score": 67.54561756837775,
+    "latency_s": 27.6,
+    "retrieval_mode": "vector_only"
+  },
+  {
+    "sample_id": "REAL-005_hybrid_rag",
+    "advisory_id": "REAL-005",
+    "condition": "hybrid_rag",
+    "analysis_text": "{'analysis': {'summary': \"### Analysis\\n\\n#### 1) Threat Type:\\nAPT (Advanced Persistent Threat)\\n\\n#### 2) Severity:\\nSerious Threat\\n\\n#### 3) MITRE ATT&CK Techniques Mapped:\\n- **T1566.001**: Spearphishing Attachment\\n- **T1059.001**: PowerShell Execution\\n- **T1587.001**: Malware (resource-development)\\n- **T1593.003**: Code Repositories (reconnaissance)\\n\\n#### 4) Red Flags:\\n- APT28's use of spearphishing with malicious Microsoft Office documents, which is a known and effective attack vector.\\n- Credential harvesting through fake \", 'severity': 'Serious Threat', 'ttps': [{'id': 'T1566.001', 'name': 'Spearphishing Attachment', 'tactic': 'See ATT&CK'}, {'id': 'T1071.001', 'name': 'Web Protocols', 'tactic': 'See ATT&CK'}, {'id': 'T1059.001', 'name': 'PowerShell', 'tactic': 'See ATT&CK'}], 'iocs': {'cves': ['CVE-2017-0199', 'CVE-2015-1641']}, 'red_flags': ['T1566.001**: Spearphishing Attachment', 'T1059.001**: PowerShell Execution', 'T1587.001**: Malware (resource-development)', 'T1593.003**: Code Repositories (reconnaissance)', \"APT28's use of spearphishing with malicious Microsoft Office documents, which is a known and effective attack vector.\", 'Credential harvesting through fake login pages mimicking corporate webmail portals to maintain persistence.'], 'threat_type': 'Analysed by Local LLM'}, 'stix_objects': [], 'raw_response': \"### Analysis\\n\\n#### 1) Threat Type:\\nAPT (Advanced Persistent Threat)\\n\\n#### 2) Severity:\\nSerious Threat\\n\\n#### 3) MITRE ATT&CK Techniques Mapped:\\n- **T1566.001**: Spearphishing Attachment\\n- **T1059.001**: PowerShell Execution\\n- **T1587.001**: Malware (resource-development)\\n- **T1593.003**: Code Repositories (reconnaissance)\\n\\n#### 4) Red Flags:\\n- APT28's use of spearphishing with malicious Microsoft Office documents, which is a known and effective attack vector.\\n- Credential harvesting through fake login pages mimicking corporate webmail portals to maintain persistence.\\n- Use of X-Agent and Zebrocy malware for persistent access.\\n- Exfiltration of data over encrypted C2 channels using web protocols.\\n\\n#### 5) IOCs:\\n- **CVE-2017-0199**: A known vulnerability in Microsoft Office documents that can be exploited by APT groups like APT28.\\n- **CVE-2015-1641**: Another known vulnerability in Microsoft Office documents, also targeted by APT28.\\n- **X-Agent**: Malware used for persistent access and data exfiltration.\\n- **Zebrocy**: Malware used for persistence and data exfiltration.\\n- **Encrypted C2 Channels using T1071.001 web protocols**: The specific encryption method or protocol is not specified, but encrypted communication over web protocols is a common tactic.\\n\\n### Notes:\\n- No specific IP addresses, domains, or hashes are provided in the given context.\\n- CVE numbers (CVE-2017-0199 and CVE-2015-1641) are mentioned, indicating known vulnerabilities that APT28 has exploited.\\n- The use of X-Agent and Zebrocy malware suggests a sophisticated attack with multiple layers of persistence and data exfiltr",
+    "raw_response": "",
+    "llm_model": "qwen2.5:3b",
+    "guard_passed": true,
+    "guard_composite": 0.9052,
+    "tier_scores": {
+      "t1_embedding": 0.6841,
+      "t2_nli": 1.0,
+      "t3_crossref": 1.0,
+      "t4_entity": 1.0
+    },
+    "hallucination_rate": 0.0948,
+    "ungrounded_entities": [],
+    "attribution_rate": 1.0,
+    "citations": [
+      {
+        "claim": "{'summary': \"### Analysis\\n\\n#### 1) Threat Type:\\nAPT (Advanced Persistent Threat)\\n\\n#### 2) Severity:\\nSerious Threat",
+        "source": "https://attack.mitre.org/techniques/T1587/001",
+        "confidence": "LOW"
+      }
+    ],
+    "ttp_recall": 1.0,
+    "cve_recall": 1.0,
+    "found_ttps": [
+      "T1059.001",
+      "T1071.001",
+      "T1566.001",
+      "T1587.001",
+      "T1593.003"
+    ],
+    "expected_ttps": [
+      "T1059.001",
+      "T1071.001",
+      "T1566.001"
+    ],
+    "found_cves": [
+      "CVE-2015-1641",
+      "CVE-2017-0199"
+    ],
+    "expected_cves": [
+      "CVE-2015-1641",
+      "CVE-2017-0199"
+    ],
+    "trust_score": 67.0982688889874,
+    "latency_s": 69.3,
+    "retrieval_mode": "hybrid"
+  },
+  {
+    "sample_id": "REAL-009_no_rag",
+    "advisory_id": "REAL-009",
+    "condition": "no_rag",
+    "analysis_text": "{'analysis': {'summary': '### Analysis\\n\\n#### 1) Threat Type:\\nSupply Chain Attack\\n\\n#### 2) Severity:\\nSerious Threat\\n\\n#### 3) TTPs Mapped to MITRE ATT&CK (T-codes):\\n- **T1566.001**: The use of forged SAML tokens for lateral movement.\\n- **T1210**: Credential theft with Mimikatz.\\n- **T1048.003**: Use of TEARDROP and Raindrop malware loaders.\\n- **T1092**: Communication via HTTP to a C2 domain (avsvmcloud.com).\\n- **T1566.001**: Lateral movement using forged SAML tokens.\\n\\n#### 4) Red Flags:\\n- The attack leveraged SolarWinds Ori', 'severity': 'Serious Threat', 'ttps': [{'id': 'T1566.001', 'name': 'Spearphishing Attachment', 'tactic': 'See ATT&CK'}], 'iocs': {'domains': ['avsvmcloud.com'], 'cves': ['CVE-2020-10148']}, 'red_flags': ['T1566.001**: The use of forged SAML tokens for lateral movement.', 'T1210**: Credential theft with Mimikatz.', 'T1048.003**: Use of TEARDROP and Raindrop malware loaders.', 'T1092**: Communication via HTTP to a C2 domain (avsvmcloud.com).', 'T1566.001**: Lateral movement using forged SAML tokens.', 'The attack leveraged SolarWinds Orion software, which was widely used by government agencies.'], 'threat_type': 'Analysed by Local LLM'}, 'stix_objects': [], 'raw_response': \"### Analysis\\n\\n#### 1) Threat Type:\\nSupply Chain Attack\\n\\n#### 2) Severity:\\nSerious Threat\\n\\n#### 3) TTPs Mapped to MITRE ATT&CK (T-codes):\\n- **T1566.001**: The use of forged SAML tokens for lateral movement.\\n- **T1210**: Credential theft with Mimikatz.\\n- **T1048.003**: Use of TEARDROP and Raindrop malware loaders.\\n- **T1092**: Communication via HTTP to a C2 domain (avsvmcloud.com).\\n- **T1566.001**: Lateral movement using forged SAML tokens.\\n\\n#### 4) Red Flags:\\n- The attack leveraged SolarWinds Orion software, which was widely used by government agencies.\\n- Use of multiple malware loaders and credential theft tools indicates a sophisticated attacker with advanced capabilities.\\n- Communication via HTTP to a C2 domain (avsvmcloud.com), suggesting the use of compromised infrastructure or command-and-control servers.\\n\\n#### 5) IOCs:\\n- **C2 Domain**: avsvmcloud.com\\n- **CVEs**:\\n  - CVE-2020-10148: Exploited for lateral movement via forged SAML tokens.\\n  \\n### Detailed Breakdown\\n\\n#### TTPs Mapped to MITRE ATT&CK:\\n\\n- **T1566.001**: The use of forged SAML tokens is a common tactic in credential theft and lateral movement campaigns. This involves creating fake authentication credentials that trick the victim into providing their real credentials, which are then used by the attacker.\\n  - **Example**: In this case, attackers used forged SAML tokens to move laterally within compromised systems.\\n\\n- **T1210**: Mimikatz is a tool for credential dumping. It can extract sensitive information such as passwords and encryption keys from memory without requiring user interaction.\\n  - **Example**: The report mentions that Mimikatz was used for credential theft, indicating the attacker's ability to compromise system credentials.\\n\\n- **T104",
+    "raw_response": "",
+    "llm_model": "qwen2.5:3b",
+    "guard_passed": true,
+    "guard_composite": 0.8871,
+    "tier_scores": {
+      "t1_embedding": 0.6238,
+      "t2_nli": 1.0,
+      "t3_crossref": 1.0,
+      "t4_entity": 1.0
+    },
+    "hallucination_rate": 0.1129,
+    "ungrounded_entities": [],
+    "attribution_rate": 1.0,
+    "citations": [
+      {
+        "claim": "{'summary': '### Analysis\\n\\n#### 1) Threat Type:\\nSupply Chain Attack\\n\\n#### 2) Severity:\\nSerious Threat\\n\\n#### 3) T",
+        "source": "https://attack.mitre.org/techniques/T1608/001",
+        "confidence": "LOW"
+      }
+    ],
+    "ttp_recall": 0.0,
+    "cve_recall": 1.0,
+    "found_ttps": [
+      "T1048.003",
+      "T1092",
+      "T1210",
+      "T1566.001"
+    ],
+    "expected_ttps": [
+      "T1003",
+      "T1071.001",
+      "T1195.002"
+    ],
+    "found_cves": [
+      "CVE-2020-10148"
+    ],
+    "expected_cves": [
+      "CVE-2020-10148"
+    ],
+    "trust_score": 66.14927232836868,
+    "latency_s": 35.6,
+    "retrieval_mode": "none"
+  },
+  {
+    "sample_id": "REAL-009_vector_rag",
+    "advisory_id": "REAL-009",
+    "condition": "vector_rag",
+    "analysis_text": "{'analysis': {'summary': '### Analysis of the Threat Report\\n\\n#### 1. **Threat Type**\\n   - **Supply Chain Attack**: The threat actor used the SolarWinds supply chain compromise, inserting malicious code into their software updates.\\n\\n#### 2. **Severity**\\n   - **Serious Threat**: Given that approximately 18,000 organizations worldwide were affected, including US government agencies, this is a significant and severe threat.\\n\\n#### 3. **TTPs Mapped to MITRE ATT&CK (T-codes)**\\n   - **T1566.001**: The threat actor used the Solar', 'severity': 'Serious Threat', 'ttps': [{'id': 'T1566.001', 'name': 'Spearphishing Attachment', 'tactic': 'See ATT&CK'}], 'iocs': {'domains': ['avsvmcloud.com'], 'cves': ['CVE-2020-10148']}, 'red_flags': ['Supply Chain Attack**: The threat actor used the SolarWinds supply chain compromise, inserting malicious code into their software updates.', 'Serious Threat**: Given that approximately 18,000 organizations worldwide were affected, including US government agencies, this is a significant and severe threat.', 'T1566.001**: The threat actor used the SolarWinds Orion software updates as part of their attack vector.', 'T1211.004**: The malicious code communicated via HTTP, which is a common method for Defense Evasion and bypassing security features.', 'T1584.003**: The threat actor compromised third-party Virtual Private Servers (VPSs) to use as infrastructure.', 'Use of SolarWinds Software**: Organizations using the affected SolarWinds software were targeted, indicating a sophisticated and well-planned attack.'], 'threat_type': 'Analysed by Local LLM'}, 'stix_objects': [], 'raw_response': '### Analysis of the Threat Report\\n\\n#### 1. **Threat Type**\\n   - **Supply Chain Attack**: The threat actor used the SolarWinds supply chain compromise, inserting malicious code into their software updates.\\n\\n#### 2. **Severity**\\n   - **Serious Threat**: Given that approximately 18,000 organizations worldwide were affected, including US government agencies, this is a significant and severe threat.\\n\\n#### 3. **TTPs Mapped to MITRE ATT&CK (T-codes)**\\n   - **T1566.001**: The threat actor used the SolarWinds Orion software updates as part of their attack vector.\\n   - **T1211.004**: The malicious code communicated via HTTP, which is a common method for Defense Evasion and bypassing security features.\\n   - **T1584.003**: The threat actor compromised third-party Virtual Private Servers (VPSs) to use as infrastructure.\\n\\n#### 4. **Red Flags**\\n   - **Use of SolarWinds Software**: Organizations using the affected SolarWinds software were targeted, indicating a sophisticated and well-planned attack.\\n   - **C2 Domain**: The C2 domain avsvmcloud.com was used for communication, suggesting persistence and stealth in the compromised systems.\\n\\n#### 5. **IOCs (IPs, Domains, Hashes, CVEs)**\\n   - **Domain**: avsvmcloud.com\\n   - **CVE**: No specific CVE numbers are provided in the given context.\\n   - **Hashes**: No specific hashes are mentione",
+    "raw_response": "",
+    "llm_model": "qwen2.5:3b",
+    "guard_passed": true,
+    "guard_composite": 0.8955,
+    "tier_scores": {
+      "t1_embedding": 0.6517,
+      "t2_nli": 1.0,
+      "t3_crossref": 1.0,
+      "t4_entity": 1.0
+    },
+    "hallucination_rate": 0.1045,
+    "ungrounded_entities": [],
+    "attribution_rate": 0.75,
+    "citations": [
+      {
+        "claim": "{'summary': '### Analysis of the Threat Report\\n\\n#### 1.",
+        "source": "https://attack.mitre.org/techniques/T1211",
+        "confidence": "LOW"
+      },
+      {
+        "claim": "**Threat Type**\\n   - **Supply Chain Attack**: The threat actor used the SolarWinds supply chain compromise, inserting m",
+        "source": "https://attack.mitre.org/techniques/T1211",
+        "confidence": "LOW"
+      },
+      {
+        "claim": "**Severity**\\n   - **Serious Threat**: Given that approximately 18,000 organizations worldwide were affected, including ",
+        "source": "",
+        "confidence": "LOW"
+      },
+      {
+        "claim": "**TTPs Mapped to MITRE ATT&CK (T-codes)**\\n   - **T1566.001**: The threat actor used the Solar', 'severity': 'Serious Th",
+        "source": "https://attack.mitre.org/techniques/T1211",
+        "confidence": "LOW"
+      }
+    ],
+    "ttp_recall": 0.0,
+    "cve_recall": 1.0,
+    "found_ttps": [
+      "T1211.004",
+      "T1566.001",
+      "T1584.003"
+    ],
+    "expected_ttps": [
+      "T1003",
+      "T1071.001",
+      "T1195.002"
+    ],
+    "found_cves": [
+      "CVE-2020-10148"
+    ],
+    "expected_cves": [
+      "CVE-2020-10148"
+    ],
+    "trust_score": 66.43119309949955,
+    "latency_s": 29.9,
+    "retrieval_mode": "vector_only"
+  },
+  {
+    "sample_id": "REAL-009_hybrid_rag",
+    "advisory_id": "REAL-009",
+    "condition": "hybrid_rag",
+    "analysis_text": "{'analysis': {'summary': '### Analysis\\n\\n#### 1) Threat Type:\\nThe threat type is a supply chain attack. The attackers compromised SolarWinds Orion software updates to deploy malware on the target systems.\\n\\n#### 2) Severity:\\n**Serious Threat**\\n\\n#### 3) TTPs Mapped to MITRE ATT&CK (T-codes):\\n- **T1566.001**: SUNBURST malicious code was inserted into SolarWinds Orion software updates, which is a common tactic used in supply chain attacks.\\n- **T1003**: Mimikatz and Raindrop malware loaders were used for credential theft and l', 'severity': 'Serious Threat', 'ttps': [{'id': 'T1003', 'name': 'OS Credential Dumping', 'tactic': 'See ATT&CK'}, {'id': 'T1003.001', 'name': 'LSASS Memory', 'tactic': 'See ATT&CK'}, {'id': 'T1566.001', 'name': 'Spearphishing Attachment', 'tactic': 'See ATT&CK'}], 'iocs': {'domains': ['avsvmcloud.com'], 'cves': ['CVE-2020-10148']}, 'red_flags': ['Serious Threat**', 'T1566.001**: SUNBURST malicious code was inserted into SolarWinds Orion software updates, which is a common tactic used in supply chain attacks.', 'T1003**: Mimikatz and Raindrop malware loaders were used for credential theft and lateral movement.', 'T1003.001**: Mimikatz uses LSASS memory to dump credentials.', 'The attack affected a large number of organizations, including US government agencies, indicating significant impact.', 'Use of forged SAML tokens suggests sophisticated social engineering tactics.'], 'threat_type': 'Analysed by Local LLM'}, 'stix_objects': [], 'raw_response': '### Analysis\\n\\n#### 1) Threat Type:\\nThe threat type is a supply chain attack. The attackers compromised SolarWinds Orion software updates to deploy malware on the target systems.\\n\\n#### 2) Severity:\\n**Serious Threat**\\n\\n#### 3) TTPs Mapped to MITRE ATT&CK (T-codes):\\n- **T1566.001**: SUNBURST malicious code was inserted into SolarWinds Orion software updates, which is a common tactic used in supply chain attacks.\\n- **T1003**: Mimikatz and Raindrop malware loaders were used for credential theft and lateral movement.\\n- **T1003.001**: Mimikatz uses LSASS memory to dump credentials.\\n\\n#### 4) Red Flags:\\n- The attack affected a large number of organizations, including US government agencies, indicating significant impact.\\n- Use of forged SAML tokens suggests sophisticated social engineering tactics.\\n- Communication via HTTP to the C2 domain avsvmcloud.com is indicative of a compromised infrastructure or service.\\n\\n#### 5) IOCs (IPs, domains, hashes, CVEs):\\n- **C2 Domain**: avsvmcloud.com\\n- **CVE**: CVE-2020-10148 - This vulnerability was exploited to move laterally via forged SAML tokens.\\n- **Hashes**: Not provided in the given context.\\n\\n### Summary:\\nThe SolarWinds supply chain compromise is a serious threat due to its wide-reaching impact and sophisticated tactics. The use of compromised infrastructure, credential theft, lateral movement, and social engineering are red flags indicating a well-planned attack. IOCs such as avsvmcloud.com and CVE-2020-10148 provid",
+    "raw_response": "",
+    "llm_model": "qwen2.5:3b",
+    "guard_passed": true,
+    "guard_composite": 0.8987,
+    "tier_scores": {
+      "t1_embedding": 0.6623,
+      "t2_nli": 1.0,
+      "t3_crossref": 1.0,
+      "t4_entity": 1.0
+    },
+    "hallucination_rate": 0.1013,
+    "ungrounded_entities": [],
+    "attribution_rate": 0.5,
+    "citations": [
+      {
+        "claim": "{'summary': '### Analysis\\n\\n#### 1) Threat Type:\\nThe threat type is a supply chain attack.",
+        "source": "",
+        "confidence": "LOW"
+      },
+      {
+        "claim": "The attackers compromised SolarWinds Orion software updates to deploy malware on the target systems.\\n\\n#### 2) Severity",
+        "source": "ATT&CK:T1003",
+        "confidence": "LOW"
+      }
+    ],
+    "ttp_recall": 0.3333,
+    "cve_recall": 1.0,
+    "found_ttps": [
+      "T1003",
+      "T1003.001",
+      "T1566.001"
+    ],
+    "expected_ttps": [
+      "T1003",
+      "T1071.001",
+      "T1195.002"
+    ],
+    "found_cves": [
+      "CVE-2020-10148"
+    ],
+    "expected_cves": [
+      "CVE-2020-10148"
+    ],
+    "trust_score": 66.65837775414322,
+    "latency_s": 54.1,
+    "retrieval_mode": "hybrid"
+  }
+]

@@ -1,0 +1,190 @@
+{
+  "metadata": {
+    "exported_at": "2026-04-25T18:49:44.618242+00:00",
+    "total_runs": 2,
+    "summary": {
+      "total_runs": 2,
+      "latency": {
+        "mean_ms": 617.31,
+        "median_ms": 1234.5,
+        "p95_ms": 1234.5,
+        "min_ms": 0.12,
+        "max_ms": 1234.5
+      },
+      "trust_score": {
+        "mean": 68.75,
+        "min": 65.0,
+        "max": 72.5
+      },
+      "hallucination_rate": {
+        "mean": 0.0795,
+        "min": 0.059,
+        "max": 0.1
+      },
+      "guard_pass_rate": 1.0,
+      "model_modes": {
+        "demo": 1,
+        "api": 1
+      },
+      "retrieval_modes": {
+        "hybrid": 2
+      },
+      "per_agent_latency": {
+        "CommandAgent": {
+          "mean_ms": 1.2,
+          "max_ms": 1.2,
+          "min_ms": 1.2
+        },
+        "KGBuilder": {
+          "mean_ms": 17.65,
+          "max_ms": 20.0,
+          "min_ms": 15.3
+        },
+        "OSINTAgent": {
+          "mean_ms": 234.5,
+          "max_ms": 234.5,
+          "min_ms": 234.5
+        },
+        "ThreatReasoner": {
+          "mean_ms": 683.9,
+          "max_ms": 800.0,
+          "min_ms": 567.8
+        },
+        "HallucinationGuard": {
+          "mean_ms": 89.1,
+          "max_ms": 89.1,
+          "min_ms": 89.1
+        },
+        "DriftDetector": {
+          "mean_ms": 2.1,
+          "max_ms": 2.1,
+          "min_ms": 2.1
+        }
+      }
+    }
+  },
+  "runs": [
+    {
+      "run_id": "37b65e86",
+      "timestamp": "2026-04-25T18:49:44.616810+00:00",
+      "model_mode": "demo",
+      "model_name": "",
+      "retrieval_mode": "hybrid",
+      "input_chars": 27,
+      "output_chars": 0,
+      "total_latency_ms": 0.12,
+      "agents": {
+        "CommandAgent": {
+          "latency_ms": 1.2,
+          "success": true
+        },
+        "KGBuilder": {
+          "latency_ms": 15.3,
+          "success": true
+        },
+        "OSINTAgent": {
+          "latency_ms": 234.5,
+          "success": true
+        },
+        "ThreatReasoner": {
+          "latency_ms": 567.8,
+          "success": true
+        },
+        "HallucinationGuard": {
+          "latency_ms": 89.1,
+          "success": true
+        },
+        "DriftDetector": {
+          "latency_ms": 2.1,
+          "success": true
+        }
+      },
+      "retrieval": {
+        "kg_results": 3,
+        "vec_results": 5,
+        "fused_results": 5,
+        "latency_ms": 124.5,
+        "mode": "hybrid"
+      },
+      "guard": {
+        "passed": true,
+        "retries": 0,
+        "tier_scores": {
+          "t1_embedding": 0.832,
+          "t2_nli": 1.0,
+          "t3_crossref": 1.0
+        },
+        "claims_checked": 5,
+        "claims_grounded": 5
+      },
+      "metrics": {
+        "cve_precision": 0.0,
+        "cve_recall": 0.0,
+        "cve_f1": 0.95,
+        "ttp_precision": 0.0,
+        "ttp_recall": 0.0,
+        "ttp_f1": 0.67,
+        "hallucination_rate": 0.059,
+        "trust_score": 72.5,
+        "trust_grade": "B",
+        "confidence": 0.78,
+        "guard_passed": true,
+        "drift_signal": "STABLE",
+        "escalation": "none"
+      }
+    },
+    {
+      "run_id": "64eebf2f",
+      "timestamp": "2026-04-25T18:49:44.618176+00:00",
+      "model_mode": "api",
+      "model_name": "gpt-4o",
+      "retrieval_mode": "hybrid",
+      "input_chars": 15,
+      "output_chars": 35,
+      "total_latency_ms": 1234.5,
+      "agents": {
+        "KGBuilder": {
+          "latency_ms": 20.0,
+          "success": true
+        },
+        "ThreatReasoner": {
+          "latency_ms": 800.0,
+          "success": true
+        }
+      },
+      "retrieval": {
+        "kg_results": 2,
+        "vec_results": 4,
+        "fused_results": 5,
+        "latency_ms": 100.0,
+        "mode": "hybrid"
+      },
+      "guard": {
+        "passed": true,
+        "retries": 0,
+        "tier_scores": {
+          "t1_embedding": 0.75,
+          "t2_nli": 0.9,
+          "t3_crossref": 1.0
+        },
+        "claims_checked": 10,
+        "claims_grounded": 9
+      },
+      "metrics": {
+        "cve_precision": 0.0,
+        "cve_recall": 0.0,
+        "cve_f1": 0.0,
+        "ttp_precision": 0.0,
+        "ttp_recall": 0.0,
+        "ttp_f1": 0.0,
+        "hallucination_rate": 0.1,
+        "trust_score": 65.0,
+        "trust_grade": "C",
+        "confidence": 0.6,
+        "guard_passed": true,
+        "drift_signal": "STABLE",
+        "escalation": "none"
+      }
+    }
+  ]
+}

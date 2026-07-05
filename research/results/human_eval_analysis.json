@@ -1,0 +1,80 @@
+{
+  "timestamp": "2026-04-29T05:38:00Z",
+  "llm_model": "qwen2.5:3b (Ollama, local)",
+  "evaluators": [
+    "AutoEval_Lenient",
+    "AutoEval_Moderate",
+    "AutoEval_Strict"
+  ],
+  "n_scores": 45,
+  "condition_means": {
+    "no_rag": {
+      "Q1_usability": 4.533,
+      "Q2_accuracy": 3.133,
+      "Q3_verifiability": 4.6,
+      "Q4_hallucination": 4.533,
+      "Q5_operational": 4.133
+    },
+    "vector_rag": {
+      "Q1_usability": 4.267,
+      "Q2_accuracy": 3.133,
+      "Q3_verifiability": 4.067,
+      "Q4_hallucination": 4.533,
+      "Q5_operational": 3.867
+    },
+    "hybrid_rag": {
+      "Q1_usability": 4.4,
+      "Q2_accuracy": 3.2,
+      "Q3_verifiability": 3.8,
+      "Q4_hallucination": 4.533,
+      "Q5_operational": 4.0
+    }
+  },
+  "grand_means": {
+    "no_rag": 4.187,
+    "vector_rag": 3.973,
+    "hybrid_rag": 3.987
+  },
+  "wilcoxon_hybrid_vs_norag": {
+    "Q1_usability": {
+      "W": 7.0,
+      "p": 0.4142161782425253,
+      "r": 1.8073922282301278,
+      "sig": false,
+      "n": 15
+    },
+    "Q2_accuracy": {
+      "W": 9.0,
+      "p": 0.7388826803635273,
+      "r": 2.32379000772445,
+      "sig": false,
+      "n": 15
+    },
+    "Q3_verifiability": {
+      "W": 4.0,
+      "p": 0.0474368928248654,
+      "r": 1.0327955589886444,
+      "sig": true,
+      "n": 15
+    },
+    "Q4_hallucination": {
+      "W": 18.0,
+      "p": 1.0,
+      "r": 4.6475800154489,
+      "sig": false,
+      "n": 15
+    },
+    "Q5_operational": {
+      "W": 13.5,
+      "p": 0.47950012218695337,
+      "r": 3.485685011586675,
+      "sig": false,
+      "n": 15
+    }
+  },
+  "kappa_range": [
+    -0.084,
+    0.89
+  ],
+  "kappa_mean": 0.367
+}

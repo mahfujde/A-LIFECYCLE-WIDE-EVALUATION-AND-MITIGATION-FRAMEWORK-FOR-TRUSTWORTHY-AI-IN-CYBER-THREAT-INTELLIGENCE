@@ -1,0 +1,399 @@
+{
+  "experiment": "live_mode_rag_proof",
+  "purpose": "Isolate retrieval contribution on a real LLM: RAG-on vs RAG-off generation, faithfulness scored against retrieved evidence. Fixes the demo-mode ablation's metric/intervention mismatch.",
+  "timestamp": "2026-07-04T18:43:06.351965+00:00",
+  "backend": "api",
+  "llm_model": "nvidia/nemotron-3-super-120b-a12b:free",
+  "llm_provider": "OpenRouter (Free)",
+  "llm_models_used": [
+    "nvidia/nemotron-3-super-120b-a12b:free"
+  ],
+  "model_rotations": [],
+  "strict_llm": true,
+  "n_scored": 10,
+  "summary": {
+    "faithfulness": {
+      "rag_on_mean": 0.9535,
+      "rag_off_mean": 0.9867,
+      "mean_gain": -0.0331,
+      "wilcoxon": {
+        "statistic": 1.0,
+        "p_value": 0.25
+      },
+      "cohens_dz": -0.4177
+    },
+    "attribution_rate": {
+      "rag_on_mean": 0.8226,
+      "rag_off_mean": 0.8356,
+      "mean_gain": -0.013,
+      "wilcoxon": {
+        "statistic": 12.0,
+        "p_value": 0.46094
+      },
+      "cohens_dz": -0.0701
+    },
+    "hallucination_rate": {
+      "rag_on_mean": 0.29,
+      "rag_off_mean": 0.592,
+      "mean_reduction": 0.302,
+      "wilcoxon": {
+        "statistic": 1.0,
+        "p_value": 0.01562
+      },
+      "cohens_dz": 0.7467
+    },
+    "context_recall_mean": 0.195
+  },
+  "per_advisory": [
+    {
+      "id": "REAL-001",
+      "source": "CISA Advisory AA22-110A (Russian State-Sponsored Cyber Threats)",
+      "retrieval": {
+        "merged_context_chars": 1081,
+        "vector_docs": 5,
+        "kg_results": 9,
+        "context_recall_vs_ground_truth": 0.125,
+        "context_precision": 0.75
+      },
+      "faithfulness": {
+        "rag_on": 1.0,
+        "rag_off": 1.0,
+        "delta": 0.0
+      },
+      "attribution_rate": {
+        "rag_on": 0.8889,
+        "rag_off": 0.875,
+        "delta": 0.0139
+      },
+      "answer_relevancy": {
+        "rag_on": 0.8752,
+        "rag_off": 0.8012
+      },
+      "hallucination_rate": {
+        "rag_on": 1.0,
+        "rag_off": 1.0,
+        "delta": 0.0
+      },
+      "latency_ms": {
+        "rag_on": 50338.7,
+        "rag_off": 159382.7
+      },
+      "model_on": "openrouter/nvidia/nemotron-3-super-120b-a12b:free"
+    },
+    {
+      "id": "REAL-002",
+      "source": "CISA Advisory AA23-136A (LockBit 3.0 Ransomware)",
+      "retrieval": {
+        "merged_context_chars": 1126,
+        "vector_docs": 5,
+        "kg_results": 10,
+        "context_recall_vs_ground_truth": 0.0,
+        "context_precision": 0.75
+      },
+      "faithfulness": {
+        "rag_on": 0.7692,
+        "rag_off": 1.0,
+        "delta": -0.2308
+      },
+      "attribution_rate": {
+        "rag_on": 0.6538,
+        "rag_off": 0.875,
+        "delta": -0.2212
+      },
+      "answer_relevancy": {
+        "rag_on": 0.7423,
+        "rag_off": 0.8328
+      },
+      "hallucination_rate": {
+        "rag_on": 1.0,
+        "rag_off": 1.0,
+        "delta": 0.0
+      },
+      "latency_ms": {
+        "rag_on": 33159.9,
+        "rag_off": 30815.0
+      },
+      "model_on": "openrouter/nvidia/nemotron-3-super-120b-a12b:free"
+    },
+    {
+      "id": "REAL-003",
+      "source": "CISA Advisory AA24-060A (Volt Typhoon / PRC State-Sponsored)",
+      "retrieval": {
+        "merged_context_chars": 759,
+        "vector_docs": 5,
+        "kg_results": 10,
+        "context_recall_vs_ground_truth": 0.3333,
+        "context_precision": 0.75
+      },
+      "faithfulness": {
+        "rag_on": 1.0,
+        "rag_off": 1.0,
+        "delta": 0.0
+      },
+      "attribution_rate": {
+        "rag_on": 1.0,
+        "rag_off": 1.0,
+        "delta": 0.0
+      },
+      "answer_relevancy": {
+        "rag_on": 0.6318,
+        "rag_off": 0.7895
+      },
+      "hallucination_rate": {
+        "rag_on": 0.1242,
+        "rag_off": 0.2322,
+        "delta": 0.1079
+      },
+      "latency_ms": {
+        "rag_on": 22006.9,
+        "rag_off": 69390.9
+      },
+      "model_on": "openrouter/nvidia/nemotron-3-super-120b-a12b:free"
+    },
+    {
+      "id": "REAL-004",
+      "source": "FBI IC3 Alert (Business Email Compromise)",
+      "retrieval": {
+        "merged_context_chars": 1384,
+        "vector_docs": 5,
+        "kg_results": 5,
+        "context_recall_vs_ground_truth": 0.3333,
+        "context_precision": 0.75
+      },
+      "faithfulness": {
+        "rag_on": 1.0,
+        "rag_off": 0.95,
+        "delta": 0.05
+      },
+      "attribution_rate": {
+        "rag_on": 0.9231,
+        "rag_off": 0.85,
+        "delta": 0.0731
+      },
+      "answer_relevancy": {
+        "rag_on": 0.8335,
+        "rag_off": 0.7409
+      },
+      "hallucination_rate": {
+        "rag_on": 0.0711,
+        "rag_off": 0.1111,
+        "delta": 0.04
+      },
+      "latency_ms": {
+        "rag_on": 33906.0,
+        "rag_off": 65659.1
+      },
+      "model_on": "openrouter/nvidia/nemotron-3-super-120b-a12b:free"
+    },
+    {
+      "id": "REAL-005",
+      "source": "MITRE ATT&CK Group G0007 (APT28/Fancy Bear)",
+      "retrieval": {
+        "merged_context_chars": 1106,
+        "vector_docs": 5,
+        "kg_results": 10,
+        "context_recall_vs_ground_truth": 0.375,
+        "context_precision": 0.75
+      },
+      "faithfulness": {
+        "rag_on": 0.9091,
+        "rag_off": 1.0,
+        "delta": -0.0909
+      },
+      "attribution_rate": {
+        "rag_on": 0.8182,
+        "rag_off": 0.9167,
+        "delta": -0.0985
+      },
+      "answer_relevancy": {
+        "rag_on": 0.866,
+        "rag_off": 0.7362
+      },
+      "hallucination_rate": {
+        "rag_on": 0.1199,
+        "rag_off": 0.103,
+        "delta": -0.0169
+      },
+      "latency_ms": {
+        "rag_on": 29824.2,
+        "rag_off": 54171.3
+      },
+      "model_on": "openrouter/nvidia/nemotron-3-super-120b-a12b:free"
+    },
+    {
+      "id": "REAL-006",
+      "source": "CISA Advisory AA23-325A (Scattered Spider)",
+      "retrieval": {
+        "merged_context_chars": 1389,
+        "vector_docs": 5,
+        "kg_results": 10,
+        "context_recall_vs_ground_truth": 0.0,
+        "context_precision": 0.75
+      },
+      "faithfulness": {
+        "rag_on": 1.0,
+        "rag_off": 1.0,
+        "delta": 0.0
+      },
+      "attribution_rate": {
+        "rag_on": 0.8,
+        "rag_off": 0.9375,
+        "delta": -0.1375
+      },
+      "answer_relevancy": {
+        "rag_on": 0.5709,
+        "rag_off": 0.6837
+      },
+      "hallucination_rate": {
+        "rag_on": 0.121,
+        "rag_off": 0.25,
+        "delta": 0.1291
+      },
+      "latency_ms": {
+        "rag_on": 32289.2,
+        "rag_off": 39492.0
+      },
+      "model_on": "openrouter/nvidia/nemotron-3-super-120b-a12b:free"
+    },
+    {
+      "id": "REAL-007",
+      "source": "CISA Advisory AA24-131A (Black Basta Ransomware)",
+      "retrieval": {
+        "merged_context_chars": 1385,
+        "vector_docs": 5,
+        "kg_results": 10,
+        "context_recall_vs_ground_truth": 0.0,
+        "context_precision": 0.75
+      },
+      "faithfulness": {
+        "rag_on": 1.0,
+        "rag_off": 1.0,
+        "delta": 0.0
+      },
+      "attribution_rate": {
+        "rag_on": 0.8182,
+        "rag_off": 1.0,
+        "delta": -0.1818
+      },
+      "answer_relevancy": {
+        "rag_on": 0.7507,
+        "rag_off": 0.8416
+      },
+      "hallucination_rate": {
+        "rag_on": 0.1041,
+        "rag_off": 1.0,
+        "delta": 0.8959
+      },
+      "latency_ms": {
+        "rag_on": 97185.6,
+        "rag_off": 46270.5
+      },
+      "model_on": "openrouter/nvidia/nemotron-3-super-120b-a12b:free"
+    },
+    {
+      "id": "REAL-008",
+      "source": "US-CERT Alert TA18-106A (SamSam Ransomware)",
+      "retrieval": {
+        "merged_context_chars": 1389,
+        "vector_docs": 5,
+        "kg_results": 10,
+        "context_recall_vs_ground_truth": 0.25,
+        "context_precision": 0.75
+      },
+      "faithfulness": {
+        "rag_on": 0.8571,
+        "rag_off": 0.9167,
+        "delta": -0.0595
+      },
+      "attribution_rate": {
+        "rag_on": 0.8571,
+        "rag_off": 0.4167,
+        "delta": 0.4405
+      },
+      "answer_relevancy": {
+        "rag_on": 0.6443,
+        "rag_off": 0.7698
+      },
+      "hallucination_rate": {
+        "rag_on": 0.124,
+        "rag_off": 1.0,
+        "delta": 0.876
+      },
+      "latency_ms": {
+        "rag_on": 48382.7,
+        "rag_off": 40498.3
+      },
+      "model_on": "openrouter/nvidia/nemotron-3-super-120b-a12b:free"
+    },
+    {
+      "id": "REAL-009",
+      "source": "NCSC Advisory (SolarWinds/SUNBURST)",
+      "retrieval": {
+        "merged_context_chars": 798,
+        "vector_docs": 5,
+        "kg_results": 10,
+        "context_recall_vs_ground_truth": 0.2,
+        "context_precision": 0.5
+      },
+      "faithfulness": {
+        "rag_on": 1.0,
+        "rag_off": 1.0,
+        "delta": 0.0
+      },
+      "attribution_rate": {
+        "rag_on": 0.8,
+        "rag_off": 0.8182,
+        "delta": -0.0182
+      },
+      "answer_relevancy": {
+        "rag_on": 0.8272,
+        "rag_off": 0.8134
+      },
+      "hallucination_rate": {
+        "rag_on": 0.1143,
+        "rag_off": 0.2236,
+        "delta": 0.1092
+      },
+      "latency_ms": {
+        "rag_on": 45173.5,
+        "rag_off": 31965.7
+      },
+      "model_on": "openrouter/nvidia/nemotron-3-super-120b-a12b:free"
+    },
+    {
+      "id": "REAL-010",
+      "source": "CISA Alert AA21-209A (Log4Shell/CVE-2021-44228)",
+      "retrieval": {
+        "merged_context_chars": 1077,
+        "vector_docs": 5,
+        "kg_results": 10,
+        "context_recall_vs_ground_truth": 0.3333,
+        "context_precision": 0.75
+      },
+      "faithfulness": {
+        "rag_on": 1.0,
+        "rag_off": 1.0,
+        "delta": 0.0
+      },
+      "attribution_rate": {
+        "rag_on": 0.6667,
+        "rag_off": 0.6667,
+        "delta": 0.0
+      },
+      "answer_relevancy": {
+        "rag_on": 0.7985,
+        "rag_off": 0.8273
+      },
+      "hallucination_rate": {
+        "rag_on": 0.1213,
+        "rag_off": 1.0,
+        "delta": 0.8787
+      },
+      "latency_ms": {
+        "rag_on": 29113.9,
+        "rag_off": 116094.0
+      },
+      "model_on": "openrouter/nvidia/nemotron-3-super-120b-a12b:free"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+APT Group Analysis Report — APT-PHANTOM-BEAR
+
+Executive Summary:
+A sophisticated threat actor group designated APT-PHANTOM-BEAR has been observed targeting financial institutions across Southeast Asia since Q3 2023. The group employs spear-phishing emails (T1566.001) with malicious Microsoft Excel attachments containing obfuscated VBA macros.
+
+Attack Chain:
+1. Initial Access: Spear-phishing emails impersonating banking regulators
+2. Execution: Malicious VBA macro downloads second-stage payload
+3. Persistence: Scheduled task created (T1053.005)
+4. Command & Control: HTTPS beacon to C2 server (T1071.001)
+5. Exfiltration: Data staged and exfiltrated via DNS tunneling (T1048)
+
+Indicators of Compromise:
+- C2 Server: 198.51.100.42
+- C2 Domain: phantom-update.example.com
+- Payload Hash (SHA256): e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+- Phishing Sender: compliance@banking-authority-update.tk
+- CVE Exploited: CVE-2023-36884 (Office HTML RCE)
+
+Recommended Mitigations:
+- Block known IOCs at perimeter
+- Disable VBA macros for internet-sourced documents
+- Enable Advanced Threat Protection on email gateways
+- Patch CVE-2023-36884 immediately
+- Implement network segmentation for financial systems

@@ -1,0 +1,69 @@
+{
+  "run_id": "37b65e86",
+  "timestamp": "2026-04-25T18:49:44.616810+00:00",
+  "model_mode": "demo",
+  "model_name": "",
+  "retrieval_mode": "hybrid",
+  "input_chars": 27,
+  "output_chars": 0,
+  "total_latency_ms": 0.12,
+  "agents": {
+    "CommandAgent": {
+      "latency_ms": 1.2,
+      "success": true
+    },
+    "KGBuilder": {
+      "latency_ms": 15.3,
+      "success": true
+    },
+    "OSINTAgent": {
+      "latency_ms": 234.5,
+      "success": true
+    },
+    "ThreatReasoner": {
+      "latency_ms": 567.8,
+      "success": true
+    },
+    "HallucinationGuard": {
+      "latency_ms": 89.1,
+      "success": true
+    },
+    "DriftDetector": {
+      "latency_ms": 2.1,
+      "success": true
+    }
+  },
+  "retrieval": {
+    "kg_results": 3,
+    "vec_results": 5,
+    "fused_results": 5,
+    "latency_ms": 124.5,
+    "mode": "hybrid"
+  },
+  "guard": {
+    "passed": true,
+    "retries": 0,
+    "tier_scores": {
+      "t1_embedding": 0.832,
+      "t2_nli": 1.0,
+      "t3_crossref": 1.0
+    },
+    "claims_checked": 5,
+    "claims_grounded": 5
+  },
+  "metrics": {
+    "cve_precision": 0.0,
+    "cve_recall": 0.0,
+    "cve_f1": 0.95,
+    "ttp_precision": 0.0,
+    "ttp_recall": 0.0,
+    "ttp_f1": 0.67,
+    "hallucination_rate": 0.059,
+    "trust_score": 72.5,
+    "trust_grade": "B",
+    "confidence": 0.78,
+    "guard_passed": true,
+    "drift_signal": "STABLE",
+    "escalation": "none"
+  }
+}

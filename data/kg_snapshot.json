@@ -1,0 +1,610 @@
+{
+  "triples": [
+    {
+      "subject": "APT28",
+      "predicate": "related_to",
+      "obj": "CVE-2017-0199",
+      "technique_id": "",
+      "technique_name": "",
+      "confidence": 0.6,
+      "source": "pipeline",
+      "timestamp": "2026-04-27T01:05:41.099862+00:00"
+    },
+    {
+      "subject": "APT28",
+      "predicate": "related_to",
+      "obj": "CVE-2015-1641",
+      "technique_id": "",
+      "technique_name": "",
+      "confidence": 0.6,
+      "source": "pipeline",
+      "timestamp": "2026-04-27T01:05:41.109734+00:00"
+    },
+    {
+      "subject": "CVE-2017-0199",
+      "predicate": "related_to",
+      "obj": "CVE-2015-1641",
+      "technique_id": "",
+      "technique_name": "",
+      "confidence": 0.6,
+      "source": "pipeline",
+      "timestamp": "2026-04-27T01:05:41.109901+00:00"
+    },
+    {
+      "subject": "Zebrocy",
+      "predicate": "uses",
+      "obj": "X-Agent and Zebrocy malware",
+      "technique_id": "T1078",
+      "technique_name": "Valid Accounts",
+      "confidence": 0.85,
+      "source": "pipeline",
+      "timestamp": "2026-04-27T01:05:41.110065+00:00"
+    },
+    {
+      "subject": "Zebrocy",
+      "predicate": "related_to",
+      "obj": "X-Agent",
+      "technique_id": "T1078",
+      "technique_name": "Valid Accounts",
+      "confidence": 0.7,
+      "source": "pipeline",
+      "timestamp": "2026-04-27T01:05:41.110103+00:00"
+    },
+    {
+      "subject": "APT28",
+      "predicate": "uses",
+      "obj": "T1566.001 spearphishing attachment and T1059.001 PowerShell",
+      "technique_id": "T1566.001",
+      "technique_name": "Spearphishing Attachment",
+      "confidence": 0.9,
+      "source": "pipeline",
+      "timestamp": "2026-04-27T01:05:41.110195+00:00"
+    },
+    {
+      "subject": "APT28",
+      "predicate": "employs",
+      "obj": "T1566.001",
+      "technique_id": "T1566.001",
+      "technique_name": "Spearphishing Attachment",
+      "confidence": 0.75,
+      "source": "pipeline",
+      "timestamp": "2026-04-27T01:05:41.110211+00:00"
+    },
+    {
+      "subject": "APT28",
+      "predicate": "employs",
+      "obj": "T1059.001",
+      "technique_id": "T1566.001",
+      "technique_name": "Spearphishing Attachment",
+      "confidence": 0.75,
+      "source": "pipeline",
+      "timestamp": "2026-04-27T01:05:41.110217+00:00"
+    },
+    {
+      "subject": "T1566.001",
+      "predicate": "related_to",
+      "obj": "T1059.001",
+      "technique_id": "T1566.001",
+      "technique_name": "Spearphishing Attachment",
+      "confidence": 0.75,
+      "source": "pipeline",
+      "timestamp": "2026-04-27T01:05:41.110222+00:00"
+    },
+    {
+      "subject": "T1071.001",
+      "predicate": "exfiltrates",
+      "obj": "over",
+      "technique_id": "T1071.001",
+      "technique_name": "Web Protocols",
+      "confidence": 0.9,
+      "source": "pipeline",
+      "timestamp": "2026-04-27T01:05:41.110258+00:00"
+    },
+    {
+      "subject": "CVE-2018-13379",
+      "predicate": "exploits",
+      "obj": "known vulnerabilities",
+      "technique_id": "T1190",
+      "technique_name": "Exploit Public-Facing Application",
+      "confidence": 0.85,
+      "source": "pipeline",
+      "timestamp": "2026-04-27T01:35:04.283404+00:00"
+    },
+    {
+      "subject": "CVE-2018-13379",
+      "predicate": "related_to",
+      "obj": "CVE-2020-0688",
+      "technique_id": "T1190",
+      "technique_name": "Exploit Public-Facing Application",
+      "confidence": 0.7,
+      "source": "pipeline",
+      "timestamp": "2026-04-27T01:35:04.283650+00:00"
+    },
+    {
+      "subject": "LockBit",
+      "predicate": "exploits",
+      "obj": "CVE-2023-0669",
+      "technique_id": "",
+      "technique_name": "",
+      "confidence": 0.6,
+      "source": "pipeline",
+      "timestamp": "2026-04-27T01:35:33.783807+00:00"
+    },
+    {
+      "subject": "LockBit",
+      "predicate": "exploits",
+      "obj": "CVE-2023-27350",
+      "technique_id": "",
+      "technique_name": "",
+      "confidence": 0.6,
+      "source": "pipeline",
+      "timestamp": "2026-04-27T01:35:33.794381+00:00"
+    },
+    {
+      "subject": "CVE-2023-0669",
+      "predicate": "related_to",
+      "obj": "CVE-2023-27350",
+      "technique_id": "",
+      "technique_name": "",
+      "confidence": 0.6,
+      "source": "pipeline",
+      "timestamp": "2026-04-27T01:35:33.794549+00:00"
+    },
+    {
+      "subject": "Cobalt Strike",
+      "predicate": "uses",
+      "obj": "Remote Desktop Protocol",
+      "technique_id": "T1021.001",
+      "technique_name": "Remote Desktop Protocol",
+      "confidence": 0.85,
+      "source": "pipeline",
+      "timestamp": "2026-04-27T01:35:33.794756+00:00"
+    },
+    {
+      "subject": "rclone",
+      "predicate": "exfiltrates",
+      "obj": "data",
+      "technique_id": "T1041",
+      "technique_name": "Exfiltration Over C2 Channel",
+      "confidence": 0.85,
+      "source": "pipeline",
+      "timestamp": "2026-04-27T01:35:33.794949+00:00"
+    },
+    {
+      "subject": "Volt Typhoon",
+      "predicate": "exploits",
+      "obj": "vulnerabilities",
+      "technique_id": "T1190",
+      "technique_name": "Exploit Public-Facing Application",
+      "confidence": 0.85,
+      "source": "pipeline",
+      "timestamp": "2026-04-27T01:35:43.104791+00:00"
+    },
+    {
+      "subject": "Volt Typhoon",
+      "predicate": "related_to",
+      "obj": "CVE-2023-27997",
+      "technique_id": "T1190",
+      "technique_name": "Exploit Public-Facing Application",
+      "confidence": 0.7,
+      "source": "pipeline",
+      "timestamp": "2026-04-27T01:35:43.104931+00:00"
+    },
+    {
+      "subject": "X-Agent",
+      "predicate": "uses",
+      "obj": "X-Agent and Zebrocy malware",
+      "technique_id": "T1078",
+      "technique_name": "Valid Accounts",
+      "confidence": 0.85,
+      "source": "pipeline",
+      "timestamp": "2026-04-27T01:36:20.279066+00:00"
+    },
+    {
+      "subject": "X-Agent",
+      "predicate": "related_to",
+      "obj": "Zebrocy",
+      "technique_id": "T1078",
+      "technique_name": "Valid Accounts",
+      "confidence": 0.7,
+      "source": "pipeline",
+      "timestamp": "2026-04-27T01:36:20.279140+00:00"
+    },
+    {
+      "subject": "AnyDesk",
+      "predicate": "related_to",
+      "obj": "ConnectWise",
+      "technique_id": "T1219",
+      "technique_name": "Remote Access Software",
+      "confidence": 0.7,
+      "source": "pipeline",
+      "timestamp": "2026-04-27T01:36:54.374111+00:00"
+    },
+    {
+      "subject": "ALPHV",
+      "predicate": "uses",
+      "obj": "BlackCat",
+      "technique_id": "T1041",
+      "technique_name": "Exfiltration Over C2 Channel",
+      "confidence": 0.7,
+      "source": "pipeline",
+      "timestamp": "2026-04-27T01:36:54.375109+00:00"
+    },
+    {
+      "subject": "Mimikatz",
+      "predicate": "uses",
+      "obj": "tools like Mimikatz",
+      "technique_id": "T1003.001",
+      "technique_name": "LSASS Memory",
+      "confidence": 0.9,
+      "source": "pipeline",
+      "timestamp": "2026-04-27T01:37:19.168821+00:00"
+    },
+    {
+      "subject": "Mimikatz",
+      "predicate": "related_to",
+      "obj": "T1003.001",
+      "technique_id": "T1003.001",
+      "technique_name": "LSASS Memory",
+      "confidence": 0.75,
+      "source": "pipeline",
+      "timestamp": "2026-04-27T01:37:19.168938+00:00"
+    },
+    {
+      "subject": "Mimikatz",
+      "predicate": "related_to",
+      "obj": "T1021.001",
+      "technique_id": "T1003.001",
+      "technique_name": "LSASS Memory",
+      "confidence": 0.75,
+      "source": "pipeline",
+      "timestamp": "2026-04-27T01:37:19.168963+00:00"
+    },
+    {
+      "subject": "T1003.001",
+      "predicate": "related_to",
+      "obj": "T1021.001",
+      "technique_id": "T1003.001",
+      "technique_name": "LSASS Memory",
+      "confidence": 0.75,
+      "source": "pipeline",
+      "timestamp": "2026-04-27T01:37:19.168984+00:00"
+    },
+    {
+      "subject": "WinSCP",
+      "predicate": "exfiltrates",
+      "obj": "data",
+      "technique_id": "T1041",
+      "technique_name": "Exfiltration Over C2 Channel",
+      "confidence": 0.85,
+      "source": "pipeline",
+      "timestamp": "2026-04-27T01:37:19.169099+00:00"
+    },
+    {
+      "subject": "SamSam",
+      "predicate": "exploits",
+      "obj": "Windows servers via Remote Desktop Protocol",
+      "technique_id": "T1078",
+      "technique_name": "Valid Accounts",
+      "confidence": 0.85,
+      "source": "pipeline",
+      "timestamp": "2026-04-27T01:37:30.571122+00:00"
+    },
+    {
+      "subject": "PsExec",
+      "predicate": "related_to",
+      "obj": "Mimikatz",
+      "technique_id": "T1003.001",
+      "technique_name": "LSASS Memory",
+      "confidence": 0.7,
+      "source": "pipeline",
+      "timestamp": "2026-04-27T01:37:30.571634+00:00"
+    },
+    {
+      "subject": "UNC2452",
+      "predicate": "related_to",
+      "obj": "SUNBURST",
+      "technique_id": "",
+      "technique_name": "",
+      "confidence": 0.6,
+      "source": "pipeline",
+      "timestamp": "2026-04-27T01:37:36.784539+00:00"
+    },
+    {
+      "subject": "UNC2452",
+      "predicate": "uses",
+      "obj": "SUNBURST",
+      "technique_id": "",
+      "technique_name": "",
+      "confidence": 0.6,
+      "source": "pipeline",
+      "timestamp": "2026-04-27T01:37:36.785329+00:00"
+    },
+    {
+      "subject": "SUNBURST",
+      "predicate": "uses",
+      "obj": "SUNBURST",
+      "technique_id": "",
+      "technique_name": "",
+      "confidence": 0.6,
+      "source": "pipeline",
+      "timestamp": "2026-04-27T01:37:36.785641+00:00"
+    },
+    {
+      "subject": "Raindrop",
+      "predicate": "delivers",
+      "obj": "and Raindrop malware loaders, performed credential theft with Mimikatz, and moved laterally",
+      "technique_id": "T1003",
+      "technique_name": "OS Credential Dumping",
+      "confidence": 0.85,
+      "source": "pipeline",
+      "timestamp": "2026-04-27T01:37:36.786217+00:00"
+    },
+    {
+      "subject": "Raindrop",
+      "predicate": "related_to",
+      "obj": "TEARDROP",
+      "technique_id": "T1003",
+      "technique_name": "OS Credential Dumping",
+      "confidence": 0.7,
+      "source": "pipeline",
+      "timestamp": "2026-04-27T01:37:36.786420+00:00"
+    },
+    {
+      "subject": "Raindrop",
+      "predicate": "related_to",
+      "obj": "Mimikatz",
+      "technique_id": "T1003",
+      "technique_name": "OS Credential Dumping",
+      "confidence": 0.7,
+      "source": "pipeline",
+      "timestamp": "2026-04-27T01:37:36.786579+00:00"
+    },
+    {
+      "subject": "TEARDROP",
+      "predicate": "related_to",
+      "obj": "Mimikatz",
+      "technique_id": "T1003",
+      "technique_name": "OS Credential Dumping",
+      "confidence": 0.7,
+      "source": "pipeline",
+      "timestamp": "2026-04-27T01:37:36.786739+00:00"
+    },
+    {
+      "subject": "TEARDROP",
+      "predicate": "exploits",
+      "obj": "CVE-2020-10148",
+      "technique_id": "T1003",
+      "technique_name": "OS Credential Dumping",
+      "confidence": 0.7,
+      "source": "pipeline",
+      "timestamp": "2026-04-27T01:37:36.786899+00:00"
+    },
+    {
+      "subject": "Mimikatz",
+      "predicate": "exploits",
+      "obj": "CVE-2020-10148",
+      "technique_id": "T1003",
+      "technique_name": "OS Credential Dumping",
+      "confidence": 0.7,
+      "source": "pipeline",
+      "timestamp": "2026-04-27T01:37:36.787057+00:00"
+    },
+    {
+      "subject": "Log4j",
+      "predicate": "exploits",
+      "obj": "CVE-2021-44228",
+      "technique_id": "T1190",
+      "technique_name": "Exploit Public-Facing Application",
+      "confidence": 0.7,
+      "source": "pipeline",
+      "timestamp": "2026-04-27T01:38:04.710295+00:00"
+    },
+    {
+      "subject": "CVE-2015-1641",
+      "predicate": "related_to",
+      "obj": "CVE-2017-0199",
+      "technique_id": "",
+      "technique_name": "",
+      "confidence": 0.6,
+      "source": "pipeline",
+      "timestamp": "2026-04-27T01:45:42.773638+00:00"
+    },
+    {
+      "subject": "T1059.001",
+      "predicate": "related_to",
+      "obj": "T1566.001",
+      "technique_id": "T1566.001",
+      "technique_name": "Spearphishing Attachment",
+      "confidence": 0.75,
+      "source": "pipeline",
+      "timestamp": "2026-04-27T01:45:42.774393+00:00"
+    },
+    {
+      "subject": "ConnectWise",
+      "predicate": "related_to",
+      "obj": "AnyDesk",
+      "technique_id": "T1219",
+      "technique_name": "Remote Access Software",
+      "confidence": 0.7,
+      "source": "pipeline",
+      "timestamp": "2026-04-27T01:45:47.967372+00:00"
+    },
+    {
+      "subject": "Mimikatz",
+      "predicate": "related_to",
+      "obj": "PsExec",
+      "technique_id": "T1003.001",
+      "technique_name": "LSASS Memory",
+      "confidence": 0.7,
+      "source": "pipeline",
+      "timestamp": "2026-04-27T01:45:56.267265+00:00"
+    },
+    {
+      "subject": "SUNBURST",
+      "predicate": "related_to",
+      "obj": "UNC2452",
+      "technique_id": "",
+      "technique_name": "",
+      "confidence": 0.6,
+      "source": "pipeline",
+      "timestamp": "2026-04-27T01:45:59.381591+00:00"
+    },
+    {
+      "subject": "Mimikatz",
+      "predicate": "related_to",
+      "obj": "TEARDROP",
+      "technique_id": "T1003",
+      "technique_name": "OS Credential Dumping",
+      "confidence": 0.7,
+      "source": "pipeline",
+      "timestamp": "2026-04-27T01:45:59.385710+00:00"
+    },
+    {
+      "subject": "Mimikatz",
+      "predicate": "delivers",
+      "obj": "and Raindrop malware loaders, performed credential theft with Mimikatz, and moved laterally",
+      "technique_id": "T1003",
+      "technique_name": "OS Credential Dumping",
+      "confidence": 0.85,
+      "source": "pipeline",
+      "timestamp": "2026-04-28T08:00:27.156214+00:00"
+    },
+    {
+      "subject": "Mimikatz",
+      "predicate": "related_to",
+      "obj": "Raindrop",
+      "technique_id": "T1003",
+      "technique_name": "OS Credential Dumping",
+      "confidence": 0.7,
+      "source": "pipeline",
+      "timestamp": "2026-04-28T08:00:27.156301+00:00"
+    },
+    {
+      "subject": "Raindrop",
+      "predicate": "exploits",
+      "obj": "CVE-2020-10148",
+      "technique_id": "T1003",
+      "technique_name": "OS Credential Dumping",
+      "confidence": 0.7,
+      "source": "pipeline",
+      "timestamp": "2026-04-28T08:00:27.156500+00:00"
+    },
+    {
+      "subject": "CVE-2020-0688",
+      "predicate": "exploits",
+      "obj": "known vulnerabilities",
+      "technique_id": "T1190",
+      "technique_name": "Exploit Public-Facing Application",
+      "confidence": 0.85,
+      "source": "pipeline",
+      "timestamp": "2026-04-28T09:09:21.459208+00:00"
+    },
+    {
+      "subject": "CVE-2020-0688",
+      "predicate": "related_to",
+      "obj": "CVE-2018-13379",
+      "technique_id": "T1190",
+      "technique_name": "Exploit Public-Facing Application",
+      "confidence": 0.7,
+      "source": "pipeline",
+      "timestamp": "2026-04-28T09:09:21.459451+00:00"
+    },
+    {
+      "subject": "CVE-2023-27350",
+      "predicate": "related_to",
+      "obj": "CVE-2023-0669",
+      "technique_id": "",
+      "technique_name": "",
+      "confidence": 0.6,
+      "source": "pipeline",
+      "timestamp": "2026-04-28T09:10:10.867946+00:00"
+    },
+    {
+      "subject": "T1021.001",
+      "predicate": "related_to",
+      "obj": "T1003.001",
+      "technique_id": "T1003.001",
+      "technique_name": "LSASS Memory",
+      "confidence": 0.75,
+      "source": "pipeline",
+      "timestamp": "2026-04-28T09:48:27.769485+00:00"
+    },
+    {
+      "subject": "TEARDROP",
+      "predicate": "delivers",
+      "obj": "and Raindrop malware loaders, performed credential theft with Mimikatz, and moved laterally",
+      "technique_id": "T1003",
+      "technique_name": "OS Credential Dumping",
+      "confidence": 0.85,
+      "source": "pipeline",
+      "timestamp": "2026-04-28T10:08:26.884826+00:00"
+    },
+    {
+      "subject": "TEARDROP",
+      "predicate": "related_to",
+      "obj": "Raindrop",
+      "technique_id": "T1003",
+      "technique_name": "OS Credential Dumping",
+      "confidence": 0.7,
+      "source": "pipeline",
+      "timestamp": "2026-04-28T10:08:26.884937+00:00"
+    }
+  ],
+  "entities": {
+    "threat_actor": [
+      "ALPHV",
+      "APT28",
+      "Black Basta",
+      "SUNBURST",
+      "SamSam",
+      "Scattered Spider",
+      "UNC2452",
+      "Volt Typhoon"
+    ],
+    "malware": [
+      "AnyDesk",
+      "BlackCat",
+      "Cobalt Strike",
+      "ConnectWise",
+      "LockBit",
+      "Log4j",
+      "Mimikatz",
+      "PsExec",
+      "Raindrop",
+      "SUNBURST",
+      "TEARDROP",
+      "WinSCP",
+      "X-Agent",
+      "Zebrocy",
+      "rclone"
+    ],
+    "cve": [
+      "CVE-2015-1641",
+      "CVE-2017-0199",
+      "CVE-2018-13379",
+      "CVE-2020-0688",
+      "CVE-2020-10148",
+      "CVE-2021-44228",
+      "CVE-2023-0669",
+      "CVE-2023-27350",
+      "CVE-2023-27997",
+      "CVE-2024-1709"
+    ],
+    "ip_address": [],
+    "domain": [
+      "avsvmcloud.com"
+    ],
+    "hash_md5": [],
+    "hash_sha256": [],
+    "technique": [
+      "T1003.001",
+      "T1021.001",
+      "T1059.001",
+      "T1071.001",
+      "T1486",
+      "T1566.001"
+    ]
+  },
+  "saved_at": "2026-07-04T17:03:47.271810+00:00"
+}

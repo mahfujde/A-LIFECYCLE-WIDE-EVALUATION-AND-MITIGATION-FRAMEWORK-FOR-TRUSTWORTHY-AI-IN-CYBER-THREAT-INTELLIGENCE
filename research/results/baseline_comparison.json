@@ -1,0 +1,363 @@
+{
+  "timestamp": "2026-07-05T01:03:47Z",
+  "ctibench_evaluation": {
+    "macro_f1": 0.6894,
+    "macro_precision": 0.5667,
+    "macro_recall": 0.9083,
+    "per_advisory": [
+      {
+        "id": "REAL-001",
+        "precision": 0.5,
+        "recall": 1.0,
+        "f1": 0.6667,
+        "found": [
+          "T1059.001",
+          "T1059.003",
+          "T1078",
+          "T1110",
+          "T1133",
+          "T1190",
+          "T1218",
+          "T1566",
+          "T1566.001",
+          "T1587.001"
+        ],
+        "expected": [
+          "T1059.001",
+          "T1059.003",
+          "T1078",
+          "T1110",
+          "T1566.001"
+        ],
+        "true_positives": 5
+      },
+      {
+        "id": "REAL-002",
+        "precision": 0.5714,
+        "recall": 1.0,
+        "f1": 0.7273,
+        "found": [
+          "T1021",
+          "T1021.001",
+          "T1041",
+          "T1071.001",
+          "T1486",
+          "T1490",
+          "T1567"
+        ],
+        "expected": [
+          "T1021.001",
+          "T1486",
+          "T1490",
+          "T1567"
+        ],
+        "true_positives": 4
+      },
+      {
+        "id": "REAL-003",
+        "precision": 0.5,
+        "recall": 1.0,
+        "f1": 0.6667,
+        "found": [
+          "T1021",
+          "T1059.001",
+          "T1059.003",
+          "T1078",
+          "T1090",
+          "T1190",
+          "T1218",
+          "T1505.003"
+        ],
+        "expected": [
+          "T1059.001",
+          "T1090",
+          "T1190",
+          "T1505.003"
+        ],
+        "true_positives": 4
+      },
+      {
+        "id": "REAL-004",
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "found": [
+          "T1078",
+          "T1534",
+          "T1566"
+        ],
+        "expected": [
+          "T1078",
+          "T1534",
+          "T1566"
+        ],
+        "true_positives": 3
+      },
+      {
+        "id": "REAL-005",
+        "precision": 0.6,
+        "recall": 1.0,
+        "f1": 0.75,
+        "found": [
+          "T1003",
+          "T1059.001",
+          "T1071.001",
+          "T1078",
+          "T1566.001"
+        ],
+        "expected": [
+          "T1059.001",
+          "T1071.001",
+          "T1566.001"
+        ],
+        "true_positives": 3
+      },
+      {
+        "id": "REAL-006",
+        "precision": 0.5,
+        "recall": 0.6667,
+        "f1": 0.5714,
+        "found": [
+          "T1041",
+          "T1219",
+          "T1486",
+          "T1566"
+        ],
+        "expected": [
+          "T1078",
+          "T1219",
+          "T1566"
+        ],
+        "true_positives": 2
+      },
+      {
+        "id": "REAL-007",
+        "precision": 0.4286,
+        "recall": 0.75,
+        "f1": 0.5455,
+        "found": [
+          "T1003",
+          "T1003.001",
+          "T1021",
+          "T1021.001",
+          "T1041",
+          "T1190",
+          "T1486"
+        ],
+        "expected": [
+          "T1003.001",
+          "T1021.001",
+          "T1486",
+          "T1566"
+        ],
+        "true_positives": 3
+      },
+      {
+        "id": "REAL-008",
+        "precision": 0.4,
+        "recall": 0.6667,
+        "f1": 0.5,
+        "found": [
+          "T1003.001",
+          "T1021.001",
+          "T1078",
+          "T1486",
+          "T1569.002"
+        ],
+        "expected": [
+          "T1003",
+          "T1021.001",
+          "T1486"
+        ],
+        "true_positives": 2
+      },
+      {
+        "id": "REAL-009",
+        "precision": 0.5,
+        "recall": 1.0,
+        "f1": 0.6667,
+        "found": [
+          "T1003",
+          "T1003.001",
+          "T1071.001",
+          "T1078",
+          "T1195.002",
+          "T1606.002"
+        ],
+        "expected": [
+          "T1003",
+          "T1071.001",
+          "T1195.002"
+        ],
+        "true_positives": 3
+      },
+      {
+        "id": "REAL-010",
+        "precision": 0.6667,
+        "recall": 1.0,
+        "f1": 0.8,
+        "found": [
+          "T1059",
+          "T1190",
+          "T1486"
+        ],
+        "expected": [
+          "T1059",
+          "T1190"
+        ],
+        "true_positives": 2
+      }
+    ],
+    "n_advisories": 10
+  },
+  "mezzi_comparison": {
+    "mezzi_baseline": 0.5,
+    "pre_guard_halluc_rate": 0.5839,
+    "post_guard_halluc_rate": 0.3665,
+    "reduction_pct": 37.2,
+    "guard_rejection_rate": 0.5,
+    "n_advisories": 10,
+    "per_advisory_pre": [
+      0.5118,
+      0.4371,
+      0.7219,
+      0.5673,
+      0.5019,
+      0.6865,
+      0.5606,
+      0.6778,
+      0.5752,
+      0.5986
+    ],
+    "per_advisory_post": [
+      0.3535,
+      0.3311,
+      0.5166,
+      0.3702,
+      0.2506,
+      0.3059,
+      0.5482,
+      0.3367,
+      0.2726,
+      0.3796
+    ]
+  },
+  "comparisons": [
+    {
+      "baseline_name": "CTIBench GPT-4",
+      "baseline_paper": "CTIBench (Alam et al., NeurIPS 2024)",
+      "baseline_value": 0.6388,
+      "our_value": 0.6894,
+      "delta": 0.0506,
+      "delta_pct": 7.9,
+      "metric": "Macro-F1 (TTP extraction)",
+      "our_conditions": "Zero-shot NLP, 103 regex patterns, 10 CISA advisories",
+      "baseline_conditions": "GPT-4, zero-shot, CTI-ATE task (60 annotated malware descriptions, sub-techniques excluded)",
+      "directly_comparable": true,
+      "contextualisation": "Both evaluate zero-shot TTP extraction from advisory text. CTIBench uses GPT-4; we use rule-based NLP with KG augmentation."
+    },
+    {
+      "baseline_name": "CTIBench LLaMA-3-70B",
+      "baseline_paper": "CTIBench (Alam et al., NeurIPS 2024)",
+      "baseline_value": 0.472,
+      "our_value": 0.6894,
+      "delta": 0.2174,
+      "delta_pct": 46.1,
+      "metric": "Macro-F1 (TTP extraction)",
+      "our_conditions": "Zero-shot NLP + KG, 10 CISA advisories",
+      "baseline_conditions": "LLaMA-3-70B, zero-shot",
+      "directly_comparable": true,
+      "contextualisation": ""
+    },
+    {
+      "baseline_name": "CTIKG (supervised)",
+      "baseline_paper": "CTIKG (OpenReview 2024)",
+      "baseline_value": 0.9189,
+      "our_value": 0.5667,
+      "delta": -0.3522,
+      "delta_pct": -38.3,
+      "metric": "TTP Precision",
+      "our_conditions": "Zero-shot NLP, no training data",
+      "baseline_conditions": "LLM-powered KG construction, evaluated on the ATT&CK knowledge base",
+      "directly_comparable": false,
+      "contextualisation": "CTIKG uses supervised NER/RE trained on 72K articles \u2014 our system uses zero-shot NLP patterns without any training data. The precision gap is expected; our advantage is deployability without labelled corpora."
+    },
+    {
+      "baseline_name": "Unguarded LLM (internal reference)",
+      "baseline_paper": "Internal reference level (this work)",
+      "baseline_value": 0.5,
+      "our_value": 0.5839,
+      "delta": 0.0839,
+      "delta_pct": 16.8,
+      "metric": "Hallucination Rate (pre-guard)",
+      "our_conditions": "Demo LLM, before guardrail application",
+      "baseline_conditions": "Round reference level for the guard-off/guard-on comparison",
+      "directly_comparable": true,
+      "contextualisation": "Internal pre-guard measurement of raw LLM output; the 0.50 column is a round reference level, not a published external rate."
+    },
+    {
+      "baseline_name": "CTI-Shield (guarded)",
+      "baseline_paper": "This work",
+      "baseline_value": 0.5,
+      "our_value": 0.3665,
+      "delta": -0.1335,
+      "delta_pct": -26.7,
+      "metric": "Hallucination Rate (post-guard)",
+      "our_conditions": "4-tier guard (embedding + NLI + cross-ref + entity grounding)",
+      "baseline_conditions": "Round reference level for the guard-off/guard-on comparison",
+      "directly_comparable": true,
+      "contextualisation": "After applying the 4-tier hallucination guard, the hallucination rate is significantly reduced, demonstrating the guard's efficacy."
+    }
+  ],
+  "baselines": {
+    "ctibench_gpt4": {
+      "paper": "CTIBench (Alam et al., NeurIPS 2024)",
+      "metric": "Macro-F1 (TTP extraction)",
+      "value": 0.6388,
+      "conditions": "GPT-4, zero-shot, CTI-ATE task (60 annotated malware descriptions, sub-techniques excluded)",
+      "notes": "Verified against arXiv 2406.07599 Table 1"
+    },
+    "ctibench_llama3_70b": {
+      "paper": "CTIBench (Alam et al., NeurIPS 2024)",
+      "metric": "Macro-F1 (TTP extraction)",
+      "value": 0.472,
+      "conditions": "LLaMA-3-70B, zero-shot",
+      "notes": "Open-source LLM baseline"
+    },
+    "ctibench_gemini15": {
+      "paper": "CTIBench (Alam et al., NeurIPS 2024)",
+      "metric": "Macro-F1 (TTP extraction)",
+      "value": 0.4612,
+      "conditions": "Gemini-1.5, zero-shot",
+      "notes": "Verified per-model score"
+    },
+    "ctikg_precision": {
+      "paper": "CTIKG (OpenReview 2024)",
+      "metric": "Precision (ATT&CK KB evaluation)",
+      "value": 0.9189,
+      "conditions": "LLM-powered KG construction, evaluated on the ATT&CK knowledge base",
+      "notes": "Not directly comparable \u2014 different task construction. (Reported recall on the same evaluation is 89.39%.)"
+    },
+    "mezzi_halluc_rate": {
+      "paper": "Internal reference level (this work)",
+      "metric": "Hallucination Rate",
+      "value": 0.5,
+      "conditions": "Round reference level for the guard-off/guard-on comparison",
+      "notes": "VERIFICATION NOTE: Mezzi et al. (arXiv:2503.23175) publish no ~50% hallucination rate (they report task recalls of 0.72-0.90 and near-zero generation recall). Earlier drafts mis-attributed this constant to them; it is an internal anchor only."
+    },
+    "ctiarena_raw_accuracy": {
+      "paper": "CTIArena (Cheng et al., 2025)",
+      "metric": "Accuracy (no RAG)",
+      "value": 0.05,
+      "conditions": "GPT-4 without retrieval augmentation",
+      "notes": "Structured CTI tasks without context"
+    },
+    "ctiarena_rag_accuracy": {
+      "paper": "CTIArena (Cheng et al., 2025)",
+      "metric": "Accuracy (with RAG)",
+      "value": 0.98,
+      "conditions": "GPT-4 + retrieval augmentation",
+      "notes": "RAG dramatically improves structured CTI accuracy"
+    }
+  }
+}

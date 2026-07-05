@@ -1,0 +1,34 @@
+RANSOMWARE ALERT — LockBit 3.0 Variant "LockBit-NG"
+
+Severity: CRITICAL
+Date: 2024-01-15
+
+Overview:
+A new variant of LockBit 3.0 ransomware, internally designated "LockBit-NG" (Next Generation), has been detected in active campaigns targeting healthcare and manufacturing sectors. The variant introduces improved evasion techniques and faster encryption speeds.
+
+Technical Details:
+- Initial Access: Exploitation of Citrix NetScaler vulnerability CVE-2023-4966 ("Citrix Bleed")
+- Execution: PowerShell-based loader (T1059.001) downloads encrypted payload
+- Defense Evasion: Process injection (T1055) into legitimate system processes
+- Impact: AES-256-CTR encryption of local and network-shared files (T1486)
+- Ransom: 2-5 BTC demanded via Tor-based payment portal
+
+Indicators of Compromise:
+- Payload MD5: a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4
+- Payload SHA256: 7d865e959b2466918c9863afca942d0fb89d7c9ac0c99bafc3749504ded97730
+- C2 IP: 203.0.113.50
+- Ransom Note Filename: README-LOCKBIT.txt
+- Tor Payment URL: lockbitng[.]onion/payment
+- Mutex: Global\LockBit_NG_2024
+
+Affected Products:
+- Citrix NetScaler ADC and Gateway (unpatched)
+- Windows Server 2016, 2019, 2022
+- VMware ESXi 6.7, 7.0
+
+Recommended Actions:
+1. Patch CVE-2023-4966 immediately
+2. Isolate affected systems from network
+3. Verify backup integrity (offline/immutable backups)
+4. Deploy EDR with ransomware-specific detection rules
+5. Report incidents to CISA and FBI IC3

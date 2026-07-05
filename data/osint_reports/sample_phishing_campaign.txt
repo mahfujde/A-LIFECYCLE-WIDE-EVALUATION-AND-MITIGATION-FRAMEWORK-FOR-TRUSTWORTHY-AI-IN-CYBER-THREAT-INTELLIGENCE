@@ -1,0 +1,36 @@
+PHISHING CAMPAIGN REPORT — Operation Cloud Harvest
+
+Date: 2024-02-01
+Threat Level: HIGH
+
+Summary:
+A widespread phishing campaign dubbed "Operation Cloud Harvest" is targeting Microsoft 365 and Google Workspace users across multiple industries. The campaign uses sophisticated social engineering techniques to harvest credentials for Business Email Compromise (BEC) attacks.
+
+Attack Methodology:
+1. Victims receive emails impersonating IT support teams
+2. Emails contain urgent requests to "verify account security"
+3. Links redirect through legitimate URL shorteners to phishing pages
+4. Phishing pages are hosted on compromised WordPress sites
+5. Harvested credentials are used for BEC within 24 hours
+
+Indicators of Compromise:
+- Phishing Domain: m1cr0soft-security-verify.tk
+- Phishing Domain: g00gle-workspace-update.ml
+- Sender Spoofing: it-helpdesk@company-security-update.com
+- URL Shortener Abuse: bit.ly/3xR7kM2
+- IP Addresses: 45.33.32.156, 104.16.99.52
+
+MITRE ATT&CK Mapping:
+- T1566.002: Phishing — Spearphishing Link
+- T1078: Valid Accounts (credential harvesting)
+- T1534: Internal Spearphishing (post-compromise BEC)
+- T1114: Email Collection
+- T1071.001: Application Layer Protocol — Web Protocols
+
+Recommendations:
+- Enable MFA on all cloud service accounts
+- Implement DMARC, DKIM, and SPF email authentication
+- Deploy URL filtering to block known malicious domains
+- Conduct phishing awareness training for all employees
+- Monitor for impossible travel alerts in cloud access logs
+- Block .tk and .ml TLD access at the proxy level

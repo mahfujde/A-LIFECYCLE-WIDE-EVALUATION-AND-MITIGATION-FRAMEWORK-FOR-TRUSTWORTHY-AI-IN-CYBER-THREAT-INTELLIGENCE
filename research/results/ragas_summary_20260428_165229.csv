@@ -1,0 +1,4 @@
+Condition,N,faithfulness,faithfulness_mean,faithfulness_std,answer_relevancy,answer_relevancy_mean,answer_relevancy_std,context_recall,context_recall_mean,context_recall_std,context_precision,context_precision_mean,context_precision_std,hallucination_rate,hallucination_rate_mean,hallucination_rate_std,trust_score,trust_score_mean,trust_score_std
+A: No RAG (baseline),10,0.0000 ± 0.0000,0.0,0.0,0.3967 ± 0.0912,0.3967,0.0912,0.0000 ± 0.0000,0.0,0.0,0.0000 ± 0.0000,0.0,0.0,0.2439 ± 0.1014,0.2439,0.1014,59.8767 ± 3.0566,59.8767,3.0566
+B: Vector-only RAG,10,1.0000 ± 0.0000,1.0,0.0,0.3967 ± 0.0912,0.3967,0.0912,0.0000 ± 0.0000,0.0,0.0,0.0000 ± 0.0000,0.0,0.0,0.2439 ± 0.1014,0.2439,0.1014,60.1498 ± 3.1732,60.1498,3.1732
+C: Hybrid KG+Vector RAG,10,1.0000 ± 0.0000,1.0,0.0,0.3967 ± 0.0912,0.3967,0.0912,0.0000 ± 0.0000,0.0,0.0,0.0000 ± 0.0000,0.0,0.0,0.2439 ± 0.1014,0.2439,0.1014,58.6996 ± 3.1900,58.6996,3.19

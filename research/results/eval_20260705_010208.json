@@ -1,0 +1,976 @@
+{
+  "metadata": {
+    "framework": "CTI-SHIELD v3",
+    "evaluator": "real_eval.py",
+    "timestamp": "2026-07-04T16:40:40.262725+00:00",
+    "mode": "api",
+    "llm_model": "nvidia/nemotron-3-super-120b-a12b:free",
+    "llm_provider": "OpenRouter (Free)",
+    "llm_models_used": [
+      "nvidia/nemotron-3-super-120b-a12b:free"
+    ],
+    "model_rotations": [],
+    "osint_skipped": true,
+    "strict_llm": true
+  },
+  "aggregate_metrics": {
+    "evaluation_timestamp": "2026-07-04T16:40:40.262725+00:00",
+    "num_reports": 10,
+    "data_sources": "CISA Advisories, MITRE ATT&CK, FBI IC3, NCSC",
+    "cve_extraction": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "total_expected": 10,
+      "total_found": 10,
+      "total_correct": 10
+    },
+    "ttp_extraction": {
+      "precision": 0.5345,
+      "recall": 0.9118,
+      "f1": 0.6739,
+      "total_expected": 34,
+      "total_found": 58,
+      "total_correct": 31
+    },
+    "kg_builder": {
+      "total_triples": 0,
+      "total_mapped": 0,
+      "mapping_rate": 0.0
+    },
+    "hallucination_guard": {
+      "total_checks": 10,
+      "total_passed": 10,
+      "pass_rate": 1.0
+    }
+  },
+  "per_report_results": [
+    {
+      "id": "REAL-001",
+      "source": "CISA Advisory AA22-110A (Russian State-Sponsored Cyber Threats)",
+      "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa22-110a",
+      "timestamp": "2026-07-04T16:40:40.262725+00:00",
+      "pipeline_latency_ms": 139437.6,
+      "ground_truth": {
+        "threat_type": "APT / State-Sponsored",
+        "severity": "Serious Threat",
+        "expected_ttps": [
+          "T1566.001",
+          "T1110",
+          "T1078",
+          "T1059.001",
+          "T1059.003"
+        ],
+        "expected_cves": [
+          "CVE-2018-13379",
+          "CVE-2020-0688"
+        ],
+        "expected_actors": [
+          "Russian state-sponsored"
+        ],
+        "ioc_types": [
+          "cves"
+        ]
+      },
+      "findings": {
+        "cves_found": [
+          "CVE-2018-13379",
+          "CVE-2020-0688"
+        ],
+        "cves_correct": [
+          "CVE-2018-13379",
+          "CVE-2020-0688"
+        ],
+        "cve_precision": 1.0,
+        "cve_recall": 1.0,
+        "ttps_found": [
+          "T1566.001",
+          "T1566",
+          "T1190",
+          "T1078",
+          "T1110",
+          "T1133",
+          "T1059.001",
+          "T1059.003",
+          "T1218",
+          "T1587.001"
+        ],
+        "ttps_detail": [
+          {
+            "id": "T1566.001",
+            "name": "Spearphishing Attachment",
+            "method": "nlp_pattern"
+          },
+          {
+            "id": "T1566",
+            "name": "Phishing",
+            "method": "nlp_pattern"
+          },
+          {
+            "id": "T1190",
+            "name": "Exploit Public-Facing Application",
+            "method": "nlp_pattern"
+          },
+          {
+            "id": "T1078",
+            "name": "Valid Accounts",
+            "method": "nlp_pattern"
+          },
+          {
+            "id": "T1110",
+            "name": "Brute Force",
+            "method": "nlp_pattern"
+          },
+          {
+            "id": "T1133",
+            "name": "External Remote Services",
+            "method": "nlp_pattern"
+          },
+          {
+            "id": "T1059.001",
+            "name": "PowerShell",
+            "method": "nlp_pattern"
+          },
+          {
+            "id": "T1059.003",
+            "name": "Windows Command Shell",
+            "method": "nlp_pattern"
+          },
+          {
+            "id": "T1218",
+            "name": "System Binary Proxy Execution",
+            "method": "nlp_pattern"
+          },
+          {
+            "id": "T1587.001",
+            "name": "Malware",
+            "method": "nlp_pattern"
+          }
+        ],
+        "ttps_correct": [
+          "T1078",
+          "T1059.001",
+          "T1566.001",
+          "T1059.003",
+          "T1110"
+        ],
+        "ttp_precision": 0.5,
+        "ttp_recall": 1.0,
+        "kg_triples": 0,
+        "kg_mapped": 0,
+        "guard_passed": true,
+        "guard_tiers": {
+          "t1_embedding": 0.8046492338180542,
+          "t2_nli": 0.7777777777777778,
+          "t3_crossref": 1.0,
+          "t4_entity": 1.0
+        },
+        "severity_detected": "",
+        "severity_correct": true,
+        "trust_score": 57.09465390443802,
+        "confidence": 0.73
+      }
+    },
+    {
+      "id": "REAL-002",
+      "source": "CISA Advisory AA23-136A (LockBit 3.0 Ransomware)",
+      "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-136a",
+      "timestamp": "2026-07-04T16:40:40.262725+00:00",
+      "pipeline_latency_ms": 210075.9,
+      "ground_truth": {
+        "threat_type": "Ransomware",
+        "severity": "Emergency",
+        "expected_ttps": [
+          "T1486",
+          "T1490",
+          "T1021.001",
+          "T1567"
+        ],
+        "expected_cves": [
+          "CVE-2023-0669",
+          "CVE-2023-27350"
+        ],
+        "expected_actors": [
+          "LockBit"
+        ],
+        "ioc_types": [
+          "cves"
+        ]
+      },
+      "findings": {
+        "cves_found": [
+          "CVE-2023-0669",
+          "CVE-2023-27350"
+        ],
+        "cves_correct": [
+          "CVE-2023-0669",
+          "CVE-2023-27350"
+        ],
+        "cve_precision": 1.0,
+        "cve_recall": 1.0,
+        "ttps_found": [
+          "T1021.001",
+          "T1021",
+          "T1041",
+          "T1567",
+          "T1486",
+          "T1490",
+          "T1071.001"
+        ],
+        "ttps_detail": [
+          {
+            "id": "T1021.001",
+            "name": "Remote Desktop Protocol",
+            "method": "nlp_pattern"
+          },
+          {
+            "id": "T1021",
+            "name": "Remote Services",
+            "method": "nlp_pattern"
+          },
+          {
+            "id": "T1041",
+            "name": "Exfiltration Over C2 Channel",
+            "method": "nlp_pattern"
+          },
+          {
+            "id": "T1567",
+            "name": "Exfiltration Over Web Service",
+            "method": "nlp_pattern"
+          },
+          {
+            "id": "T1486",
+            "name": "Data Encrypted for Impact",
+            "method": "nlp_pattern"
+          },
+          {
+            "id": "T1490",
+            "name": "Inhibit System Recovery",
+            "method": "nlp_pattern"
+          },
+          {
+            "id": "T1071.001",
+            "name": "Web Protocols",
+            "method": "nlp_pattern"
+          }
+        ],
+        "ttps_correct": [
+          "T1490",
+          "T1486",
+          "T1567",
+          "T1021.001"
+        ],
+        "ttp_precision": 0.5714285714285714,
+        "ttp_recall": 1.0,
+        "kg_triples": 0,
+        "kg_mapped": 0,
+        "guard_passed": true,
+        "guard_tiers": {
+          "t1_embedding": 0.8257459402084351,
+          "t2_nli": 1.0,
+          "t3_crossref": 1.0,
+          "t4_entity": 0.5
+        },
+        "severity_detected": "",
+        "severity_correct": true,
+        "trust_score": 56.67468965053558,
+        "confidence": 0.6900000000000001
+      }
+    },
+    {
+      "id": "REAL-003",
+      "source": "CISA Advisory AA24-060A (Volt Typhoon / PRC State-Sponsored)",
+      "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa24-060a",
+      "timestamp": "2026-07-04T16:40:40.262725+00:00",
+      "pipeline_latency_ms": 66749.9,
+      "ground_truth": {
+        "threat_type": "APT / State-Sponsored",
+        "severity": "Emergency",
+        "expected_ttps": [
+          "T1190",
+          "T1059.001",
+          "T1505.003",
+          "T1090"
+        ],
+        "expected_cves": [
+          "CVE-2023-27997"
+        ],
+        "expected_actors": [
+          "Volt Typhoon"
+        ],
+        "ioc_types": [
+          "cves"
+        ]
+      },
+      "findings": {
+        "cves_found": [
+          "CVE-2023-27997"
+        ],
+        "cves_correct": [
+          "CVE-2023-27997"
+        ],
+        "cve_precision": 1.0,
+        "cve_recall": 1.0,
+        "ttps_found": [
+          "T1190",
+          "T1059.001",
+          "T1059.003",
+          "T1505.003",
+          "T1078",
+          "T1218",
+          "T1090",
+          "T1021"
+        ],
+        "ttps_detail": [
+          {
+            "id": "T1190",
+            "name": "Exploit Public-Facing Application",
+            "method": "nlp_pattern"
+          },
+          {
+            "id": "T1059.001",
+            "name": "PowerShell",
+            "method": "nlp_pattern"
+          },
+          {
+            "id": "T1059.003",
+            "name": "Windows Command Shell",
+            "method": "nlp_pattern"
+          },
+          {
+            "id": "T1505.003",
+            "name": "Web Shell",
+            "method": "nlp_pattern"
+          },
+          {
+            "id": "T1078",
+            "name": "Valid Accounts",
+            "method": "nlp_pattern"
+          },
+          {
+            "id": "T1218",
+            "name": "System Binary Proxy Execution",
+            "method": "nlp_pattern"
+          },
+          {
+            "id": "T1090",
+            "name": "Proxy",
+            "method": "nlp_pattern"
+          },
+          {
+            "id": "T1021",
+            "name": "Remote Services",
+            "method": "nlp_pattern"
+          }
+        ],
+        "ttps_correct": [
+          "T1505.003",
+          "T1090",
+          "T1059.001",
+          "T1190"
+        ],
+        "ttp_precision": 0.5,
+        "ttp_recall": 1.0,
+        "kg_triples": 0,
+        "kg_mapped": 0,
+        "guard_passed": true,
+        "guard_tiers": {
+          "t1_embedding": 0.6494544148445129,
+          "t2_nli": 0.7,
+          "t3_crossref": 1.0,
+          "t4_entity": 1.0
+        },
+        "severity_detected": "",
+        "severity_correct": true,
+        "trust_score": 53.91541045904159,
+        "confidence": 0.6900000000000001
+      }
+    },
+    {
+      "id": "REAL-004",
+      "source": "FBI IC3 Alert (Business Email Compromise)",
+      "url": "https://www.ic3.gov/PSA/2024/PSA240219",
+      "timestamp": "2026-07-04T16:40:40.262725+00:00",
+      "pipeline_latency_ms": 123102.9,
+      "ground_truth": {
+        "threat_type": "Phishing / BEC",
+        "severity": "Serious Threat",
+        "expected_ttps": [
+          "T1566",
+          "T1534",
+          "T1078"
+        ],
+        "expected_cves": [],
+        "expected_actors": [],
+        "ioc_types": []
+      },
+      "findings": {
+        "cves_found": [],
+        "cves_correct": [],
+        "cve_precision": 0.0,
+        "cve_recall": 1.0,
+        "ttps_found": [
+          "T1566",
+          "T1534",
+          "T1078"
+        ],
+        "ttps_detail": [
+          {
+            "id": "T1566",
+            "name": "Phishing",
+            "method": "nlp_pattern"
+          },
+          {
+            "id": "T1534",
+            "name": "Internal Spearphishing",
+            "method": "nlp_pattern"
+          },
+          {
+            "id": "T1078",
+            "name": "Valid Accounts",
+            "method": "nlp_pattern"
+          }
+        ],
+        "ttps_correct": [
+          "T1534",
+          "T1566",
+          "T1078"
+        ],
+        "ttp_precision": 1.0,
+        "ttp_recall": 1.0,
+        "kg_triples": 0,
+        "kg_mapped": 0,
+        "guard_passed": true,
+        "guard_tiers": {
+          "t1_embedding": 0.7309029698371887,
+          "t2_nli": 1.0,
+          "t3_crossref": 1.0,
+          "t4_entity": 1.0
+        },
+        "severity_detected": "",
+        "severity_correct": true,
+        "trust_score": 57.816272139549255,
+        "confidence": 0.73
+      }
+    },
+    {
+      "id": "REAL-005",
+      "source": "MITRE ATT&CK Group G0007 (APT28/Fancy Bear)",
+      "url": "https://attack.mitre.org/groups/G0007/",
+      "timestamp": "2026-07-04T16:40:40.262725+00:00",
+      "pipeline_latency_ms": 71729.9,
+      "ground_truth": {
+        "threat_type": "APT / State-Sponsored",
+        "severity": "Serious Threat",
+        "expected_ttps": [
+          "T1566.001",
+          "T1059.001",
+          "T1071.001"
+        ],
+        "expected_cves": [
+          "CVE-2017-0199",
+          "CVE-2015-1641"
+        ],
+        "expected_actors": [
+          "APT28",
+          "APT-28",
+          "Fancy Bear"
+        ],
+        "ioc_types": [
+          "cves"
+        ]
+      },
+      "findings": {
+        "cves_found": [
+          "CVE-2015-1641",
+          "CVE-2017-0199"
+        ],
+        "cves_correct": [
+          "CVE-2015-1641",
+          "CVE-2017-0199"
+        ],
+        "cve_precision": 1.0,
+        "cve_recall": 1.0,
+        "ttps_found": [
+          "T1566.001",
+          "T1059.001",
+          "T1078",
+          "T1003",
+          "T1071.001"
+        ],
+        "ttps_detail": [
+          {
+            "id": "T1566.001",
+            "name": "Spearphishing Attachment",
+            "method": "nlp_pattern"
+          },
+          {
+            "id": "T1059.001",
+            "name": "PowerShell",
+            "method": "nlp_pattern"
+          },
+          {
+            "id": "T1078",
+            "name": "Valid Accounts",
+            "method": "nlp_pattern"
+          },
+          {
+            "id": "T1003",
+            "name": "OS Credential Dumping",
+            "method": "nlp_pattern"
+          },
+          {
+            "id": "T1071.001",
+            "name": "Web Protocols",
+            "method": "nlp_pattern"
+          }
+        ],
+        "ttps_correct": [
+          "T1566.001",
+          "T1059.001",
+          "T1071.001"
+        ],
+        "ttp_precision": 0.6,
+        "ttp_recall": 1.0,
+        "kg_triples": 0,
+        "kg_mapped": 0,
+        "guard_passed": true,
+        "guard_tiers": {
+          "t1_embedding": 0.8318139314651489,
+          "t2_nli": 1.0,
+          "t3_crossref": 1.0,
+          "t4_entity": 1.0
+        },
+        "severity_detected": "",
+        "severity_correct": true,
+        "trust_score": 59.213217198848724,
+        "confidence": 0.6900000000000001
+      }
+    },
+    {
+      "id": "REAL-006",
+      "source": "CISA Advisory AA23-325A (Scattered Spider)",
+      "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-325a",
+      "timestamp": "2026-07-04T16:40:40.262725+00:00",
+      "pipeline_latency_ms": 208303.2,
+      "ground_truth": {
+        "threat_type": "Ransomware / Social Engineering",
+        "severity": "Serious Threat",
+        "expected_ttps": [
+          "T1566",
+          "T1078",
+          "T1219"
+        ],
+        "expected_cves": [],
+        "expected_actors": [
+          "Scattered Spider"
+        ],
+        "ioc_types": []
+      },
+      "findings": {
+        "cves_found": [],
+        "cves_correct": [],
+        "cve_precision": 0.0,
+        "cve_recall": 1.0,
+        "ttps_found": [
+          "T1041",
+          "T1486",
+          "T1219",
+          "T1566"
+        ],
+        "ttps_detail": [
+          {
+            "id": "T1041",
+            "name": "Exfiltration Over C2 Channel",
+            "method": "nlp_pattern"
+          },
+          {
+            "id": "T1486",
+            "name": "Data Encrypted for Impact",
+            "method": "nlp_pattern"
+          },
+          {
+            "id": "T1219",
+            "name": "Remote Access Software",
+            "method": "nlp_pattern"
+          },
+          {
+            "id": "T1566",
+            "name": "Phishing",
+            "method": "nlp_pattern"
+          }
+        ],
+        "ttps_correct": [
+          "T1219",
+          "T1566"
+        ],
+        "ttp_precision": 0.5,
+        "ttp_recall": 0.6666666666666666,
+        "kg_triples": 0,
+        "kg_mapped": 0,
+        "guard_passed": true,
+        "guard_tiers": {
+          "t1_embedding": 0.6509087085723877,
+          "t2_nli": 1.0,
+          "t3_crossref": 1.0,
+          "t4_entity": 1.0
+        },
+        "severity_detected": "",
+        "severity_correct": true,
+        "trust_score": 58.71593135595321,
+        "confidence": 0.6900000000000001
+      }
+    },
+    {
+      "id": "REAL-007",
+      "source": "CISA Advisory AA24-131A (Black Basta Ransomware)",
+      "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa24-131a",
+      "timestamp": "2026-07-04T16:40:40.262725+00:00",
+      "pipeline_latency_ms": 90109.5,
+      "ground_truth": {
+        "threat_type": "Ransomware",
+        "severity": "Emergency",
+        "expected_ttps": [
+          "T1566",
+          "T1003.001",
+          "T1021.001",
+          "T1486"
+        ],
+        "expected_cves": [
+          "CVE-2024-1709"
+        ],
+        "expected_actors": [
+          "Black Basta"
+        ],
+        "ioc_types": [
+          "cves"
+        ]
+      },
+      "findings": {
+        "cves_found": [
+          "CVE-2024-1709"
+        ],
+        "cves_correct": [
+          "CVE-2024-1709"
+        ],
+        "cve_precision": 1.0,
+        "cve_recall": 1.0,
+        "ttps_found": [
+          "T1190",
+          "T1003",
+          "T1003.001",
+          "T1021",
+          "T1041",
+          "T1486",
+          "T1021.001"
+        ],
+        "ttps_detail": [
+          {
+            "id": "T1190",
+            "name": "Exploit Public-Facing Application",
+            "method": "nlp_pattern"
+          },
+          {
+            "id": "T1003",
+            "name": "OS Credential Dumping",
+            "method": "nlp_pattern"
+          },
+          {
+            "id": "T1003.001",
+            "name": "LSASS Memory",
+            "method": "nlp_pattern"
+          },
+          {
+            "id": "T1021",
+            "name": "Remote Services",
+            "method": "nlp_pattern"
+          },
+          {
+            "id": "T1041",
+            "name": "Exfiltration Over C2 Channel",
+            "method": "nlp_pattern"
+          },
+          {
+            "id": "T1486",
+            "name": "Data Encrypted for Impact",
+            "method": "nlp_pattern"
+          },
+          {
+            "id": "T1021.001",
+            "name": "Remote Desktop Protocol",
+            "method": "explicit"
+          }
+        ],
+        "ttps_correct": [
+          "T1003.001",
+          "T1486",
+          "T1021.001"
+        ],
+        "ttp_precision": 0.42857142857142855,
+        "ttp_recall": 0.75,
+        "kg_triples": 0,
+        "kg_mapped": 0,
+        "guard_passed": true,
+        "guard_tiers": {
+          "t1_embedding": 0.7923588156700134,
+          "t2_nli": 0.6,
+          "t3_crossref": 1.0,
+          "t4_entity": 1.0
+        },
+        "severity_detected": "",
+        "severity_correct": true,
+        "trust_score": 56.12990154981613,
+        "confidence": 0.73
+      }
+    },
+    {
+      "id": "REAL-008",
+      "source": "US-CERT Alert TA18-106A (SamSam Ransomware)",
+      "url": "https://www.cisa.gov/news-events/alerts/2018/04/16/samsam-ransomware",
+      "timestamp": "2026-07-04T16:40:40.262725+00:00",
+      "pipeline_latency_ms": 110373.1,
+      "ground_truth": {
+        "threat_type": "Ransomware",
+        "severity": "Emergency",
+        "expected_ttps": [
+          "T1021.001",
+          "T1003",
+          "T1486"
+        ],
+        "expected_cves": [],
+        "expected_actors": [
+          "SamSam"
+        ],
+        "ioc_types": []
+      },
+      "findings": {
+        "cves_found": [],
+        "cves_correct": [],
+        "cve_precision": 0.0,
+        "cve_recall": 1.0,
+        "ttps_found": [
+          "T1078",
+          "T1003.001",
+          "T1021.001",
+          "T1569.002",
+          "T1486"
+        ],
+        "ttps_detail": [
+          {
+            "id": "T1078",
+            "name": "Valid Accounts",
+            "method": "nlp_pattern"
+          },
+          {
+            "id": "T1003.001",
+            "name": "LSASS Memory",
+            "method": "nlp_pattern"
+          },
+          {
+            "id": "T1021.001",
+            "name": "Remote Desktop Protocol",
+            "method": "nlp_pattern"
+          },
+          {
+            "id": "T1569.002",
+            "name": "Service Execution",
+            "method": "nlp_pattern"
+          },
+          {
+            "id": "T1486",
+            "name": "Data Encrypted for Impact",
+            "method": "nlp_pattern"
+          }
+        ],
+        "ttps_correct": [
+          "T1486",
+          "T1021.001"
+        ],
+        "ttp_precision": 0.4,
+        "ttp_recall": 0.6666666666666666,
+        "kg_triples": 0,
+        "kg_mapped": 0,
+        "guard_passed": true,
+        "guard_tiers": {
+          "t1_embedding": 0.6262617111206055,
+          "t2_nli": 1.0,
+          "t3_crossref": 1.0,
+          "t4_entity": 1.0
+        },
+        "severity_detected": "",
+        "severity_correct": true,
+        "trust_score": 58.9939867237568,
+        "confidence": 0.73
+      }
+    },
+    {
+      "id": "REAL-009",
+      "source": "NCSC Advisory (SolarWinds/SUNBURST)",
+      "url": "https://www.ncsc.gov.uk/news/supply-chain-attack-solarwinds",
+      "timestamp": "2026-07-04T16:40:40.262725+00:00",
+      "pipeline_latency_ms": 163645.0,
+      "ground_truth": {
+        "threat_type": "APT / Supply Chain",
+        "severity": "Emergency",
+        "expected_ttps": [
+          "T1195.002",
+          "T1071.001",
+          "T1003"
+        ],
+        "expected_cves": [
+          "CVE-2020-10148"
+        ],
+        "expected_actors": [
+          "UNC2452"
+        ],
+        "ioc_types": [
+          "domains",
+          "cves"
+        ]
+      },
+      "findings": {
+        "cves_found": [
+          "CVE-2020-10148"
+        ],
+        "cves_correct": [
+          "CVE-2020-10148"
+        ],
+        "cve_precision": 1.0,
+        "cve_recall": 1.0,
+        "ttps_found": [
+          "T1195.002",
+          "T1078",
+          "T1003",
+          "T1003.001",
+          "T1606.002",
+          "T1071.001"
+        ],
+        "ttps_detail": [
+          {
+            "id": "T1195.002",
+            "name": "Compromise Software Supply Chain",
+            "method": "nlp_pattern"
+          },
+          {
+            "id": "T1078",
+            "name": "Valid Accounts",
+            "method": "nlp_pattern"
+          },
+          {
+            "id": "T1003",
+            "name": "OS Credential Dumping",
+            "method": "nlp_pattern"
+          },
+          {
+            "id": "T1003.001",
+            "name": "LSASS Memory",
+            "method": "nlp_pattern"
+          },
+          {
+            "id": "T1606.002",
+            "name": "SAML Tokens",
+            "method": "nlp_pattern"
+          },
+          {
+            "id": "T1071.001",
+            "name": "Web Protocols",
+            "method": "nlp_pattern"
+          }
+        ],
+        "ttps_correct": [
+          "T1003",
+          "T1195.002",
+          "T1071.001"
+        ],
+        "ttp_precision": 0.5,
+        "ttp_recall": 1.0,
+        "kg_triples": 0,
+        "kg_mapped": 0,
+        "guard_passed": true,
+        "guard_tiers": {
+          "t1_embedding": 0.8661227226257324,
+          "t2_nli": 0.85,
+          "t3_crossref": 1.0,
+          "t4_entity": 1.0
+        },
+        "severity_detected": "",
+        "severity_correct": true,
+        "trust_score": 58.11682166305751,
+        "confidence": 0.6900000000000001
+      }
+    },
+    {
+      "id": "REAL-010",
+      "source": "CISA Alert AA21-209A (Log4Shell/CVE-2021-44228)",
+      "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa21-356a",
+      "timestamp": "2026-07-04T16:40:40.262725+00:00",
+      "pipeline_latency_ms": 90755.8,
+      "ground_truth": {
+        "threat_type": "Vulnerability Exploitation",
+        "severity": "Emergency",
+        "expected_ttps": [
+          "T1190",
+          "T1059"
+        ],
+        "expected_cves": [
+          "CVE-2021-44228"
+        ],
+        "expected_actors": [],
+        "ioc_types": [
+          "cves"
+        ]
+      },
+      "findings": {
+        "cves_found": [
+          "CVE-2021-44228"
+        ],
+        "cves_correct": [
+          "CVE-2021-44228"
+        ],
+        "cve_precision": 1.0,
+        "cve_recall": 1.0,
+        "ttps_found": [
+          "T1486",
+          "T1190",
+          "T1059"
+        ],
+        "ttps_detail": [
+          {
+            "id": "T1486",
+            "name": "Data Encrypted for Impact",
+            "method": "nlp_pattern"
+          },
+          {
+            "id": "T1190",
+            "name": "Exploit Public-Facing Application",
+            "method": "nlp_pattern"
+          },
+          {
+            "id": "T1059",
+            "name": "Command and Scripting Interpreter",
+            "method": "nlp_pattern"
+          }
+        ],
+        "ttps_correct": [
+          "T1059",
+          "T1190"
+        ],
+        "ttp_precision": 0.6666666666666666,
+        "ttp_recall": 1.0,
+        "kg_triples": 0,
+        "kg_mapped": 0,
+        "guard_passed": true,
+        "guard_tiers": {
+          "t1_embedding": 0.7724774479866028,
+          "t2_nli": 1.0,
+          "t3_crossref": 1.0,
+          "t4_entity": 1.0
+        },
+        "severity_detected": "",
+        "severity_correct": true,
+        "trust_score": 59.020463100432885,
+        "confidence": 0.6900000000000001
+      }
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+# Byte-compiled
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual env
+venv/
+.venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Environment
+.env
+
+# Data (generated)
+data/faiss_index/*
+!data/faiss_index/.gitkeep
+logs/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Dist
+dist/
+build/
+*.egg-info/

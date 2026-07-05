@@ -1,0 +1,555 @@
+{
+  "metadata": {
+    "framework": "CTI-SHIELD v3",
+    "evaluator": "real_eval.py",
+    "timestamp": "2026-04-23T22:47:34.747548+00:00",
+    "mode": "DEMO"
+  },
+  "aggregate_metrics": {
+    "evaluation_timestamp": "2026-04-23T22:47:34.747548+00:00",
+    "num_reports": 10,
+    "data_sources": "CISA Advisories, MITRE ATT&CK, FBI IC3, NCSC",
+    "cve_extraction": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "total_expected": 10,
+      "total_found": 10,
+      "total_correct": 10
+    },
+    "ttp_extraction": {
+      "precision": 1.0,
+      "recall": 0.1765,
+      "f1": 0.3,
+      "total_expected": 34,
+      "total_found": 6,
+      "total_correct": 6
+    },
+    "kg_builder": {
+      "total_triples": 0,
+      "total_mapped": 0,
+      "mapping_rate": 0.0
+    },
+    "hallucination_guard": {
+      "total_checks": 10,
+      "total_passed": 10,
+      "pass_rate": 1.0
+    }
+  },
+  "per_report_results": [
+    {
+      "id": "REAL-001",
+      "source": "CISA Advisory AA22-110A (Russian State-Sponsored Cyber Threats)",
+      "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa22-110a",
+      "timestamp": "2026-04-23T22:47:34.747548+00:00",
+      "pipeline_latency_ms": 5.3,
+      "ground_truth": {
+        "threat_type": "APT / State-Sponsored",
+        "severity": "Serious Threat",
+        "expected_ttps": [
+          "T1566.001",
+          "T1110",
+          "T1078",
+          "T1059.001",
+          "T1059.003"
+        ],
+        "expected_cves": [
+          "CVE-2018-13379",
+          "CVE-2020-0688"
+        ],
+        "expected_actors": [
+          "Russian state-sponsored"
+        ],
+        "ioc_types": [
+          "cves"
+        ]
+      },
+      "findings": {
+        "cves_found": [
+          "CVE-2018-13379",
+          "CVE-2020-0688"
+        ],
+        "cves_correct": [
+          "CVE-2018-13379",
+          "CVE-2020-0688"
+        ],
+        "cve_precision": 1.0,
+        "cve_recall": 1.0,
+        "ttps_found": [],
+        "ttps_correct": [],
+        "ttp_precision": 0.0,
+        "ttp_recall": 0.0,
+        "kg_triples": 0,
+        "kg_mapped": 0,
+        "guard_passed": true,
+        "guard_tiers": {
+          "t1_embedding": 0.16233766233766234,
+          "t2_nli": 0.5,
+          "t3_crossref": 1.0
+        },
+        "severity_detected": "",
+        "severity_correct": true,
+        "trust_score": 38.0,
+        "confidence": 0.78
+      }
+    },
+    {
+      "id": "REAL-002",
+      "source": "CISA Advisory AA23-136A (LockBit 3.0 Ransomware)",
+      "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-136a",
+      "timestamp": "2026-04-23T22:47:34.747548+00:00",
+      "pipeline_latency_ms": 1.7,
+      "ground_truth": {
+        "threat_type": "Ransomware",
+        "severity": "Emergency",
+        "expected_ttps": [
+          "T1486",
+          "T1490",
+          "T1021.001",
+          "T1567"
+        ],
+        "expected_cves": [
+          "CVE-2023-0669",
+          "CVE-2023-27350"
+        ],
+        "expected_actors": [
+          "LockBit"
+        ],
+        "ioc_types": [
+          "cves"
+        ]
+      },
+      "findings": {
+        "cves_found": [
+          "CVE-2023-0669",
+          "CVE-2023-27350"
+        ],
+        "cves_correct": [
+          "CVE-2023-0669",
+          "CVE-2023-27350"
+        ],
+        "cve_precision": 1.0,
+        "cve_recall": 1.0,
+        "ttps_found": [],
+        "ttps_correct": [],
+        "ttp_precision": 0.0,
+        "ttp_recall": 0.0,
+        "kg_triples": 0,
+        "kg_mapped": 0,
+        "guard_passed": true,
+        "guard_tiers": {
+          "t1_embedding": 0.20945945945945946,
+          "t2_nli": 0.8333333333333334,
+          "t3_crossref": 1.0
+        },
+        "severity_detected": "",
+        "severity_correct": true,
+        "trust_score": 58.96,
+        "confidence": 0.8099999999999999
+      }
+    },
+    {
+      "id": "REAL-003",
+      "source": "CISA Advisory AA24-060A (Volt Typhoon / PRC State-Sponsored)",
+      "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa24-060a",
+      "timestamp": "2026-04-23T22:47:34.747548+00:00",
+      "pipeline_latency_ms": 2.3,
+      "ground_truth": {
+        "threat_type": "APT / State-Sponsored",
+        "severity": "Emergency",
+        "expected_ttps": [
+          "T1190",
+          "T1059.001",
+          "T1505.003",
+          "T1090"
+        ],
+        "expected_cves": [
+          "CVE-2023-27997"
+        ],
+        "expected_actors": [
+          "Volt Typhoon"
+        ],
+        "ioc_types": [
+          "cves"
+        ]
+      },
+      "findings": {
+        "cves_found": [
+          "CVE-2023-27997"
+        ],
+        "cves_correct": [
+          "CVE-2023-27997"
+        ],
+        "cve_precision": 1.0,
+        "cve_recall": 1.0,
+        "ttps_found": [],
+        "ttps_correct": [],
+        "ttp_precision": 0.0,
+        "ttp_recall": 0.0,
+        "kg_triples": 0,
+        "kg_mapped": 0,
+        "guard_passed": true,
+        "guard_tiers": {
+          "t1_embedding": 0.1592356687898089,
+          "t2_nli": 0.6666666666666666,
+          "t3_crossref": 1.0
+        },
+        "severity_detected": "",
+        "severity_correct": true,
+        "trust_score": 38.66666666666667,
+        "confidence": 0.78
+      }
+    },
+    {
+      "id": "REAL-004",
+      "source": "FBI IC3 Alert (Business Email Compromise)",
+      "url": "https://www.ic3.gov/PSA/2024/PSA240219",
+      "timestamp": "2026-04-23T22:47:34.747548+00:00",
+      "pipeline_latency_ms": 2.2,
+      "ground_truth": {
+        "threat_type": "Phishing / BEC",
+        "severity": "Serious Threat",
+        "expected_ttps": [
+          "T1566",
+          "T1534",
+          "T1078"
+        ],
+        "expected_cves": [],
+        "expected_actors": [],
+        "ioc_types": []
+      },
+      "findings": {
+        "cves_found": [],
+        "cves_correct": [],
+        "cve_precision": 0.0,
+        "cve_recall": 1.0,
+        "ttps_found": [],
+        "ttps_correct": [],
+        "ttp_precision": 0.0,
+        "ttp_recall": 0.0,
+        "kg_triples": 0,
+        "kg_mapped": 0,
+        "guard_passed": true,
+        "guard_tiers": {
+          "t1_embedding": 0.17419354838709677,
+          "t2_nli": 0.3333333333333333,
+          "t3_crossref": 1.0
+        },
+        "severity_detected": "",
+        "severity_correct": true,
+        "trust_score": 38.0,
+        "confidence": 0.7
+      }
+    },
+    {
+      "id": "REAL-005",
+      "source": "MITRE ATT&CK Group G0007 (APT28/Fancy Bear)",
+      "url": "https://attack.mitre.org/groups/G0007/",
+      "timestamp": "2026-04-23T22:47:34.747548+00:00",
+      "pipeline_latency_ms": 2.6,
+      "ground_truth": {
+        "threat_type": "APT / State-Sponsored",
+        "severity": "Serious Threat",
+        "expected_ttps": [
+          "T1566.001",
+          "T1059.001",
+          "T1071.001"
+        ],
+        "expected_cves": [
+          "CVE-2017-0199",
+          "CVE-2015-1641"
+        ],
+        "expected_actors": [
+          "APT28",
+          "APT-28",
+          "Fancy Bear"
+        ],
+        "ioc_types": [
+          "cves"
+        ]
+      },
+      "findings": {
+        "cves_found": [
+          "CVE-2017-0199",
+          "CVE-2015-1641"
+        ],
+        "cves_correct": [
+          "CVE-2017-0199",
+          "CVE-2015-1641"
+        ],
+        "cve_precision": 1.0,
+        "cve_recall": 1.0,
+        "ttps_found": [
+          "T1071.001",
+          "T1566.001",
+          "T1059.001"
+        ],
+        "ttps_correct": [
+          "T1566.001",
+          "T1071.001",
+          "T1059.001"
+        ],
+        "ttp_precision": 1.0,
+        "ttp_recall": 1.0,
+        "kg_triples": 0,
+        "kg_mapped": 0,
+        "guard_passed": true,
+        "guard_tiers": {
+          "t1_embedding": 0.18181818181818182,
+          "t2_nli": 0.3333333333333333,
+          "t3_crossref": 1.0
+        },
+        "severity_detected": "",
+        "severity_correct": true,
+        "trust_score": 38.0,
+        "confidence": 0.8999999999999999
+      }
+    },
+    {
+      "id": "REAL-006",
+      "source": "CISA Advisory AA23-325A (Scattered Spider)",
+      "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-325a",
+      "timestamp": "2026-04-23T22:47:34.747548+00:00",
+      "pipeline_latency_ms": 2.4,
+      "ground_truth": {
+        "threat_type": "Ransomware / Social Engineering",
+        "severity": "Serious Threat",
+        "expected_ttps": [
+          "T1566",
+          "T1078",
+          "T1219"
+        ],
+        "expected_cves": [],
+        "expected_actors": [
+          "Scattered Spider"
+        ],
+        "ioc_types": []
+      },
+      "findings": {
+        "cves_found": [],
+        "cves_correct": [],
+        "cve_precision": 0.0,
+        "cve_recall": 1.0,
+        "ttps_found": [],
+        "ttps_correct": [],
+        "ttp_precision": 0.0,
+        "ttp_recall": 0.0,
+        "kg_triples": 0,
+        "kg_mapped": 0,
+        "guard_passed": true,
+        "guard_tiers": {
+          "t1_embedding": 0.17834394904458598,
+          "t2_nli": 0.3333333333333333,
+          "t3_crossref": 1.0
+        },
+        "severity_detected": "",
+        "severity_correct": true,
+        "trust_score": 38.0,
+        "confidence": 0.8999999999999999
+      }
+    },
+    {
+      "id": "REAL-007",
+      "source": "CISA Advisory AA24-131A (Black Basta Ransomware)",
+      "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa24-131a",
+      "timestamp": "2026-04-23T22:47:34.747548+00:00",
+      "pipeline_latency_ms": 1.4,
+      "ground_truth": {
+        "threat_type": "Ransomware",
+        "severity": "Emergency",
+        "expected_ttps": [
+          "T1566",
+          "T1003.001",
+          "T1021.001",
+          "T1486"
+        ],
+        "expected_cves": [
+          "CVE-2024-1709"
+        ],
+        "expected_actors": [
+          "Black Basta"
+        ],
+        "ioc_types": [
+          "cves"
+        ]
+      },
+      "findings": {
+        "cves_found": [
+          "CVE-2024-1709"
+        ],
+        "cves_correct": [
+          "CVE-2024-1709"
+        ],
+        "cve_precision": 1.0,
+        "cve_recall": 1.0,
+        "ttps_found": [
+          "T1486",
+          "T1021.001",
+          "T1003.001"
+        ],
+        "ttps_correct": [
+          "T1486",
+          "T1021.001",
+          "T1003.001"
+        ],
+        "ttp_precision": 1.0,
+        "ttp_recall": 0.75,
+        "kg_triples": 0,
+        "kg_mapped": 0,
+        "guard_passed": true,
+        "guard_tiers": {
+          "t1_embedding": 0.19736842105263158,
+          "t2_nli": 0.6,
+          "t3_crossref": 1.0
+        },
+        "severity_detected": "",
+        "severity_correct": true,
+        "trust_score": 51.754933333333334,
+        "confidence": 0.8999999999999999
+      }
+    },
+    {
+      "id": "REAL-008",
+      "source": "US-CERT Alert TA18-106A (SamSam Ransomware)",
+      "url": "https://www.cisa.gov/news-events/alerts/2018/04/16/samsam-ransomware",
+      "timestamp": "2026-04-23T22:47:34.747548+00:00",
+      "pipeline_latency_ms": 1.2,
+      "ground_truth": {
+        "threat_type": "Ransomware",
+        "severity": "Emergency",
+        "expected_ttps": [
+          "T1021.001",
+          "T1003",
+          "T1486"
+        ],
+        "expected_cves": [],
+        "expected_actors": [
+          "SamSam"
+        ],
+        "ioc_types": []
+      },
+      "findings": {
+        "cves_found": [],
+        "cves_correct": [],
+        "cve_precision": 0.0,
+        "cve_recall": 1.0,
+        "ttps_found": [],
+        "ttps_correct": [],
+        "ttp_precision": 0.0,
+        "ttp_recall": 0.0,
+        "kg_triples": 0,
+        "kg_mapped": 0,
+        "guard_passed": true,
+        "guard_tiers": {
+          "t1_embedding": 0.19607843137254902,
+          "t2_nli": 0.6666666666666666,
+          "t3_crossref": 1.0
+        },
+        "severity_detected": "",
+        "severity_correct": true,
+        "trust_score": 50.820864,
+        "confidence": 0.8999999999999999
+      }
+    },
+    {
+      "id": "REAL-009",
+      "source": "NCSC Advisory (SolarWinds/SUNBURST)",
+      "url": "https://www.ncsc.gov.uk/news/supply-chain-attack-solarwinds",
+      "timestamp": "2026-04-23T22:47:34.747548+00:00",
+      "pipeline_latency_ms": 2.4,
+      "ground_truth": {
+        "threat_type": "APT / Supply Chain",
+        "severity": "Emergency",
+        "expected_ttps": [
+          "T1195.002",
+          "T1071.001",
+          "T1003"
+        ],
+        "expected_cves": [
+          "CVE-2020-10148"
+        ],
+        "expected_actors": [
+          "UNC2452"
+        ],
+        "ioc_types": [
+          "domains",
+          "cves"
+        ]
+      },
+      "findings": {
+        "cves_found": [
+          "CVE-2020-10148"
+        ],
+        "cves_correct": [
+          "CVE-2020-10148"
+        ],
+        "cve_precision": 1.0,
+        "cve_recall": 1.0,
+        "ttps_found": [],
+        "ttps_correct": [],
+        "ttp_precision": 0.0,
+        "ttp_recall": 0.0,
+        "kg_triples": 0,
+        "kg_mapped": 0,
+        "guard_passed": true,
+        "guard_tiers": {
+          "t1_embedding": 0.18181818181818182,
+          "t2_nli": 0.6666666666666666,
+          "t3_crossref": 1.0
+        },
+        "severity_detected": "",
+        "severity_correct": true,
+        "trust_score": 38.12125411555556,
+        "confidence": 0.8999999999999999
+      }
+    },
+    {
+      "id": "REAL-010",
+      "source": "CISA Alert AA21-209A (Log4Shell/CVE-2021-44228)",
+      "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa21-356a",
+      "timestamp": "2026-04-23T22:47:34.747548+00:00",
+      "pipeline_latency_ms": 2.3,
+      "ground_truth": {
+        "threat_type": "Vulnerability Exploitation",
+        "severity": "Emergency",
+        "expected_ttps": [
+          "T1190",
+          "T1059"
+        ],
+        "expected_cves": [
+          "CVE-2021-44228"
+        ],
+        "expected_actors": [],
+        "ioc_types": [
+          "cves"
+        ]
+      },
+      "findings": {
+        "cves_found": [
+          "CVE-2021-44228"
+        ],
+        "cves_correct": [
+          "CVE-2021-44228"
+        ],
+        "cve_precision": 1.0,
+        "cve_recall": 1.0,
+        "ttps_found": [],
+        "ttps_correct": [],
+        "ttp_precision": 0.0,
+        "ttp_recall": 0.0,
+        "kg_triples": 0,
+        "kg_mapped": 0,
+        "guard_passed": true,
+        "guard_tiers": {
+          "t1_embedding": 0.15894039735099338,
+          "t2_nli": 0.3333333333333333,
+          "t3_crossref": 1.0
+        },
+        "severity_detected": "",
+        "severity_correct": true,
+        "trust_score": 38.486548724622224,
+        "confidence": 0.8999999999999999
+      }
+    }
+  ]
+}
