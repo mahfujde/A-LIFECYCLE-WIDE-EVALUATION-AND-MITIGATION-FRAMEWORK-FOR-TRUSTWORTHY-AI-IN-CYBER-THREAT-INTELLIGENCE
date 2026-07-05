@@ -193,9 +193,6 @@ See the repository license file if one is added to the GitHub project. If you ar
 
 | Document | Description |
 |----------|-------------|
-| [RESEARCH.md](RESEARCH.md) | Full architecture, methodology, threat model |
-| [research_paper.md](research_paper.md) | Academic paper with 21 references |
-| [CTI-SHIELD_Research_Paper.pdf](CTI-SHIELD_Research_Paper.pdf) | PDF version |
 | [research/results/](research/results/) | All evaluation data as timestamped JSON |
 
 ### Research Objectives
