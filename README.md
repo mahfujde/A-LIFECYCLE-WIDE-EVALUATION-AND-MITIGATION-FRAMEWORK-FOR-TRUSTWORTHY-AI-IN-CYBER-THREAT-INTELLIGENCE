@@ -194,15 +194,6 @@ See the repository license file if one is added to the GitHub project. If you ar
 | Document | Description |
 |----------|-------------|
 | [research/results/](research/results/) | All evaluation data as timestamped JSON |
-
-### Research Objectives
-
-| RO | Question | Key Metric |
-|----|----------|------------|
-| **RO1** | Does RAG reduce LLM hallucination in CTI? | Hallucination rate, RAGAS Faithfulness |
-| **RO2** | Does Hybrid KG+Vector outperform vector-only? | TTP F1, Temporal freshness |
-| **RO3** | Can outputs be traced to verifiable sources? | Attribution rate, Citation report |
-
 ---
 
 ## ❓ Troubleshooting
